@@ -117,7 +117,7 @@ export default function Home() {
       {/* HERO */}
       <HeroSection
         title="Laserové rezanie do 7 dní. Garantované."
-        perex="Potrebuješ laserové diely rýchlo? Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Potrebuješ rýchlejšie? Express 48h za +50%."
+        perex="Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Potrebuješ rýchlejšie? Express 48 hodín. Potrebuješ to zajtra? Aj to vieme. Zavolaj a dohodneme sa."
         bgImage="/images/hero-laser.png"
       >
         <Button href="/kontakt">Pošli dopyt →</Button>
