@@ -8,7 +8,6 @@ import {
   Phone,
   CheckCircle,
   ShieldCheck,
-  ArrowRight,
 } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import Button from "@/components/Button";

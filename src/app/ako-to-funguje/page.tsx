@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Upload, Euro, Clock, Zap, CreditCard, Truck } from "lucide-react";
+import { Clock, Zap, CreditCard, Truck } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
-import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import Card from "@/components/Card";
 import FAQ from "@/components/FAQ";

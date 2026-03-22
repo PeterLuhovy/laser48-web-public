@@ -51,35 +51,35 @@ export default function ReferenciePage() {
               <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
               <div>
                 <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Netransparentné ceny</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Nikdy neviem, koľko to bude stáť. Cenu sa dozviem až po týždni čakania na ponuku."</p>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>{"„Nikdy neviem, koľko to bude stáť. Cenu sa dozviem až po týždni čakania na ponuku.""}</p>
               </div>
             </div>
             <div style={{ display: "flex", gap: "var(--space-md)" }}>
               <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
               <div>
                 <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Vysoké minimálne objednávky</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Potrebujem 5 kusov, ale chcú minimum 50. Musím objednať viac, než potrebujem."</p>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>{"„Potrebujem 5 kusov, ale chcú minimum 50. Musím objednať viac, než potrebujem.""}</p>
               </div>
             </div>
             <div style={{ display: "flex", gap: "var(--space-md)" }}>
               <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
               <div>
                 <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Nespoľahlivé dodacie lehoty</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Sľubujú týždeň, dodajú za mesiac. Zastavia mi vlastnú výrobu."</p>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>{"„Sľubujú týždeň, dodajú za mesiac. Zastavia mi vlastnú výrobu.""}</p>
               </div>
             </div>
             <div style={{ display: "flex", gap: "var(--space-md)" }}>
               <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
               <div>
                 <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Slabá komunikácia</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Neberú telefón, neodpovedajú na emaily. Neviem čo sa deje s mojou objednávkou."</p>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>{"„Neberú telefón, neodpovedajú na emaily. Neviem čo sa deje s mojou objednávkou.""}</p>
               </div>
             </div>
             <div style={{ display: "flex", gap: "var(--space-md)" }}>
               <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
               <div>
                 <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Otrepy, okuje, zlé hrany</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Diely prídu s otrepmi a okujami. Musím ich dodatočne opracovávať — stojí to čas a peniaze."</p>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>{"„Diely prídu s otrepmi a okujami. Musím ich dodatočne opracovávať — stojí to čas a peniaze.""}</p>
               </div>
             </div>
           </div>
