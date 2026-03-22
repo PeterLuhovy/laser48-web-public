@@ -152,26 +152,15 @@
   margin-bottom: var(--space-xl);
 }
 
-.mapPlaceholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-  padding: var(--space-3xl) var(--space-xl);
-  background: var(--color-bg-light);
-  border: 2px dashed var(--color-silver);
+.mapLink {
+  display: block;
   border-radius: var(--radius-md);
-  text-align: center;
-  color: var(--color-dark);
+  overflow: hidden;
+  transition: opacity var(--transition);
 }
 
-.mapPlaceholder svg {
-  color: var(--color-primary);
-}
-
-.mapPlaceholder p {
-  font-size: var(--text-lg);
+.mapLink:hover {
+  opacity: 0.9;
 }
 
 .mapButton {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -199,10 +200,21 @@ export default function KontaktPage() {
         <div className="container">
           <SectionHeading title="Kde nás nájdeš" center />
           <div className={styles.mapStatic}>
-            <div className={styles.mapPlaceholder}>
-              <MapPin size={48} />
-              <p><strong>LASER48</strong></p>
-              <p>Nosice 256, 020 01 Púchov</p>
+            <a
+              href="https://www.google.com/maps/search/Nosice+256,+020+01+Púchov,+Slovensko"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapLink}
+            >
+              <Image
+                src="/images/mapa.png"
+                alt="LASER48 — Nosice 256, 020 01 Púchov, Slovensko"
+                width={1200}
+                height={600}
+                style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)" }}
+              />
+            </a>
+            <div style={{ textAlign: "center", marginTop: "var(--space-md)" }}>
               <a
                 href="https://www.google.com/maps/search/Nosice+256,+020+01+Púchov,+Slovensko"
                 target="_blank"

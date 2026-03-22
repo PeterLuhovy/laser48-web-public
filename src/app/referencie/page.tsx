@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {
   Bot, Car, Wrench, Lightbulb, Building, Megaphone,
+  AlertTriangle, CheckCircle,
 } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -37,8 +38,98 @@ export default function ReferenciePage() {
         small
       />
 
-      {/* Citáty */}
+      {/* Pain pointy z prieskumu */}
       <section className="section">
+        <div className="container">
+          <SectionHeading
+            title="S čím sa stretávate u iných dodávateľov?"
+            subtitle="Prieskum medzi 500+ firmami ukázal 5 najčastejších problémov pri objednávaní laserového rezania."
+            center
+          />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "var(--space-xl)", marginBottom: "var(--space-3xl)" }}>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Netransparentné ceny</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Nikdy neviem, koľko to bude stáť. Cenu sa dozviem až po týždni čakania na ponuku."</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Vysoké minimálne objednávky</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Potrebujem 5 kusov, ale chcú minimum 50. Musím objednať viac, než potrebujem."</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Nespoľahlivé dodacie lehoty</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Sľubujú týždeň, dodajú za mesiac. Zastavia mi vlastnú výrobu."</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Slabá komunikácia</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Neberú telefón, neodpovedajú na emaily. Neviem čo sa deje s mojou objednávkou."</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <AlertTriangle size={24} color="#dc3545" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Otrepy, okuje, zlé hrany</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>„Diely prídu s otrepmi a okujami. Musím ich dodatočne opracovávať — stojí to čas a peniaze."</p>
+              </div>
+            </div>
+          </div>
+
+          <SectionHeading
+            title="Ako to riešime my?"
+            center
+          />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "var(--space-xl)" }}>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <CheckCircle size={24} color="#28a745" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Ponuka do 24 hodín</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>Pošli výkres — presná cena vrátane materiálu, práce a DPH do 24 hodín. Žiadne čakanie.</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <CheckCircle size={24} color="#28a745" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Od 1 kusu</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>Žiadne minimálne objednávky. Potrebuješ 1 kus? 5 kusov? Žiadny problém.</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <CheckCircle size={24} color="#28a745" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>7 dní alebo 20% zľava</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>Ak nestihneme, dostaneš 20% automaticky. Za 2 roky sme nestihli v 2% prípadov.</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <CheckCircle size={24} color="#28a745" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Reálni ľudia, nie automaty</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>Zdvíhame telefón. Odpovedáme na emaily. Informujeme o priebehu objednávky.</p>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <CheckCircle size={24} color="#28a745" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Čisté diely, pripravené na použitie</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>Každý diel kontrolujeme. Otrepy a okuje? Odstránené pred odoslaním.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Citáty */}
+      <section className="section-alt">
         <div className="container">
           <SectionHeading title="Prečo nás zákazníci odporúčajú?" center />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "var(--space-xl)" }}>

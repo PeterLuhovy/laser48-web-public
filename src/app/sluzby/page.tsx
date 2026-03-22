@@ -102,7 +102,7 @@ export default function SluzbyPage() {
               </h3>
               <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
                 <li>Kontrola každého kusu pred odoslaním</li>
-                <li>Okuje a otrepy odstraňujeme ručne</li>
+                <li>Otrepy a okuje? Odstránené pred odoslaním</li>
                 <li>Čisté diely pripravené na použitie</li>
                 <li>Aj pri 5 000 kusoch — každý skontrolovaný</li>
               </ul>

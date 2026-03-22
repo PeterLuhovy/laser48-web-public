@@ -13,15 +13,97 @@ import {
 import HeroSection from "@/components/HeroSection";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
+import JsonLd from "@/components/JsonLd";
 import Card from "@/components/Card";
 import StatCounter from "@/components/StatCounter";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
 import styles from "./page.module.css";
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.laser48.sk/#organization",
+  name: "LASER48",
+  description:
+    "Laserové rezanie kovov do 7 dní. Nerezová oceľ 0.5–6mm, čierna oceľ 0.55–8mm, hliník 1.5–4mm. Cenová ponuka do 24 hodín. Express 48h možný.",
+  url: "https://www.laser48.sk",
+  logo: "https://www.laser48.sk/images/logo-light.png",
+  image: "https://www.laser48.sk/images/hero-laser.png",
+  telephone: "+421911132485",
+  email: "laser@laser48.sk",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Nosice 256",
+    addressLocality: "Púchov",
+    postalCode: "020 01",
+    addressCountry: "SK",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 49.117,
+    longitude: 18.324,
+  },
+  areaServed: [
+    { "@type": "Country", name: "Slovakia" },
+    { "@type": "Country", name: "Czech Republic" },
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+  ],
+  priceRange: "$$",
+  currenciesAccepted: "EUR",
+  paymentAccepted: "Bank Transfer, Invoice, Card",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Laserové rezanie kovov",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie nerezovej ocele",
+          description:
+            "CO₂ laser rezanie nerezovej ocele AISI304/316, hrúbka 0.5–6mm, max rozmer 1540×750mm, presnosť ±0.1mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie čiernej ocele",
+          description:
+            "CO₂ laser rezanie čiernej ocele DC01/S235/C45, hrúbka 0.55–8mm, max rozmer 1540×750mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie hliníka",
+          description:
+            "CO₂ laser rezanie hliníka AlMg3, hrúbka 1.5–4mm, max rozmer 1540×750mm.",
+        },
+      },
+    ],
+  },
+  parentOrganization: {
+    "@type": "Organization",
+    name: "LRA GROUP",
+    url: "https://lra.group",
+  },
+};
+
 export default function Home() {
   return (
     <>
+      <JsonLd data={localBusinessJsonLd} />
+
       {/* HERO */}
       <HeroSection
         title="Laserové rezanie do 7 dní. Garantované."
@@ -84,8 +166,8 @@ export default function Home() {
             </Card>
             <Card icon={ShieldCheck} title="Kontrola každého kusu">
               <p>
-                Každý diel kontrolujeme. Okuje a otrepy odstraňujeme ručne.
-                Dostaneš čisté diely, pripravené na použitie.
+                Každý diel kontrolujeme pred odoslaním. Otrepy a okuje?
+                Odstránené. Dostaneš čisté diely pripravené na použitie.
               </p>
             </Card>
           </div>
@@ -128,7 +210,7 @@ export default function Home() {
               </div>
               <div className={styles.comparisonLabel}>
                 <span className={styles.labelGood}>✓ LASER48</span>
-                <p>Každý kus skontrolovaný. Okuje a otrepy odstránené ručne. Pripravené na použitie.</p>
+                <p>Každý kus skontrolovaný. Otrepy a okuje odstránené. Diely pripravené na okamžité použitie.</p>
               </div>
             </div>
           </div>

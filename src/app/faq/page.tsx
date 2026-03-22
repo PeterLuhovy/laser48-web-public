@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "FAQ - Často kladené otázky",
@@ -76,8 +77,25 @@ const categories = [
 ];
 
 export default function FAQPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: categories.flatMap((cat) =>
+      cat.items.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      }))
+    ),
+  };
+
   return (
     <>
+      <JsonLd data={faqJsonLd} />
+
       <HeroSection
         title="Často kladené otázky (FAQ)"
         perex="Máš otázku? Možno sme na ňu už odpovedali nižšie."
