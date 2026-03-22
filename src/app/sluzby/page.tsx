@@ -132,7 +132,7 @@ export default function SluzbyPage() {
               <h3 style={{ marginBottom: "var(--space-sm)" }}>2. Telefón</h3>
               <p style={{ color: "var(--color-text-secondary)", marginBottom: "var(--space-md)" }}>
                 Zavolaj na <a href="tel:+421911132485">+421 911 132 485</a>.
-                Po–Pia: 8:00–17:00.
+                Po–Pia: 7:00–19:00, So: 7:00–13:00.
               </p>
               <Button href="tel:+421911132485" variant="secondary" size="md">Zavolaj →</Button>
             </div>

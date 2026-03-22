@@ -65,7 +65,11 @@ export default function Footer() {
             © {new Date().getFullYear()} LASER48. Všetky práva vyhradené.
           </p>
           <p className={styles.group}>
-            Súčasť{" "}
+            Divízia{" "}
+            <a href="https://www.luhovy-industries.sk" target="_blank" rel="noopener noreferrer">
+              Luhovy Industries
+            </a>
+            {" | Člen "}
             <a href="https://lra.group" target="_blank" rel="noopener noreferrer">
               LRA GROUP
             </a>

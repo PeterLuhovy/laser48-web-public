@@ -52,8 +52,14 @@ const localBusinessJsonLd = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
+      opens: "07:00",
+      closes: "19:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "07:00",
+      closes: "13:00",
     },
   ],
   priceRange: "$$",
@@ -94,8 +100,13 @@ const localBusinessJsonLd = {
   },
   parentOrganization: {
     "@type": "Organization",
-    name: "LRA GROUP",
-    url: "https://lra.group",
+    name: "Luhovy Industries",
+    url: "https://www.luhovy-industries.sk",
+    memberOf: {
+      "@type": "Organization",
+      name: "LRA GROUP",
+      url: "https://lra.group",
+    },
   },
 };
 

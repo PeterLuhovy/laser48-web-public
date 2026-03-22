@@ -29,7 +29,7 @@ export default function KontaktPage() {
               <Phone size={32} />
               <h3>Telefón</h3>
               <a href="tel:+421911132485">+421 911 132 485</a>
-              <p>Po–Pia: 8:00–17:00</p>
+              <p>Po–Pia: 7:00–19:00, So: 7:00–13:00</p>
             </div>
             <div className={styles.contactBlock}>
               <Mail size={32} />
@@ -151,18 +151,18 @@ export default function KontaktPage() {
               <table className={styles.hoursTable}>
                 <tbody>
                   {[
-                    ["Pondelok", "8:00–17:00"],
-                    ["Utorok", "8:00–17:00"],
-                    ["Streda", "8:00–17:00"],
-                    ["Štvrtok", "8:00–17:00"],
-                    ["Piatok", "8:00–17:00"],
+                    ["Pondelok", "7:00–19:00"],
+                    ["Utorok", "7:00–19:00"],
+                    ["Streda", "7:00–19:00"],
+                    ["Štvrtok", "7:00–19:00"],
+                    ["Piatok", "7:00–19:00"],
                   ].map(([day, hours]) => (
                     <tr key={day}>
                       <td>{day}</td>
                       <td>{hours}</td>
                     </tr>
                   ))}
-                  {[["Sobota", "Zatvorené"], ["Nedeľa", "Zatvorené"]].map(([day, hours]) => (
+                  {[["Sobota", "7:00–13:00"], ["Nedeľa", "Zatvorené"]].map(([day, hours]) => (
                     <tr key={day}>
                       <td>{day}</td>
                       <td className={styles.closed}>{hours}</td>
@@ -186,7 +186,7 @@ export default function KontaktPage() {
               <div style={{ marginTop: "var(--space-xl)" }}>
                 <h3>Kto sme?</h3>
                 <p style={{ color: "var(--color-text-secondary)", fontSize: "var(--text-sm)", marginTop: "var(--space-sm)" }}>
-                  LASER48 je súčasťou LRA GROUP (Luhovy Research & Aerospace Group).
+                  LASER48 je divízia spoločnosti Luhovy Industries a člen skupiny LRA GROUP.
                   Špecializujeme sa na rýchle laserové rezanie kovov pre malé a stredné firmy.
                 </p>
               </div>
