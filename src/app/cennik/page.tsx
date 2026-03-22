@@ -140,7 +140,7 @@ export default function CennikPage() {
             </thead>
             <tbody>
               {[
-                ["0.55 mm", "DX51D+Z200NAC (zinkovaný)", "1540×750mm"],
+                ["0.5 mm", "DX51D+Z200NAC (zinkovaný)", "1540×750mm"],
                 ["1 mm", "DC01", "1540×750mm"],
                 ["1.5 mm", "DC01", "1540×750mm"],
                 ["2 mm", "DC01", "1540×750mm"],

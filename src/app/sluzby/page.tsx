@@ -17,7 +17,7 @@ const faqItems = [
   {
     question: "Ktoré materiály režete?",
     answer:
-      "Nerezová oceľ (0.5–6mm), čierna oceľ (0.55–8mm), hliník (1.5–4mm).",
+      "Nerezová oceľ (0.5–6mm), čierna oceľ (0.5–8mm), hliník (0.5–4mm).",
   },
   {
     question: "Aký je maximálny rozmer?",
@@ -60,8 +60,9 @@ export default function SluzbyPage() {
               </h3>
               <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
                 <li>Nerezová oceľ (hrúbka 0.5 – 6 mm)</li>
-                <li>Čierna oceľ (hrúbka 0.55 – 8 mm)</li>
-                <li>Hliník (hrúbka 1.5 – 4 mm)</li>
+                <li>Čierna oceľ (hrúbka 0.5 – 8 mm)</li>
+                <li>Pozinkovaná oceľ (hrúbka 0.5 – 3 mm)</li>
+                <li>Hliník (hrúbka 0.5 – 4 mm)</li>
               </ul>
             </div>
 

@@ -11,9 +11,9 @@ B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
 
 **Materiály na sklade:**
 - Nerezová oceľ AISI304/316: hrúbka 0.5–6 mm
-- Čierna oceľ DC01/S235/C45: hrúbka 0.55–8 mm
+- Čierna oceľ DC01/S235/C45: hrúbka 0.5–8 mm
 - Pozinkovaná oceľ DX51D: hrúbka 0.5–3 mm
-- Hliník AlMg3: hrúbka 1.5–4 mm
+- Hliník AlMg3: hrúbka 0.5–4 mm
 
 **Parametre:**
 - Max rozmer dielu: 1540 × 750 mm

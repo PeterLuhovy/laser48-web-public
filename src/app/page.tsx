@@ -27,7 +27,7 @@ const localBusinessJsonLd = {
   "@id": "https://www.laser48.sk/#organization",
   name: "LASER48",
   description:
-    "Laserové rezanie kovov do 7 dní. Nerezová oceľ 0.5–6mm, čierna oceľ 0.55–8mm, pozinkovaná oceľ 0.5–3mm, hliník 1.5–4mm. Cenová ponuka do 24 hodín. Express 48h možný.",
+    "Laserové rezanie kovov do 7 dní. Nerezová oceľ 0.5–6mm, čierna oceľ 0.5–8mm, pozinkovaná oceľ 0.5–3mm, hliník 0.5–4mm. Cenová ponuka do 24 hodín. Express 48h možný.",
   url: "https://www.laser48.sk",
   logo: "https://www.laser48.sk/images/logo-light.png",
   image: "https://www.laser48.sk/images/hero-laser.png",
@@ -85,7 +85,7 @@ const localBusinessJsonLd = {
           "@type": "Service",
           name: "Laserové rezanie čiernej ocele",
           description:
-            "CO₂ laser rezanie čiernej ocele DC01/S235/C45, hrúbka 0.55–8mm, max rozmer 1540×750mm.",
+            "CO₂ laser rezanie čiernej ocele DC01/S235/C45, hrúbka 0.5–8mm, max rozmer 1540×750mm.",
         },
       },
       {
@@ -103,7 +103,7 @@ const localBusinessJsonLd = {
           "@type": "Service",
           name: "Laserové rezanie hliníka",
           description:
-            "CO₂ laser rezanie hliníka AlMg3, hrúbka 1.5–4mm, max rozmer 1540×750mm.",
+            "CO₂ laser rezanie hliníka AlMg3, hrúbka 0.5–4mm, max rozmer 1540×750mm.",
         },
       },
     ],
@@ -248,7 +248,7 @@ export default function Home() {
         <div className="container">
           <SectionHeading
             title="Čo režeme?"
-            subtitle="Laserové rezanie kovov. Nerezová oceľ, čierna oceľ, pozinkovaná oceľ, hliník."
+            subtitle="Laserové rezanie kovov. Nerezová oceľ, čierna oceľ, pozinkovaná oceľ a hliník."
             center
           />
           <div className={styles.materials}>
@@ -281,24 +281,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Čierna oceľ</h3>
-                <p>Hrúbka: 0.55 – 8 mm</p>
-                <p>Max rozmer: 1540 × 750 mm</p>
-              </div>
-            </div>
-
-            <div className={styles.materialCard}>
-              <div className={styles.materialImg}>
-                <Image
-                  src="/images/mat-hlinik.jpg"
-                  alt="Hliník — laserové diely"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className={styles.materialBody}>
-                <h3>Hliník</h3>
-                <p>Hrúbka: 1.5 – 4 mm</p>
+                <p>Hrúbka: 0.5 – 8 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
             </div>
@@ -316,6 +299,23 @@ export default function Home() {
               <div className={styles.materialBody}>
                 <h3>Pozinkovaná oceľ</h3>
                 <p>Hrúbka: 0.5 – 3 mm</p>
+                <p>Max rozmer: 1540 × 750 mm</p>
+              </div>
+            </div>
+
+            <div className={styles.materialCard}>
+              <div className={styles.materialImg}>
+                <Image
+                  src="/images/mat-hlinik.jpg"
+                  alt="Hliník — laserové diely"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </div>
+              <div className={styles.materialBody}>
+                <h3>Hliník</h3>
+                <p>Hrúbka: 0.5 – 4 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
             </div>
