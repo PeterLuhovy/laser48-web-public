@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
+import { PHONE, PHONE_TEL, COMPANY } from "@/config";
 import styles from "./Header.module.css";
 
 const navItems = [
@@ -25,7 +26,7 @@ export default function Header() {
           <Link href="/" className={styles.logo}>
             <Image
               src="/images/logo-light.png"
-              alt="LASER48"
+              alt={COMPANY}
               width={160}
               height={40}
               className={styles.logoImg}
@@ -39,14 +40,14 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/kontakt" className={styles.cta}>
+            <Link href="/kontakt#formular" className={styles.cta}>
               Pošli dopyt
             </Link>
           </nav>
 
-          <a href="tel:+421911132485" className={styles.phoneMobile}>
+          <a href={PHONE_TEL} className={styles.phoneMobile}>
             <Phone size={16} />
-            +421 911 132 485
+            {PHONE}
           </a>
 
           <button

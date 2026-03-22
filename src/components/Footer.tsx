@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { PHONE, PHONE_TEL, EMAIL, EMAIL_MAILTO, ADDRESS, COMPANY, PARENT_COMPANY, PARENT_URL, GROUP, GROUP_URL } from "@/config";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -11,14 +12,14 @@ export default function Footer() {
           <div className={styles.brand}>
             <Image
               src="/images/logo-dark.png"
-              alt="LASER48"
+              alt={COMPANY}
               width={140}
               height={36}
               className={styles.logoImg}
             />
             <p>
               Laserové rezanie kovov do 7 dní. Garantované.
-              Nerezová oceľ, čierna oceľ, hliník.
+              Nerezová oceľ, čierna oceľ, pozinkovaná oceľ, hliník.
             </p>
           </div>
 
@@ -47,31 +48,31 @@ export default function Footer() {
             <h4 className={styles.heading}>Kontakt</h4>
             <div className={styles.contactItem}>
               <Phone size={14} />
-              <a href="tel:+421911132485">+421 911 132 485</a>
+              <a href={PHONE_TEL}>{PHONE}</a>
             </div>
             <div className={styles.contactItem}>
               <Mail size={14} />
-              <a href="mailto:laser@laser48.sk">laser@laser48.sk</a>
+              <a href={EMAIL_MAILTO}>{EMAIL}</a>
             </div>
             <div className={styles.contactItem}>
               <MapPin size={14} />
-              <span>Nosice 256, 020 01 Púchov</span>
+              <span>{ADDRESS}</span>
             </div>
           </div>
         </div>
 
         <div className={styles.bottom}>
           <p className={styles.copy}>
-            © {new Date().getFullYear()} LASER48. Všetky práva vyhradené.
+            © {new Date().getFullYear()} {COMPANY}. Všetky práva vyhradené.
           </p>
           <p className={styles.group}>
             Divízia{" "}
-            <a href="https://www.luhovy-industries.sk" target="_blank" rel="noopener noreferrer">
-              Luhovy Industries
+            <a href={PARENT_URL} target="_blank" rel="noopener noreferrer">
+              {PARENT_COMPANY}
             </a>
             {" | Člen "}
-            <a href="https://lra.group" target="_blank" rel="noopener noreferrer">
-              LRA GROUP
+            <a href={GROUP_URL} target="_blank" rel="noopener noreferrer">
+              {GROUP}
             </a>
           </p>
         </div>

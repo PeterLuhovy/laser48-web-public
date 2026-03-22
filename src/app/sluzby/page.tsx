@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CheckCircle } from "lucide-react";
+import { PHONE, PHONE_TEL, EMAIL, EMAIL_MAILTO, HOURS_SHORT } from "@/config";
 import HeroSection from "@/components/HeroSection";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
@@ -110,7 +111,7 @@ export default function SluzbyPage() {
           </div>
 
           <div style={{ marginTop: "var(--space-2xl)", textAlign: "center" }}>
-            <Button href="/kontakt">Pošli dopyt →</Button>
+            <Button href="/kontakt#formular">Pošli dopyt →</Button>
           </div>
         </div>
       </section>
@@ -123,7 +124,7 @@ export default function SluzbyPage() {
             <div style={{ textAlign: "center" }}>
               <h3 style={{ marginBottom: "var(--space-sm)" }}>1. Email</h3>
               <p style={{ color: "var(--color-text-secondary)", marginBottom: "var(--space-md)" }}>
-                Pošli výkres na <a href="mailto:laser@laser48.sk">laser@laser48.sk</a>.
+                Pošli výkres na <a href={EMAIL_MAILTO}>{EMAIL}</a>.
                 Odpovieme do 24 hodín.
               </p>
               <Button href="/kontakt" size="md">Pošli dopyt →</Button>
@@ -131,10 +132,10 @@ export default function SluzbyPage() {
             <div style={{ textAlign: "center" }}>
               <h3 style={{ marginBottom: "var(--space-sm)" }}>2. Telefón</h3>
               <p style={{ color: "var(--color-text-secondary)", marginBottom: "var(--space-md)" }}>
-                Zavolaj na <a href="tel:+421911132485">+421 911 132 485</a>.
-                Po–Pia: 7:00–19:00, So: 7:00–13:00.
+                Zavolaj na <a href={PHONE_TEL}>{PHONE}</a>.
+                {HOURS_SHORT}.
               </p>
-              <Button href="tel:+421911132485" variant="secondary" size="md">Zavolaj →</Button>
+              <Button href={PHONE_TEL} variant="secondary" size="md">Zavolaj →</Button>
             </div>
           </div>
         </div>

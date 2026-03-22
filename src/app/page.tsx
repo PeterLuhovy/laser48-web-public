@@ -8,11 +8,13 @@ import {
   Phone,
   CheckCircle,
   ShieldCheck,
+  HelpCircle,
 } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import JsonLd from "@/components/JsonLd";
+import PhoneButton from "@/components/PhoneButton";
 import Card from "@/components/Card";
 import StatCounter from "@/components/StatCounter";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -25,7 +27,7 @@ const localBusinessJsonLd = {
   "@id": "https://www.laser48.sk/#organization",
   name: "LASER48",
   description:
-    "Laserové rezanie kovov do 7 dní. Nerezová oceľ 0.5–6mm, čierna oceľ 0.55–8mm, hliník 1.5–4mm. Cenová ponuka do 24 hodín. Express 48h možný.",
+    "Laserové rezanie kovov do 7 dní. Nerezová oceľ 0.5–6mm, čierna oceľ 0.55–8mm, pozinkovaná oceľ 0.5–3mm, hliník 1.5–4mm. Cenová ponuka do 24 hodín. Express 48h možný.",
   url: "https://www.laser48.sk",
   logo: "https://www.laser48.sk/images/logo-light.png",
   image: "https://www.laser48.sk/images/hero-laser.png",
@@ -90,6 +92,15 @@ const localBusinessJsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
+          name: "Laserové rezanie pozinkovanej ocele",
+          description:
+            "CO₂ laser rezanie pozinkovanej ocele DX51D, hrúbka 0.5–3mm, max rozmer 1540×750mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
           name: "Laserové rezanie hliníka",
           description:
             "CO₂ laser rezanie hliníka AlMg3, hrúbka 1.5–4mm, max rozmer 1540×750mm.",
@@ -120,10 +131,8 @@ export default function Home() {
         perex="Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Potrebuješ rýchlejšie? Express 48 hodín. Potrebuješ to zajtra? Aj to vieme. Zavolaj a dohodneme sa."
         bgImage="/images/hero-laser.png"
       >
-        <Button href="/kontakt">Pošli dopyt →</Button>
-        <Button href="tel:+421911132485" variant="secondaryLight">
-          <Phone size={16} /> Zavolaj nám
-        </Button>
+        <Button href="/kontakt#formular">Pošli dopyt →</Button>
+        <PhoneButton />
       </HeroSection>
 
       {/* AKO TO FUNGUJE - 3 kroky */}
@@ -131,8 +140,8 @@ export default function Home() {
         <div className="container">
           <SectionHeading title="Ako to funguje?" center />
           <div className={styles.steps}>
-            <Card icon={Upload} step="Krok 1" title="Pošli výkres">
-              <p>Pošli DXF, DWG alebo PDF výkres. Vyber materiál a hrúbku.</p>
+            <Card icon={Upload} step="Krok 1" title="Pošli výkres" href="/kontakt#formular">
+              <p>Pošli DXF, DWG alebo PDF výkres. Nevieš aký materiál alebo hrúbku? Nevadí — poradíme ti.</p>
             </Card>
             <Card icon={Euro} step="Krok 2" title="Ponuka do 24 hodín">
               <p>Spočítame cenu a pošleme ti ponuku. Odpovieme do 24 hodín.</p>
@@ -178,6 +187,13 @@ export default function Home() {
               <p>
                 Každý diel kontrolujeme pred odoslaním. Otrepy a okuje?
                 Odstránené. Dostaneš čisté diely pripravené na použitie.
+              </p>
+            </Card>
+            <Card icon={HelpCircle} title="Poradenstvo">
+              <p>
+                Nevieš aký materiál? Povieme ti čo je na sklade a čo sa hodí.
+                Nevieš akú hrúbku? Navrhneme podľa použitia.
+                Chceš najlacnejšiu variantu? Povieme ktorá to je.
               </p>
             </Card>
           </div>
@@ -232,15 +248,15 @@ export default function Home() {
         <div className="container">
           <SectionHeading
             title="Čo režeme?"
-            subtitle="Laserové rezanie kovov. Nerezová oceľ, čierna oceľ, hliník."
+            subtitle="Laserové rezanie kovov. Nerezová oceľ, čierna oceľ, pozinkovaná oceľ, hliník."
             center
           />
           <div className={styles.materials}>
             <div className={styles.materialCard}>
               <div className={styles.materialImg}>
                 <Image
-                  src="/images/rezne-hrany.jpg"
-                  alt="Nerezová oceľ"
+                  src="/images/mat-nerez.jpg"
+                  alt="Nerezová oceľ — laserové diely"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -256,8 +272,8 @@ export default function Home() {
             <div className={styles.materialCard}>
               <div className={styles.materialImg}>
                 <Image
-                  src="/images/diel-nerez.jpg"
-                  alt="Čierna oceľ"
+                  src="/images/mat-cierna-ocel.jpg"
+                  alt="Čierna oceľ — laserové diely"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -273,8 +289,8 @@ export default function Home() {
             <div className={styles.materialCard}>
               <div className={styles.materialImg}>
                 <Image
-                  src="/images/stroj-byvention.jpg"
-                  alt="Hliník"
+                  src="/images/mat-hlinik.jpg"
+                  alt="Hliník — laserové diely"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -286,10 +302,28 @@ export default function Home() {
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
             </div>
+
+            <div className={styles.materialCard}>
+              <div className={styles.materialImg}>
+                <Image
+                  src="/images/mat-pozinkovana.jpg"
+                  alt="Pozinkovaná oceľ — laserové diely"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </div>
+              <div className={styles.materialBody}>
+                <h3>Pozinkovaná oceľ</h3>
+                <p>Hrúbka: 0.5 – 3 mm</p>
+                <p>Max rozmer: 1540 × 750 mm</p>
+              </div>
+            </div>
           </div>
           <p className={styles.materialNote}>
-            Potrebuješ iný materiál alebo veľkosť?{" "}
-            <Link href="/kontakt">Kontaktuj nás →</Link>
+            Potrebuješ iný materiál, väčší rozmer alebo hrubší plech?
+            Zabezpečíme v kooperácii — nemusíš riešiť viacero dodávateľov.{" "}
+            <Link href="/kontakt#formular">Kontaktuj nás →</Link>
           </p>
         </div>
       </section>

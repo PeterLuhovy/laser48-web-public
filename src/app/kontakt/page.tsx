@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { PHONE, PHONE_TEL, EMAIL, EMAIL_MAILTO, ADDRESS, HOURS_SHORT, COMPANY, PARENT_COMPANY } from "@/config";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -28,32 +29,32 @@ export default function KontaktPage() {
             <div className={styles.contactBlock}>
               <Phone size={32} />
               <h3>Telefón</h3>
-              <a href="tel:+421911132485">+421 911 132 485</a>
-              <p>Po–Pia: 7:00–19:00, So: 7:00–13:00</p>
+              <a href={PHONE_TEL}>{PHONE}</a>
+              <p>{HOURS_SHORT}</p>
             </div>
             <div className={styles.contactBlock}>
               <Mail size={32} />
               <h3>Email</h3>
-              <a href="mailto:laser@laser48.sk">laser@laser48.sk</a>
+              <a href={EMAIL_MAILTO}>{EMAIL}</a>
               <p>Odpovieme do 24 hodín</p>
             </div>
             <div className={styles.contactBlock}>
               <MapPin size={32} />
               <h3>Adresa</h3>
               <p style={{ fontWeight: 600, fontSize: "var(--text-lg)", color: "var(--color-black)" }}>
-                Nosice 256, Púchov
+                {ADDRESS}
               </p>
               <p>Osobný odber po dohode</p>
             </div>
           </div>
 
           {/* Formulár + Info */}
-          <div className={styles.formSection}>
+          <div id="formular" className={styles.formSection}>
             <div>
               <SectionHeading title="Pošli nám správu" subtitle="Vyplň formulár a odpovieme do 24 hodín." />
               <form
                 className={styles.form}
-                action="https://formsubmit.co/laser@laser48.sk"
+                action={`https://formsubmit.co/${EMAIL}`}
                 method="POST"
                 encType="multipart/form-data"
               >
@@ -119,12 +120,13 @@ export default function KontaktPage() {
                 </div>
 
                 <div className={styles.field}>
-                  <label htmlFor="attachment">Nahrať výkres (DXF, DWG, PDF, max 10MB)</label>
+                  <label htmlFor="attachment">Nahrať výkresy (DXF, DWG, PDF — môžeš vybrať viac súborov, max 10MB spolu)</label>
                   <input
                     type="file"
                     id="attachment"
                     name="attachment"
                     accept=".dxf,.dwg,.pdf,.jpg,.jpeg,.png,.zip"
+                    multiple
                   />
                 </div>
 
@@ -141,7 +143,7 @@ export default function KontaktPage() {
 
                 <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)" }}>
                   Odpovieme do 24 hodín v pracovné dni. Urgentné? Radšej zavolaj:{" "}
-                  <a href="tel:+421911132485">+421 911 132 485</a>
+                  <a href={PHONE_TEL}>{PHONE}</a>
                 </p>
               </form>
             </div>
@@ -186,7 +188,7 @@ export default function KontaktPage() {
               <div style={{ marginTop: "var(--space-xl)" }}>
                 <h3>Kto sme?</h3>
                 <p style={{ color: "var(--color-text-secondary)", fontSize: "var(--text-sm)", marginTop: "var(--space-sm)" }}>
-                  LASER48 je divízia spoločnosti Luhovy Industries a člen skupiny LRA GROUP.
+                  {COMPANY} je divízia spoločnosti {PARENT_COMPANY} a člen skupiny LRA GROUP.
                   Špecializujeme sa na rýchle laserové rezanie kovov pre malé a stredné firmy.
                 </p>
               </div>

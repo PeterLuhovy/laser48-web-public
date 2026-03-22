@@ -27,6 +27,16 @@
   line-height: 1.6;
 }
 
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cardLink:hover {
+  border-color: var(--color-primary);
+}
+
 .step {
   font-family: var(--font-sans);
   font-size: var(--text-xs);

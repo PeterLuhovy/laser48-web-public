@@ -90,7 +90,7 @@ export default function CennikPage() {
             subtitle="Pošli nám výkres a my ti pošleme cenovú ponuku vrátane materiálu, práce a DPH. Transparentne a bez záväzkov."
             center
           />
-          <Button href="/kontakt" size="lg">Pošli dopyt →</Button>
+          <Button href="/kontakt#formular" size="lg">Pošli dopyt →</Button>
           <div style={{ display: "flex", justifyContent: "center", gap: "var(--space-xl)", marginTop: "var(--space-lg)", flexWrap: "wrap" }}>
             <span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>✓ Odpovieme do 24 hodín</span>
             <span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>✓ Vrátane materiálu a DPH</span>

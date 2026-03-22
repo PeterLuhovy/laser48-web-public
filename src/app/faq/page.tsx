@@ -46,9 +46,9 @@ const categories = [
   {
     title: "Materiály a technické",
     items: [
-      { question: "Aké materiály režete?", answer: "Nerezová oceľ AISI304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.55–8mm), hliník AlMg3 (1.5–4mm). Max rozmer dielu: 1540 × 750 mm." },
-      { question: "Režete aj iné materiály?", answer: "Momentálne nie. Chceme robiť 3 materiály perfektne, nie 10 priemerne." },
-      { question: "Aký je maximálny rozmer dielu?", answer: "1540 × 750 mm. Väčší diel? Výrobu zabezpečujeme v kooperácii (14–28 dní)." },
+      { question: "Aké materiály režete?", answer: "Nerezová oceľ AISI304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.55–8mm), pozinkovaná oceľ DX51D (0.5–3mm), hliník AlMg3 (1.5–4mm). Max rozmer dielu: 1540 × 750 mm." },
+      { question: "Režete aj iné materiály?", answer: "Štandardne nie, ale zabezpečíme v kooperácii. Ak máš 10 dielov a z nich 8 režeme my a 2 sú mimo náš rozsah — nemusíš riešiť iného dodávateľa. Vyrobíme všetko, akurát pri kooperácii nevieme garantovať 7-dňový termín." },
+      { question: "Aký je maximálny rozmer dielu?", answer: "1540 × 750 mm. Väčší diel? Zabezpečíme v kooperácii. Nemusíš hľadať iného dodávateľa — pošli nám všetko a my to vyriešime. Pri kooperácii sa dodanie môže natiahnuť na 14–28 dní." },
       { question: "Aká je presnosť?", answer: "Laser samotný: ±0.1 mm. Celkové rozmery dielu: ±0.5 mm bežne. Pre presnejšie tolerancie napíš do poznámky." },
       { question: "Ponúkate aj ohýbanie, zváranie?", answer: "Nie. LASER48 sa špecializuje výhradne na laserové rezanie. Pre ohýbanie alebo zváranie odporúčame osloviť špecializované firmy." },
       { question: "Robíte aj povrchové úpravy?", answer: "Nie priamo my, ale spolupracujeme s partnermi na práškové lakovanie, pozinkovanie a eloxovanie. Jeden kontakt, všetko vybavíme." },
