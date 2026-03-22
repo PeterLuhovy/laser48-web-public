@@ -1,25 +1,180 @@
-* {
+/* ========================================
+   LASER48 Design System
+   Based on LASER48 Dizajnové Štandardy v2.0
+   ======================================== */
+
+/* --- CSS Variables --- */
+:root {
+  /* Primary palette */
+  --color-primary: #1565C0;
+  --color-primary-hover: #1256a3;
+  --color-dark: #0D2461;
+  --color-dark-hover: #0a1d4f;
+  --color-white: #FFFFFF;
+  --color-black: #0D0D12;
+
+  /* Secondary palette */
+  --color-bg-light: #F0F2F5;
+  --color-bg-alt: #f8f9fa;
+  --color-text-secondary: #8A9BB0;
+  --color-silver: #C8D4E0;
+  --color-border: #e2e6ea;
+
+  /* Fonts — Book Antiqua fallback chain */
+  --font-serif: "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+  --font-sans: Calibri, Arial, Helvetica, sans-serif;
+
+  /* Typography scale */
+  --text-h1: clamp(2.25rem, 5vw, 3.5rem);
+  --text-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --text-h3: clamp(1.25rem, 2.5vw, 1.5rem);
+  --text-body: 1rem;
+  --text-lg: 1.125rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.8125rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-section: clamp(3rem, 8vw, 6rem);
+
+  /* Layout */
+  --container-max: 1200px;
+  --header-height: 72px;
+
+  /* Misc */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition: 200ms ease;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  background: #f5f5f5;
+  font-family: var(--font-serif);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-black);
+  background: var(--color-white);
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  max-width: 90vw;
+img, video, svg {
+  display: block;
+  max-width: 100%;
   height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+
+/* --- Utility --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-section) 0;
+}
+
+.section-alt {
+  padding: var(--space-section) 0;
+  background: var(--color-bg-alt);
+}
+
+.section-dark {
+  padding: var(--space-section) 0;
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --- Scroll Animations --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Skip to content (a11y) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-sm) var(--space-md);
+  z-index: 1000;
+  font-family: var(--font-sans);
+}
+
+.skip-link:focus {
+  top: 0;
 }

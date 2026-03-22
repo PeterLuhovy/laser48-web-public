@@ -1,20 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "@/styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin", "latin-ext"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Laser48 | Laserové rezanie",
-  description: "Profesionálne laserové rezanie a CNC spracovanie kovov",
+  title: {
+    default: "LASER48 | Laserové rezanie do 7 dní - Garantované",
+    template: "%s | LASER48",
+  },
+  description:
+    "Laserové rezanie kovov do 7 dní. Cenová ponuka do 24h. Nerezová oceľ, čierna oceľ, hliník. Express 48h možný.",
+  keywords: [
+    "laserové rezanie",
+    "laserové rezanie Slovensko",
+    "laserové rezanie nehrdzavejúca oceľ",
+    "expresné laserové rezanie",
+    "laserové rezanie rýchlo",
+  ],
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/icon-192.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "sk_SK",
+    siteName: "LASER48",
+  },
 };
 
 export default function RootLayout({
@@ -24,8 +38,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sk">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body>
+        <a href="#main" className="skip-link">
+          Preskočiť na obsah
+        </a>
+        <Header />
+        <main id="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,24 @@
+.section {
+  padding: var(--space-section) 0;
+  background: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: var(--space-md);
+}
+
+.text {
+  font-size: var(--text-lg);
+  color: var(--color-silver);
+  max-width: 560px;
+  margin: 0 auto var(--space-xl);
+  line-height: 1.7;
+}
+
+.note {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-md);
+}
