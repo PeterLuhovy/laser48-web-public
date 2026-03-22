@@ -95,6 +95,18 @@ export default function SluzbyPage() {
                 <li>Transparentne, bez skrytých poplatkov</li>
               </ul>
             </div>
+
+            <div>
+              <h3 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "var(--space-md)" }}>
+                <CheckCircle size={20} color="var(--color-primary)" /> Kvalita
+              </h3>
+              <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
+                <li>Kontrola každého kusu pred odoslaním</li>
+                <li>Okuje a otrepy odstraňujeme ručne</li>
+                <li>Čisté diely pripravené na použitie</li>
+                <li>Aj pri 5 000 kusoch — každý skontrolovaný</li>
+              </ul>
+            </div>
           </div>
 
           <div style={{ marginTop: "var(--space-2xl)", textAlign: "center" }}>

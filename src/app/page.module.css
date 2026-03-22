@@ -5,11 +5,63 @@
   gap: var(--space-xl);
 }
 
-/* --- Why LASER48 (2x2 grid) --- */
+/* --- Why LASER48 (3 col grid, 5 items) --- */
 .reasons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
+}
+
+/* --- Quality Comparison --- */
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.comparisonBad,
+.comparisonGood {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+}
+
+.comparisonBad {
+  border-color: #dc3545;
+}
+
+.comparisonGood {
+  border-color: #28a745;
+}
+
+.comparisonImg {
+  position: relative;
+  height: 280px;
+  background: var(--color-bg-light);
+}
+
+.comparisonLabel {
+  padding: var(--space-lg);
+}
+
+.comparisonLabel p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.labelBad {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: #dc3545;
+}
+
+.labelGood {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: #28a745;
 }
 
 /* --- Materials (3 cards) --- */
@@ -89,7 +141,8 @@
 @media (max-width: 768px) {
   .steps,
   .materials,
-  .testimonials {
+  .testimonials,
+  .comparison {
     grid-template-columns: 1fr;
   }
 

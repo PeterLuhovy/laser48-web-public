@@ -7,6 +7,7 @@ import {
   Zap,
   Phone,
   CheckCircle,
+  ShieldCheck,
   ArrowRight,
 } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
@@ -81,12 +82,61 @@ export default function Home() {
                 flexibilní.
               </p>
             </Card>
+            <Card icon={ShieldCheck} title="Kontrola každého kusu">
+              <p>
+                Každý diel kontrolujeme. Okuje a otrepy odstraňujeme ručne.
+                Dostaneš čisté diely, pripravené na použitie.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* KVALITA - Porovnanie */}
+      <section className="section">
+        <div className="container">
+          <SectionHeading
+            title="Prišli vám takéto diely?"
+            subtitle="Od iných dodávateľov? U nás sa to nestane."
+            center
+          />
+          <div className={styles.comparison}>
+            <div className={styles.comparisonBad}>
+              <div className={styles.comparisonImg}>
+                <Image
+                  src="/images/otrepy-konkurencia.webp"
+                  alt="Diel s otrepmi od bežného dodávateľa"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className={styles.comparisonLabel}>
+                <span className={styles.labelBad}>✗ Bežný dodávateľ</span>
+                <p>Otrepy, okuje, špatné hrany. Musíš dodatočne opracovávať.</p>
+              </div>
+            </div>
+            <div className={styles.comparisonGood}>
+              <div className={styles.comparisonImg}>
+                <Image
+                  src="/images/rezne-hrany.jpg"
+                  alt="Čistý diel od LASER48"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className={styles.comparisonLabel}>
+                <span className={styles.labelGood}>✓ LASER48</span>
+                <p>Každý kus skontrolovaný. Okuje a otrepy odstránené ručne. Pripravené na použitie.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ČO REŽEME - Materiály */}
-      <section className="section">
+      <section className="section-alt">
         <div className="container">
           <SectionHeading
             title="Čo režeme?"
