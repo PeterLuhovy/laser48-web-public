@@ -198,14 +198,21 @@ export default function KontaktPage() {
       <section className="section-alt">
         <div className="container">
           <SectionHeading title="Kde nás nájdeš" center />
-          <iframe
-            className={styles.map}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.5!2d18.324!3d49.117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDA3JzAxLjIiTiAxOMKwMTknMjYuNCJF!5e0!3m2!1ssk!2ssk!4v1"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="LASER48 - Nosice 256, Púchov"
-          />
+          <div className={styles.mapStatic}>
+            <div className={styles.mapPlaceholder}>
+              <MapPin size={48} />
+              <p><strong>LASER48</strong></p>
+              <p>Nosice 256, 020 01 Púchov</p>
+              <a
+                href="https://www.google.com/maps/search/Nosice+256,+020+01+Púchov,+Slovensko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mapButton}
+              >
+                Otvoriť v Google Maps →
+              </a>
+            </div>
+          </div>
           <div style={{ marginTop: "var(--space-xl)", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "var(--space-lg)", fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>
             <div>
               <p><strong>Z Bratislavy (cca 170 km, 2h):</strong></p>
