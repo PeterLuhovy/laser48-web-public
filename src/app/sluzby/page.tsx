@@ -50,7 +50,7 @@ export default function SluzbyPage() {
         <div className="container">
           <SectionHeading
             title="Laserové rezanie kovov"
-            subtitle="Nerezová oceľ, čierna oceľ, hliník. Do 7 dní štandard. Do 48 hodín keď treba. Do 24 hodín keď horí."
+            subtitle="Nerezová oceľ, čierna oceľ, hliník. Do 7 dní štandard. Do 48 hodín keď treba. Do 24 hodín keď to horí."
           />
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-xl)" }}>
@@ -59,10 +59,10 @@ export default function SluzbyPage() {
                 <CheckCircle size={20} color="var(--color-primary)" /> Materiály
               </h3>
               <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
-                <li>Nerezová oceľ AISI 304 / 316 (hrúbka 0.5 – 6 mm)</li>
-                <li>Čierna oceľ DC01 / S235 / C45 (hrúbka 0.5 – 8 mm)</li>
-                <li>Pozinkovaná oceľ DX51D (hrúbka 0.5 – 3 mm)</li>
-                <li>Hliník AlMg3 (hrúbka 0.5 – 4 mm)</li>
+                <li><strong>Nerezová oceľ (0.5–6 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AISI 304 / 1.4301 · AISI 316 / 1.4401</span></li>
+                <li><strong>Čierna oceľ (0.5–8 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DC01 / 1.0330 · S235 / 1.0038 · C45 / 1.0503</span></li>
+                <li><strong>Pozinkovaná oceľ (0.5–3 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DX51D / 1.0226</span></li>
+                <li><strong>Hliník (0.5–4 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AlMg3 / 3.3535</span></li>
               </ul>
             </div>
 

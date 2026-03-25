@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: "Kedy začínate vyrábať?",
     answer:
-      "Do 2 hodín od potvrdenia objednávky a platby (v pracovných hodinách).",
+      "Urgentné do 24h — okamžite. Express 48h — zvyčajne na druhý deň. Ostatné podľa kapacity.",
   },
   {
     question: "Môžem zmeniť výkres po objednaní?",
