@@ -120,14 +120,30 @@ export default function KontaktPage() {
                 </div>
 
                 <div className={styles.field}>
-                  <label htmlFor="attachment">Nahrať výkresy (DXF, DWG, PDF — môžeš vybrať viac súborov, max 10MB spolu)</label>
+                  <label htmlFor="attachment1">Nahrať výkresy (DXF, DWG, PDF — max 10MB spolu)</label>
                   <input
                     type="file"
-                    id="attachment"
-                    name="attachment"
+                    id="attachment1"
+                    name="attachment1"
                     accept=".dxf,.dwg,.pdf,.jpg,.jpeg,.png,.zip"
-                    multiple
                   />
+                  <input
+                    type="file"
+                    id="attachment2"
+                    name="attachment2"
+                    accept=".dxf,.dwg,.pdf,.jpg,.jpeg,.png,.zip"
+                    style={{ marginTop: "var(--space-xs)" }}
+                  />
+                  <input
+                    type="file"
+                    id="attachment3"
+                    name="attachment3"
+                    accept=".dxf,.dwg,.pdf,.jpg,.jpeg,.png,.zip"
+                    style={{ marginTop: "var(--space-xs)" }}
+                  />
+                  <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)", marginTop: "var(--space-xs)" }}>
+                    Viac ako 3 súbory? Zbalte ich do ZIP alebo pošlite na laser@laser48.sk
+                  </p>
                 </div>
 
                 <div className={styles.checkbox}>
