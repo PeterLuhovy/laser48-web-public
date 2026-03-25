@@ -28,7 +28,7 @@ const localBusinessJsonLd = {
   "@id": "https://www.laser48.sk/#organization",
   name: "LASER48",
   description:
-    "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Nerezová oceľ 0.5–6mm, čierna oceľ 0.5–8mm, pozinkovaná oceľ 0.5–3mm, hliník 0.5–4mm. Cenová ponuka do 24 hodín.",
+    "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Nerezová oceľ AISI 304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.5–8mm), pozinkovaná oceľ DX51D (0.5–3mm), hliník AlMg3 (0.5–4mm). Cenová ponuka do 24 hodín.",
   url: "https://www.laser48.sk",
   logo: "https://www.laser48.sk/images/logo-light.png",
   image: "https://www.laser48.sk/images/hero-laser.png",
@@ -342,7 +342,7 @@ export default function Home() {
               company="Strojárska výroba"
             />
             <TestimonialCard
-              quote="Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 100 000."
+              quote="Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 1 000."
               name="Zákazníčka"
               company="Zákazková výroba"
             />

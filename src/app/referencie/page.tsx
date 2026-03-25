@@ -27,16 +27,16 @@ const testimonials = [
   { quote: "Keď objednávam inde, chcú presné špecifikácie, materiálové normy, pomaly zloženie plechu. Ja chcem len vyrezať pár dielov. Tu poviem že chcem oceľ, opýtajú sa či stačí bežná, a režeme.", name: "Zákazník", company: "Zákazková výroba" },
   { quote: "Diely do 24 hodín od objednávky. Ako že dnes pošlem a zajtra ráno to mám pripravené? To vážne? Áno, vážne.", name: "Zákazník", company: "Strojárska výroba" },
   { quote: "Ako údržbár pri odstávke nemám pri sebe konštruktéra a diely potrebujem hneď. Načiariam to na kus A4-ky a za pár dní mám hotový diel v ruke.", name: "Údržbár", company: "Priemyselná výroba" },
-  { quote: "Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 500 000.", name: "Zákazníčka", company: "Zákazková výroba" },
-  { quote: "Keď potrebujem rýchlo, volám LASER48. Vždy stihli termín. Vždy. A keď raz bola komplikácia, riešili to okamžite bez výhovoriek.", name: "Zákazník", company: "Prieskum trhu — Automatizácia" },
-  { quote: "Cenová ponuka do 24 hodín. Konečne niekto kto ma nenecháva čakať týždeň na ponuku. Presne čo potrebujem pre prototypovú výrobu.", name: "Zákazník", company: "Prieskum trhu — Prototypová výroba" },
-  { quote: "Museli sme zmeniť výkres kým ešte neboli vo výrobe. Zavolal som, vysvetlil situáciu. Žiadny problém. Flexibilita.", name: "Zákazník", company: "Prieskum trhu — Automotive" },
-  { quote: "Najlepšie na LASER48? Viem na čom som. Ak povedia termín, dodržia ho. Nie 'snáď', 'možno', 'skúsime'. Spoľahlivosť.", name: "Zákazník", company: "Prieskum trhu — Strojárska výroba" },
-  { quote: "Robíme prototypy a diely potrebujeme TERAZ. LASER48 je jediný kto to chápe a dokáže to stihnúť. Už 2 roky spolupracujeme.", name: "Zákazník", company: "Prieskum trhu — Robotika" },
-  { quote: "Keď som prvýkrát objednával, bol som skeptický — 48 hodín? Naozaj? Áno, naozaj. Dodnes spokojný. Už 15. objednávka za sebou.", name: "Zákazník", company: "Prieskum trhu — Strojárstvo (CZ)" },
-  { quote: "Začali sme s malými objednávkami. Teraz objednávame 100+ kusov mesačne. Vedia čo robia, stíhajú termíny, ceny sú konkurencieschopné.", name: "Zákazník", company: "Prieskum trhu — Priemysel" },
-  { quote: "Konkurencia ponúka lacnejšie. Ale LASER48 ponúka istotu. Keď máš projekt za 50 000 EUR a čakáš na jeden diel — záleží či príde včas.", name: "Zákazník", company: "Prieskum trhu — Automatizácia" },
-  { quote: "Potreboval som CAD návrh k náčrtu. Za 2 hodiny som mal výkres, cenu a potvrdenie že to stihnem do piatka. V piatok večer som mal diely.", name: "Zákazník", company: "Prieskum trhu — Zákazková výroba" },
+  { quote: "Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 1 000.", name: "Zákazníčka", company: "Zákazková výroba" },
+  { quote: "Keď potrebujem rýchlo, volám LASER48. Vždy stihli termín. Vždy. A keď raz bola komplikácia, riešili to okamžite bez výhovoriek." },
+  { quote: "Cenová ponuka do 24 hodín. Konečne niekto kto ma nenecháva čakať týždeň na ponuku. Presne čo potrebujem pre prototypovú výrobu." },
+  { quote: "Museli sme zmeniť výkres kým ešte neboli vo výrobe. Zavolal som, vysvetlil situáciu. Žiadny problém. Flexibilita." },
+  { quote: "Najlepšie na LASER48? Viem na čom som. Ak povedia termín, dodržia ho. Nie 'snáď', 'možno', 'skúsime'. Spoľahlivosť." },
+  { quote: "Robíme prototypy a diely potrebujeme TERAZ. LASER48 je jediný kto to chápe a dokáže to stihnúť." },
+  { quote: "Keď som prvýkrát objednával, bol som skeptický — 48 hodín? Naozaj? Áno, naozaj. Dodnes spokojný." },
+  { quote: "Začali sme s malými objednávkami. Teraz objednávame 100+ kusov mesačne. Vedia čo robia, stíhajú termíny, ceny sú konkurencieschopné." },
+  { quote: "Konkurencia ponúka lacnejšie. Ale LASER48 ponúka istotu. Keď máš projekt za 50 000 EUR a čakáš na jeden diel — záleží či príde včas." },
+  { quote: "Potreboval som CAD návrh k náčrtu. Za 2 hodiny som mal výkres, cenu a potvrdenie že to stihnem do piatka. V piatok večer som mal diely." },
 ];
 
 export default function ReferenciePage() {
@@ -117,8 +117,8 @@ export default function ReferenciePage() {
             <div style={{ display: "flex", gap: "var(--space-md)" }}>
               <CheckCircle size={24} color="#28a745" style={{ flexShrink: 0, marginTop: 2 }} />
               <div>
-                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>7 dní alebo 20% zľava</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>Ak nestihneme, dostaneš 20% automaticky. Za 2 roky sme nestihli v 2% prípadov.</p>
+                <h3 style={{ fontSize: "var(--text-body)", marginBottom: "var(--space-xs)" }}>Vždy dodané na čas</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>Keď povieme termín, dodržíme ho. Ak nastane problém — okamžitá komunikácia a riešenie, nie otáľanie.</p>
               </div>
             </div>
             <div style={{ display: "flex", gap: "var(--space-md)" }}>

@@ -123,13 +123,11 @@ export default function AkoToFungujePage() {
           <SectionHeading title="Platba a doprava" center />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-xl)", maxWidth: "900px", margin: "0 auto" }}>
             <Card icon={CreditCard} title="Platba">
-              <p><strong>Nový zákazník:</strong> Predfaktúra, online platba kartou, alebo dobierka.</p>
-              <br />
-              <p><strong>Overený zákazník (po 3+ objednávkach):</strong> Faktúra so splatnosťou 14 dní.</p>
+              <p>Predfaktúra alebo faktúra podľa dohody. Pri urgentných objednávkach platba vopred.</p>
             </Card>
             <Card icon={Truck} title="Doprava">
-              <p><strong>Kuriér SK:</strong> 5–10 EUR (podľa hmotnosti)</p>
-              <p><strong>Kuriér CZ:</strong> 10–15 EUR</p>
+              <p><strong>Kuriér SK a CZ:</strong> Podľa hmotnosti</p>
+              <p><strong>Trenčiansky a Žilinský kraj:</strong> Vlastný rozvoz ~1× týždenne</p>
               <p><strong>Osobný odber Púchov:</strong> Zadarmo</p>
             </Card>
           </div>

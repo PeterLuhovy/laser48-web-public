@@ -54,14 +54,15 @@ Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD 
 
 ## Doprava
 
-- Kuriér Slovensko: 5–10 EUR (podľa hmotnosti)
-- Kuriér Česko: 10–15 EUR
+- Kuriér Slovensko
+- Kuriér Česko
+- Trenčiansky a Žilinský kraj: vlastný rozvoz ~1× týždenne
 - Osobný odber Púchov: zadarmo
 
 ## Platba
 
-- Nový zákazník: predfaktúra, platba kartou, dobierka
-- Overený zákazník (3+ objednávky): faktúra 14 dní
+- Predfaktúra alebo faktúra podľa dohody
+- Pri urgentných objednávkach platba vopred
 
 ## Zľavy
 

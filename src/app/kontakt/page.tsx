@@ -191,14 +191,21 @@ export default function KontaktPage() {
 
               <h3>Fakturačné údaje</h3>
               <div className={styles.billing}>
-                <p><strong>LASER48</strong></p>
+                <p><strong>Luhovy Industries, s. r. o.</strong></p>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>divízia LASER48</p>
                 <p>Nosice 256</p>
                 <p>020 01 Púchov</p>
                 <p>Slovensko</p>
                 <br />
-                <p>IČO: [doplniť]</p>
-                <p>DIČ: [doplniť]</p>
-                <p>IČ DPH: [doplniť]</p>
+                <p>IČO: 54274061</p>
+                <p>DIČ: 2121638189</p>
+                <p>IČ DPH: SK2121638189</p>
+                <br />
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>OR OS Trenčín, oddiel: Sro, vložka č. 43022/R</p>
+                <br />
+                <p>Tatra banka, a.s.</p>
+                <p>IBAN: SK31 1100 0000 0029 4612 2649</p>
+                <p>SWIFT: TATRSKBX</p>
               </div>
 
               <div style={{ marginTop: "var(--space-xl)" }}>

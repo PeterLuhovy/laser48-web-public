@@ -17,7 +17,7 @@ const faqItems = [
   {
     question: "Ktoré materiály režete?",
     answer:
-      "Nerezová oceľ (0.5–6mm), čierna oceľ (0.5–8mm), hliník (0.5–4mm).",
+      "Nerezová oceľ AISI 304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.5–8mm), pozinkovaná oceľ DX51D (0.5–3mm), hliník AlMg3 (0.5–4mm).",
   },
   {
     question: "Aký je maximálny rozmer?",
@@ -50,7 +50,7 @@ export default function SluzbyPage() {
         <div className="container">
           <SectionHeading
             title="Laserové rezanie kovov"
-            subtitle="Naša hlavná služba. Nerezová oceľ, čierna oceľ, hliník. Štandardné dodanie do 7 dní."
+            subtitle="Nerezová oceľ, čierna oceľ, hliník. Do 7 dní štandard. Do 48 hodín keď treba. Do 24 hodín keď horí."
           />
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-xl)" }}>
@@ -59,10 +59,10 @@ export default function SluzbyPage() {
                 <CheckCircle size={20} color="var(--color-primary)" /> Materiály
               </h3>
               <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
-                <li>Nerezová oceľ (hrúbka 0.5 – 6 mm)</li>
-                <li>Čierna oceľ (hrúbka 0.5 – 8 mm)</li>
-                <li>Pozinkovaná oceľ (hrúbka 0.5 – 3 mm)</li>
-                <li>Hliník (hrúbka 0.5 – 4 mm)</li>
+                <li>Nerezová oceľ AISI 304 / 316 (hrúbka 0.5 – 6 mm)</li>
+                <li>Čierna oceľ DC01 / S235 / C45 (hrúbka 0.5 – 8 mm)</li>
+                <li>Pozinkovaná oceľ DX51D (hrúbka 0.5 – 3 mm)</li>
+                <li>Hliník AlMg3 (hrúbka 0.5 – 4 mm)</li>
               </ul>
             </div>
 

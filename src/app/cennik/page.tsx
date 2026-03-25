@@ -102,7 +102,7 @@ export default function CennikPage() {
         <div className="container">
           <SectionHeading title="Orientačný cenník" subtitle="Materiály na sklade. Presná cena závisí od zložitosti výkresu." />
 
-          <h3 style={{ marginBottom: "var(--space-md)" }}>Nerezová oceľ AISI304</h3>
+          <h3 style={{ marginBottom: "var(--space-md)" }}>Nerezová oceľ AISI 304 / AISI 316</h3>
           <table style={tableStyle}>
             <thead>
               <tr>
@@ -127,7 +127,7 @@ export default function CennikPage() {
             </tbody>
           </table>
 
-          <h3 style={{ marginBottom: "var(--space-md)" }}>Čierna oceľ</h3>
+          <h3 style={{ marginBottom: "var(--space-md)" }}>Čierna oceľ DC01 / S235 / C45</h3>
           <table style={tableStyle}>
             <thead>
               <tr>
