@@ -76,7 +76,7 @@ export default function CennikPage() {
     <>
       <HeroSection
         title="Cenník laserového rezania"
-        perex="Naša cena závisí od materiálu, hrúbky, počtu kusov a dĺžky rezu. Pošli nám výkres a cenovú ponuku dostaneš do 24 hodín."
+        perex="Naša cena závisí od materiálu, hrúbky, počtu kusov, dĺžky rezu a termínu dodania. Pošli nám výkres a cenovú ponuku dostaneš do 24 hodín."
         small
       />
 

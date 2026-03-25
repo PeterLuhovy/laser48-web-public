@@ -99,19 +99,19 @@ export default function AkoToFungujePage() {
       {/* Express */}
       <section className="section-alt">
         <div className="container">
-          <SectionHeading title="Potrebuješ rýchlejšie?" center />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-xl)", maxWidth: "900px", margin: "0 auto" }}>
-            <Card icon={Clock} title="Ekonomické 28 dní">
-              <p>-10% zľava. Pre projekty bez časového tlaku.</p>
+          <SectionHeading title="Kedy to potrebuješ?" center />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "var(--space-xl)", maxWidth: "1000px", margin: "0 auto" }}>
+            <Card icon={Zap} title="24 hodín">
+              <p>Keď to horí. Za príplatok, podľa dostupnosti.</p>
             </Card>
-            <Card icon={Zap} title="Štandard 7 dní">
-              <p>Bez príplatku. Naša štandardná rýchlosť.</p>
+            <Card icon={Zap} title="48 hodín">
+              <p>Express. Za príplatok.</p>
             </Card>
-            <Card icon={Zap} title="Express 48h">
-              <p>Za príplatok. Pre urgentné projekty.</p>
+            <Card icon={Clock} title="7 dní">
+              <p>Štandard. Bez príplatku.</p>
             </Card>
-            <Card icon={Zap} title="Extra rýchle 24h">
-              <p>Za príplatok. Podľa dohody a dostupnosti.</p>
+            <Card icon={Clock} title="28 dní">
+              <p>Ekonomické. So zľavou.</p>
             </Card>
           </div>
         </div>
