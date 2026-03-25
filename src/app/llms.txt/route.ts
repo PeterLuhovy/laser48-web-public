@@ -40,7 +40,7 @@ B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
 ## Formáty výkresov
 
 Prijímame: DXF (preferovaný), DWG, PDF s rozmermi.
-Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD výkres.
+Ak nemáš výkres: pošli náčrt, fotografiu alebo popis — vytvoríme CAD výkres.
 
 ## Stránky
 

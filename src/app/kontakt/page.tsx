@@ -142,7 +142,7 @@ export default function KontaktPage() {
                     style={{ marginTop: "var(--space-xs)" }}
                   />
                   <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)", marginTop: "var(--space-xs)" }}>
-                    Viac ako 3 súbory? Zbalte ich do ZIP alebo pošlite na laser@laser48.sk
+                    Viac ako 3 súbory? Zbaľ ich do ZIP alebo pošli na laser@laser48.sk
                   </p>
                 </div>
 

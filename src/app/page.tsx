@@ -333,18 +333,12 @@ export default function Home() {
           <div className={styles.testimonials}>
             <TestimonialCard
               quote="Vy ste super. Keď to objednám od vás, príde vždy na čas. Ani nie skôr, ani nie neskôr. Presne v ten deň ako poviete."
-              name="Zákazník"
-              company="Leoni Trenčín"
             />
             <TestimonialCard
               quote="Keď inde chcem diely do 48 hodín, je to vždy 'no, možno, uvidíme, opýtam sa'. Tu? Nech sa páči, máte to do 48 hodín."
-              name="Zákazník"
-              company="Strojárska výroba"
             />
             <TestimonialCard
               quote="Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 1 000."
-              name="Zákazníčka"
-              company="Zákazková výroba"
             />
           </div>
         </div>
