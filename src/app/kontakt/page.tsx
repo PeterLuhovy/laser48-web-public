@@ -169,18 +169,18 @@ export default function KontaktPage() {
               <table className={styles.hoursTable}>
                 <tbody>
                   {[
-                    ["Pondelok", "7:00–19:00"],
-                    ["Utorok", "7:00–19:00"],
-                    ["Streda", "7:00–19:00"],
-                    ["Štvrtok", "7:00–19:00"],
-                    ["Piatok", "7:00–19:00"],
+                    ["Pondelok", "8:00–16:00"],
+                    ["Utorok", "8:00–16:00"],
+                    ["Streda", "8:00–16:00"],
+                    ["Štvrtok", "8:00–16:00"],
+                    ["Piatok", "8:00–16:00"],
                   ].map(([day, hours]) => (
                     <tr key={day}>
                       <td>{day}</td>
                       <td>{hours}</td>
                     </tr>
                   ))}
-                  {[["Sobota", "7:00–13:00"], ["Nedeľa", "Zatvorené"]].map(([day, hours]) => (
+                  {[["Sobota", "Zatvorené"], ["Nedeľa", "Zatvorené"]].map(([day, hours]) => (
                     <tr key={day}>
                       <td>{day}</td>
                       <td className={styles.closed}>{hours}</td>

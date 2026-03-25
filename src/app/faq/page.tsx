@@ -16,11 +16,11 @@ const categories = [
   {
     title: "Objednávanie",
     items: [
-      { question: "Ako objednám?", answer: `Email (najrýchlejšie): Pošli výkres na laser@laser48.sk, odpovieme do 24 hodín. Alebo zavolaj: ${PHONE} (Po–Pia 7:00–19:00, So 7:00–13:00).` },
-      { question: "Aký formát výkresu potrebujete?", answer: "Preferujeme DXF (najlepšie), DWG alebo PDF s rozmermi. Ak máš len náčrt, fotografiu alebo slovný popis — pošli nám to, pomôžeme vytvoriť CAD výkres (zadarmo pre objednávky nad 200 EUR)." },
+      { question: "Ako objednám?", answer: `Email (najrýchlejšie): Pošli výkres na laser@laser48.sk, odpovieme do 24 hodín. Alebo zavolaj: ${PHONE} (Po–Pia 8:00–16:00).` },
+      { question: "Aký formát výkresu potrebujete?", answer: "Preferujeme DXF (najlepšie), DWG alebo PDF s rozmermi. Ak máš len náčrt, fotografiu alebo slovný popis — pošli nám to, pomôžeme vytvoriť CAD výkres." },
       { question: "Musím sa registrovať?", answer: "Nie. Registrácia nie je povinná, môžeš objednať ako hosť." },
       { question: "Môžem zmeniť výkres po objednaní?", answer: "Áno, ak ešte nie je vo výrobe. Zmeny sú bez poplatku. Ak už vyrábame, kontaktuj nás — uvidíme čo sa dá robiť." },
-      { question: "Môžem objednať bez výkresu?", answer: "Áno. Pošli fotografiu existujúceho dielu, náčrt s rozmermi, alebo slovný popis. My vytvoríme CAD výkres. Zadarmo pre objednávky nad 200 EUR, inak 30–50 EUR podľa zložitosti." },
+      { question: "Môžem objednať bez výkresu?", answer: "Áno. Pošli fotografiu existujúceho dielu, náčrt s rozmermi, alebo slovný popis. My vytvoríme CAD výkres." },
     ],
   },
   {
@@ -30,7 +30,7 @@ const categories = [
       { question: "Sú v cene zahrnuté materiál a DPH?", answer: "Áno. Cena v ponuke je finálna s DPH. Nie je v cene len doprava (5–10 EUR)." },
       { question: "Ako platím?", answer: "Nový zákazník: predfaktúra, online platba kartou, alebo dobierka. Overený zákazník (po 3+ objednávkach): faktúra so splatnosťou 14 dní." },
       { question: "Môžem platiť kartou?", answer: "Áno. Akceptujeme Visa, Mastercard a Maestro cez bezpečnú platobnú bránu." },
-      { question: "Dostávate zľavy pri väčších objednávkach?", answer: "Áno, automatická množstevná zľava: 50–99 ks -5%, 100–499 ks -10%, 500+ ks -15%. Plus vernostný program: po 5. objednávke -5%, po 10. -10%." },
+      { question: "Máte zľavy pri väčších objednávkach?", answer: "Áno. Pri väčších objemoch alebo pravidelných objednávkach dohodneme individuálnu cenu. Napíš nám." },
     ],
   },
   {
@@ -39,7 +39,7 @@ const categories = [
       { question: "Kedy dostanem diely?", answer: "Štandardne do 7 pracovných dní od potvrdenia objednávky a platby. Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok." },
       { question: "Ako počítate 7 dní?", answer: "7 pracovných dní (víkendy a sviatky nepočítame). Počítame od potvrdenia objednávky a prijatia platby." },
       { question: "Čo ak nestihnete 7 dní?", answer: "Dostaneš 20% zľavu automaticky. Žiadne výhovorky. Za 2 roky sme nestihli termín v 2% prípadov." },
-      { question: "Ako dodávate diely?", answer: "Kuriér celé Slovensko (5–10 EUR, dodanie nasledujúci deň) alebo osobný odber v Púchove zadarmo (Po–Pia 7:00–19:00, So 7:00–13:00)." },
+      { question: "Ako dodávate diely?", answer: "Kuriér celé Slovensko (5–10 EUR, dodanie nasledujúci deň) alebo osobný odber v Púchove zadarmo (Po–Pia 8:00–16:00)." },
       { question: "Dodávate aj do Česka?", answer: "Áno. Kuriér do ČR: 10–15 EUR, dodanie 2–3 dni po expedícii. Už 100+ zákazníkov z ČR." },
       { question: "Môžem sledovať stav objednávky?", answer: "Áno. Dostaneš email s potvrdením, keď začneme vyrábať, keď je hotovo, a tracking number po expedícii." },
     ],
@@ -58,10 +58,10 @@ const categories = [
   {
     title: "Zákaznícky servis",
     items: [
-      { question: "Ako vás kontaktujem?", answer: `Telefón: ${PHONE} (Po–Pia 7:00–19:00, So 7:00–13:00). Email: laser@laser48.sk (odpovieme do 24h). Osobne: Nosice 256, Púchov.` },
+      { question: "Ako vás kontaktujem?", answer: `Telefón: ${PHONE} (Po–Pia 8:00–16:00). Email: laser@laser48.sk (odpovieme do 24h). Osobne: Nosice 256, Púchov.` },
       { question: "Kedy odpovedáte na emaily?", answer: `Do 24 hodín v pracovné dni. Urgentné? Volaj: ${PHONE}.` },
       { question: "Čo ak mám reklamáciu?", answer: "Kontaktuj nás okamžite. Ak je chyba na našej strane: oprava/výmena zadarmo + kompenzácia. Reklamácií máme < 0.5%." },
-      { question: "Máte vernostný program?", answer: "Áno. Po 5. objednávke -5%, po 10. -10%. Plus referenčná zľava: odporuč nás → ty -10%, on -5%." },
+      { question: "Máte zľavy pre stálych zákazníkov?", answer: "Áno. Pre pravidelných zákazníkov dohodneme individuálne podmienky. Napíš nám alebo sa opýtaj pri objednávke." },
       { question: "Môžem dostať faktúru?", answer: "Áno, vždy. PDF emailom + papierová v balíku ak chceš. S QR kódom pre platbu." },
     ],
   },

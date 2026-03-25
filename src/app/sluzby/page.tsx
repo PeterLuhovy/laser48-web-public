@@ -152,7 +152,7 @@ export default function SluzbyPage() {
 
       <CTASection
         title="Pripravený objednať?"
-        text="Pošli výkres a cenovú ponuku dostaneš do 24 hodín. Do 7 dní máš diely u seba."
+        text="Pošli výkres a cenovú ponuku dostaneš do 24 hodín. Štandard 7 dní, express 48h alebo 24h za príplatok."
         buttonText="Objednaj teraz →"
       />
     </>

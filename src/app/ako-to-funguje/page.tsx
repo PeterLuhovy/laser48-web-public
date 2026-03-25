@@ -60,10 +60,11 @@ export default function AkoToFungujePage() {
                 <li>✓ Materiál: nerezová oceľ / čierna oceľ / hliník</li>
                 <li>✓ Hrúbka: napr. 3 mm</li>
                 <li>✓ Počet kusov: napr. 10 ks</li>
+                <li>✓ Termín: kedy diely potrebuješ</li>
               </ul>
               <p style={{ color: "var(--color-text-secondary)", fontStyle: "italic" }}>
                 💡 Nemáš hotový výkres? Pošli nám náčrt, fotografiu alebo popis.
-                Pomôžeme ti vytvoriť CAD výkres (zadarmo pre objednávky nad 200 EUR).
+                Pomôžeme ti vytvoriť CAD výkres.
               </p>
             </div>
 
@@ -71,21 +72,9 @@ export default function AkoToFungujePage() {
               <SectionHeading title="2. Ponuka do 24 hodín" />
               <p style={{ marginBottom: "var(--space-md)" }}>
                 Spočítame cenu a pošleme ti cenovú ponuku.
-                Uvidíš presnú cenu vrátane materiálu, práce a DPH.
+                Uvidíš presnú cenu vrátane DPH.
                 Odpovieme do 24 hodín v pracovné dni.
               </p>
-              <div style={{ background: "var(--color-bg-light)", padding: "var(--space-lg)", borderRadius: "var(--radius-md)", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)" }}>
-                <p style={{ fontWeight: 600, marginBottom: "var(--space-sm)" }}>Príklad výpočtu:</p>
-                <p>10 kusov | nerezová oceľ 3mm | 100×100mm</p>
-                <br />
-                <p>Materiál: 45 EUR</p>
-                <p>Práca: 68 EUR</p>
-                <p>Dodanie: 0 EUR (štandard 7 dní)</p>
-                <hr style={{ margin: "var(--space-sm) 0", border: "none", borderTop: "1px solid var(--color-border)" }} />
-                <p>Spolu bez DPH: 113 EUR</p>
-                <p>DPH 20%: 23 EUR</p>
-                <p style={{ fontWeight: 700 }}>Celkom: 136 EUR</p>
-              </div>
             </div>
 
             <div>

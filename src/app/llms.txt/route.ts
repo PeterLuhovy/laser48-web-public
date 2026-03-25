@@ -1,8 +1,8 @@
-import { PHONE, EMAIL, ADDRESS, WEB, HOURS_WEEKDAY, HOURS_SATURDAY } from "@/config";
+import { PHONE, EMAIL, ADDRESS, WEB, HOURS_WEEKDAY } from "@/config";
 
 const content = `# LASER48 — Laserové rezanie kovov
 
-> Laserové rezanie kovov do 7 dní. Cenová ponuka do 24 hodín.
+> Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Cenová ponuka do 24 hodín.
 
 LASER48 je divízia spoločnosti Luhovy Industries a člen skupiny LRA GROUP.
 B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
@@ -32,7 +32,7 @@ B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
 
 ## Kontakt
 
-- Telefón: ${PHONE} (Po–Pia ${HOURS_WEEKDAY}, So ${HOURS_SATURDAY})
+- Telefón: ${PHONE} (Po–Pia ${HOURS_WEEKDAY})
 - Email: ${EMAIL}
 - Adresa: ${ADDRESS}, Slovensko
 - Web: ${WEB}
@@ -40,7 +40,7 @@ B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
 ## Formáty výkresov
 
 Prijímame: DXF (preferovaný), DWG, PDF s rozmermi.
-Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD výkres (zadarmo pre objednávky nad 200 EUR).
+Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD výkres.
 
 ## Stránky
 
@@ -65,10 +65,7 @@ Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD 
 
 ## Zľavy
 
-- 50–99 ks: -5%
-- 100–499 ks: -10%
-- 500+ ks: -15%
-- Vernostný program: po 5. objednávke -5%, po 10. -10%
+Pri väčších objemoch alebo pravidelných objednávkach dohodneme individuálnu cenu.
 `;
 
 export function GET() {

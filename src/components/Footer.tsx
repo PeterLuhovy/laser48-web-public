@@ -18,7 +18,7 @@ export default function Footer() {
               className={styles.logoImg}
             />
             <p>
-              Laserové rezanie kovov do 7 dní.
+              Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h.
               Nerezová oceľ, čierna oceľ, pozinkovaná oceľ, hliník.
             </p>
           </div>
@@ -66,14 +66,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {COMPANY}. Všetky práva vyhradené.
           </p>
           <p className={styles.group}>
-            Divízia{" "}
-            <a href={PARENT_URL} target="_blank" rel="noopener noreferrer">
-              {PARENT_COMPANY}
-            </a>
-            {" | Člen "}
-            <a href={GROUP_URL} target="_blank" rel="noopener noreferrer">
-              {GROUP}
-            </a>
+            Divízia {PARENT_COMPANY} | Člen {GROUP}
           </p>
         </div>
       </div>

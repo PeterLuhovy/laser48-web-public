@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | LASER48",
   },
   description:
-    "Laserové rezanie kovov do 7 dní. Cenová ponuka do 24h. Nerezová oceľ, čierna oceľ, hliník. Express 48h možný.",
+    "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Cenová ponuka do 24h. Nerezová oceľ, čierna oceľ, hliník.",
   keywords: [
     "laserové rezanie",
     "laserové rezanie Slovensko",

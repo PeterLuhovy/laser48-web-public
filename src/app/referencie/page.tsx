@@ -14,19 +14,29 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Referencie - Spokojní zákazníci",
   description:
-    "Čo hovoria naši zákazníci. Rýchlosť, kvalita, spoľahlivosť. Viac ako 500 spokojných zákazníkov.",
+    "Čo hovoria naši zákazníci. Rýchlosť, kvalita, spoľahlivosť. Viac ako 500 000 dodaných dielov.",
 };
 
 const testimonials = [
-  { quote: "Keď potrebujem rýchlo, volám LASER48. Vždy stihli termín. Vždy. A keď raz bola komplikácia, riešili to okamžite bez výhovoriek.", name: "Ján Novák", company: "TechAutomation s.r.o. — Automatizácia výroby" },
-  { quote: "Cenová ponuka do 24 hodín. Konečne niekto kto ma nenecháva čakať týždeň na ponuku. Presne čo potrebujem pre prototypovú výrobu.", name: "Mária Kováčová", company: "ProtoMech — Prototypová výroba" },
-  { quote: "Museli sme zmeniť výkres kým ešte neboli vo výrobe. Zavolal som, vysvetlil situáciu. Žiadny problém. Flexibilita.", name: "Peter Horváth", company: "AutoParts SK — Automobilový dodávateľ" },
-  { quote: "Najlepšie na LASER48? Viem na čom som. Ak povedia termín, dodržia ho. Nie 'snáď', 'možno', 'skúsime'. Spoľahlivosť.", name: "Tomáš Lukáč", company: "Machinery Pro — Strojárska výroba" },
-  { quote: "Robíme prototypy a diely potrebujeme TERAZ. LASER48 je jediný kto to chápe a dokáže to stihnúť. Už 2 roky spolupracujeme.", name: "Zuzana Beňová", company: "InnoTech Solutions — Robotika" },
-  { quote: "Keď som prvýkrát objednával, bol som skeptický — 48 hodín? Naozaj? Áno, naozaj. Dodnes spokojný. Už 15. objednávka za sebou.", name: "Martin Szabó", company: "CZ Engineering — Strojárstvo (CZ)" },
-  { quote: "Začali sme s malými objednávkami. Teraz objednávame 100+ kusov mesačne. Vedia čo robia, stíhajú termíny, ceny sú konkurencieschopné.", name: "Andrej Kováč", company: "Industrial Systems" },
-  { quote: "Konkurencia ponúka lacnejšie. Ale LASER48 ponúka istotu. Keď máš projekt za 50 000 EUR a čakáš na jeden diel — záleží či príde včas.", name: "Miroslav Varga", company: "MV Automation" },
-  { quote: "Potreboval som CAD návrh k náčrtu. Za 2 hodiny som mal výkres, cenu a potvrdenie že to stihnem do piatka. V piatok večer som mal diely.", name: "Lukáš Novotný", company: "Freelancer — Zákazková výroba" },
+  { quote: "Vy ste super. Keď to objednám od vás, príde vždy na čas. Ani nie skôr, ani nie neskôr. Presne v ten deň ako poviete.", name: "Zákazník", company: "Leoni Trenčín" },
+  { quote: "Páči sa mi ako dodávate. Faktúry, balenie — máte to také pekné, profesionálne.", name: "Zákazník", company: "Leoni Trenčín" },
+  { quote: "Poslali sme zlé podklady, zákazka už bola vyrobená a dodaná. Poslali sme nové výkresy a za 24 hodín sme mali novú zákazku. Bez problémov.", name: "Zákazník", company: "SDS Dubnica" },
+  { quote: "Predchádzajúci dodávateľ dodával stovky kusov a vždy sa desiatky percent vracali kvôli okujám. Od LASER48 sú všetky diely perfektné, pripravené rovno na montáž.", name: "Zákazník", company: "SDS Dubnica" },
+  { quote: "Keď potrebujeme diely rýchlo, rovno hovoríme — dajte to LASER48, ani sa o tom nebavme.", name: "Zákazník", company: "Goms Púchov" },
+  { quote: "Keď inde chcem diely do 48 hodín, je to vždy 'no, možno, uvidíme, opýtam sa'. Tu? Nech sa páči, máte to do 48 hodín.", name: "Zákazník", company: "Strojárska výroba" },
+  { quote: "Keď objednávam inde, chcú presné špecifikácie, materiálové normy, pomaly zloženie plechu. Ja chcem len vyrezať pár dielov. Tu poviem že chcem oceľ, opýtajú sa či stačí bežná, a režeme.", name: "Zákazník", company: "Zákazková výroba" },
+  { quote: "Diely do 24 hodín od objednávky. Ako že dnes pošlem a zajtra ráno to mám pripravené? To vážne? Áno, vážne.", name: "Zákazník", company: "Strojárska výroba" },
+  { quote: "Ako údržbár pri odstávke nemám pri sebe konštruktéra a diely potrebujem hneď. Načiariam to na kus A4-ky a za pár dní mám hotový diel v ruke.", name: "Údržbár", company: "Priemyselná výroba" },
+  { quote: "Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 500 000.", name: "Zákazníčka", company: "Zákazková výroba" },
+  { quote: "Keď potrebujem rýchlo, volám LASER48. Vždy stihli termín. Vždy. A keď raz bola komplikácia, riešili to okamžite bez výhovoriek.", name: "Zákazník", company: "Prieskum trhu — Automatizácia" },
+  { quote: "Cenová ponuka do 24 hodín. Konečne niekto kto ma nenecháva čakať týždeň na ponuku. Presne čo potrebujem pre prototypovú výrobu.", name: "Zákazník", company: "Prieskum trhu — Prototypová výroba" },
+  { quote: "Museli sme zmeniť výkres kým ešte neboli vo výrobe. Zavolal som, vysvetlil situáciu. Žiadny problém. Flexibilita.", name: "Zákazník", company: "Prieskum trhu — Automotive" },
+  { quote: "Najlepšie na LASER48? Viem na čom som. Ak povedia termín, dodržia ho. Nie 'snáď', 'možno', 'skúsime'. Spoľahlivosť.", name: "Zákazník", company: "Prieskum trhu — Strojárska výroba" },
+  { quote: "Robíme prototypy a diely potrebujeme TERAZ. LASER48 je jediný kto to chápe a dokáže to stihnúť. Už 2 roky spolupracujeme.", name: "Zákazník", company: "Prieskum trhu — Robotika" },
+  { quote: "Keď som prvýkrát objednával, bol som skeptický — 48 hodín? Naozaj? Áno, naozaj. Dodnes spokojný. Už 15. objednávka za sebou.", name: "Zákazník", company: "Prieskum trhu — Strojárstvo (CZ)" },
+  { quote: "Začali sme s malými objednávkami. Teraz objednávame 100+ kusov mesačne. Vedia čo robia, stíhajú termíny, ceny sú konkurencieschopné.", name: "Zákazník", company: "Prieskum trhu — Priemysel" },
+  { quote: "Konkurencia ponúka lacnejšie. Ale LASER48 ponúka istotu. Keď máš projekt za 50 000 EUR a čakáš na jeden diel — záleží či príde včas.", name: "Zákazník", company: "Prieskum trhu — Automatizácia" },
+  { quote: "Potreboval som CAD návrh k náčrtu. Za 2 hodiny som mal výkres, cenu a potvrdenie že to stihnem do piatka. V piatok večer som mal diely.", name: "Zákazník", company: "Prieskum trhu — Zákazková výroba" },
 ];
 
 export default function ReferenciePage() {
@@ -34,7 +44,7 @@ export default function ReferenciePage() {
     <>
       <HeroSection
         title="Čo hovoria naši zákazníci"
-        perex="Dodali sme viac ako 5 000 objednávok pre stovky firiem. Tu je pár príbehov našich zákazníkov."
+        perex="Dodali sme stovky objednávok za 4 roky. Tu je pár príbehov našich zákazníkov."
         bgImage="/images/diel-nerez.jpg"
         small
       />
@@ -146,10 +156,9 @@ export default function ReferenciePage() {
         <div className="container">
           <SectionHeading title="LASER48 v číslach" center />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "var(--space-xl)" }}>
-            <StatCounter value="5 000+" label="Objednávok dodaných" dark />
-            <StatCounter value="500+" label="Spokojných zákazníkov" dark />
+            <StatCounter value="500 000+" label="Dodaných dielov" dark />
+            <StatCounter value="4 roky" label="Na trhu" dark />
             <StatCounter value="98%" label="Termíny stihnuté" dark />
-            <StatCounter value="120 000 kg" label="Materiálu spracovaného" dark />
             <StatCounter value="7 dní" label="Štandardná dodacia lehota" dark />
           </div>
         </div>
@@ -186,29 +195,9 @@ export default function ReferenciePage() {
         </div>
       </section>
 
-      {/* Hodnotenia */}
-      <section className="section-alt">
-        <div className="container" style={{ textAlign: "center", maxWidth: "600px" }}>
-          <SectionHeading title="Hodnotenia zákazníkov" center />
-          <p style={{ fontSize: "var(--text-h1)", fontWeight: 700, color: "var(--color-primary)", marginBottom: "var(--space-sm)" }}>
-            ⭐ 4.8 / 5.0
-          </p>
-          <p style={{ color: "var(--color-text-secondary)", marginBottom: "var(--space-xl)" }}>
-            Na základe 150+ hodnotení
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)" }}>
-            <p>Rýchlosť dodania: ⭐ 4.9/5</p>
-            <p>Kvalita dielov: ⭐ 4.8/5</p>
-            <p>Komunikácia: ⭐ 4.9/5</p>
-            <p>Cena / výkon: ⭐ 4.6/5</p>
-            <p>Flexibilita: ⭐ 4.8/5</p>
-          </div>
-        </div>
-      </section>
-
       <CTASection
         title="Chceš byť ďalší spokojný zákazník?"
-        text="Viac ako 500 firiem nám dôveruje. Pripoj sa k nim."
+        text="Viac ako 500 000 dodaných dielov za 4 roky. Pripoj sa k nim."
         buttonText="Objednaj teraz →"
         note={`Alebo sa nás opýtaj: ${PHONE}`}
       />

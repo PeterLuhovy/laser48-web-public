@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Gift, Star, Users, GraduationCap } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
-import Card from "@/components/Card";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 
@@ -67,9 +65,9 @@ const faqItems = [
       "Áno. Ak potrebuješ viac ako 500 kusov mesačne, napíš nám. Dohodneme individuálnu cenu.",
   },
   {
-    question: "Dajú sa kombinovať zľavy?",
+    question: "Máte zľavy pri väčších objednávkach?",
     answer:
-      "Množstevná + vernostná zľava = áno. Referenčná zľava sa nedá kombinovať s inými.",
+      "Áno. Pri väčších objemoch alebo pravidelných objednávkach dohodneme individuálnu cenu. Napíš nám.",
   },
 ];
 
@@ -173,63 +171,6 @@ export default function CennikPage() {
               ))}
             </tbody>
           </table>
-        </div>
-      </section>
-
-      {/* Ako sa cena počíta */}
-      <section className="section">
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <SectionHeading title="Ako sa cena počíta?" />
-          <p style={{ marginBottom: "var(--space-lg)", color: "var(--color-text-secondary)" }}>
-            Celková cena = Materiál + Práca + Dodanie
-          </p>
-
-          <div style={{ background: "var(--color-bg-light)", padding: "var(--space-lg)", borderRadius: "var(--radius-md)", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)", marginBottom: "var(--space-xl)" }}>
-            <p style={{ fontWeight: 700, marginBottom: "var(--space-sm)" }}>Príklad 1: Štandard 7 dní</p>
-            <p>10 kusov | nerezová oceľ 3mm | 100×100mm</p>
-            <br />
-            <p>Materiál: 45 EUR | Práca: 68 EUR | Dodanie: 0 EUR</p>
-            <hr style={{ margin: "var(--space-sm) 0", border: "none", borderTop: "1px solid var(--color-border)" }} />
-            <p style={{ fontWeight: 700 }}>Celkom s DPH: 136 EUR</p>
-          </div>
-
-          <div style={{ background: "var(--color-bg-light)", padding: "var(--space-lg)", borderRadius: "var(--radius-md)", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)" }}>
-            <p style={{ fontWeight: 700, marginBottom: "var(--space-sm)" }}>Príklad 2: Express 48h</p>
-            <p>50 kusov | oceľ 5mm | 200×150mm</p>
-            <br />
-            <p>Materiál: 30 EUR | Práca: 525 EUR | Express +50%: 333 EUR</p>
-            <hr style={{ margin: "var(--space-sm) 0", border: "none", borderTop: "1px solid var(--color-border)" }} />
-            <p style={{ fontWeight: 700 }}>Celkom s DPH: 1 066 EUR</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Zľavy */}
-      <section className="section-alt">
-        <div className="container">
-          <SectionHeading title="Zľavy a vernostný program" center />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "var(--space-xl)" }}>
-            <Card icon={Gift} title="Množstevná zľava">
-              <p>50–99 ks: -5%</p>
-              <p>100–499 ks: -10%</p>
-              <p>500+ ks: -15%</p>
-              <p style={{ marginTop: "0.5rem", fontStyle: "italic" }}>Automatická, platí pre jednu objednávku.</p>
-            </Card>
-            <Card icon={Star} title="Vernostný program">
-              <p>Po 5. objednávke: -5%</p>
-              <p>Po 10. objednávke: -10%</p>
-              <p>Stály zákazník: individuálne ceny</p>
-            </Card>
-            <Card icon={Users} title="Referenčná zľava">
-              <p>Odporuč nás priateľovi.</p>
-              <p>Ty: -10% na ďalšiu objednávku</p>
-              <p>On: -5% na prvú objednávku</p>
-            </Card>
-            <Card icon={GraduationCap} title="Študentská zľava">
-              <p>Študent alebo startup? Prvá objednávka -10%.</p>
-              <p style={{ marginTop: "0.5rem", fontStyle: "italic" }}>Max 1× použitie, písať pred objednaním.</p>
-            </Card>
-          </div>
         </div>
       </section>
 

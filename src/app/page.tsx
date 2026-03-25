@@ -28,7 +28,7 @@ const localBusinessJsonLd = {
   "@id": "https://www.laser48.sk/#organization",
   name: "LASER48",
   description:
-    "Laserové rezanie kovov do 7 dní. Nerezová oceľ 0.5–6mm, čierna oceľ 0.5–8mm, pozinkovaná oceľ 0.5–3mm, hliník 0.5–4mm. Cenová ponuka do 24 hodín. Express 48h možný.",
+    "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Nerezová oceľ 0.5–6mm, čierna oceľ 0.5–8mm, pozinkovaná oceľ 0.5–3mm, hliník 0.5–4mm. Cenová ponuka do 24 hodín.",
   url: "https://www.laser48.sk",
   logo: "https://www.laser48.sk/images/logo-light.png",
   image: "https://www.laser48.sk/images/hero-laser.png",
@@ -54,14 +54,8 @@ const localBusinessJsonLd = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:00",
-      closes: "19:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "07:00",
-      closes: "13:00",
+      opens: "08:00",
+      closes: "16:00",
     },
   ],
   priceRange: "$$",
@@ -256,7 +250,7 @@ export default function Home() {
               <div className={styles.materialImg}>
                 <Image
                   src="/images/mat-nerez.jpg"
-                  alt="Nerezová oceľ — laserové diely"
+                  alt="Laserové rezanie nerezovej ocele AISI 304 a AISI 316"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -264,6 +258,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Nerezová oceľ</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AISI 304 / AISI 316</p>
                 <p>Hrúbka: 0.5 – 6 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -273,7 +268,7 @@ export default function Home() {
               <div className={styles.materialImg}>
                 <Image
                   src="/images/mat-cierna-ocel.jpg"
-                  alt="Čierna oceľ — laserové diely"
+                  alt="Laserové rezanie čiernej ocele DC01, S235 a C45"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -281,6 +276,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Čierna oceľ</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DC01 / S235 / C45</p>
                 <p>Hrúbka: 0.5 – 8 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -290,7 +286,7 @@ export default function Home() {
               <div className={styles.materialImg}>
                 <Image
                   src="/images/mat-pozinkovana.jpg"
-                  alt="Pozinkovaná oceľ — laserové diely"
+                  alt="Laserové rezanie pozinkovanej ocele DX51D"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -298,6 +294,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Pozinkovaná oceľ</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DX51D</p>
                 <p>Hrúbka: 0.5 – 3 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -307,7 +304,7 @@ export default function Home() {
               <div className={styles.materialImg}>
                 <Image
                   src="/images/mat-hlinik.jpg"
-                  alt="Hliník — laserové diely"
+                  alt="Laserové rezanie hliníka AlMg3"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -315,6 +312,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Hliník</h3>
+                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AlMg3</p>
                 <p>Hrúbka: 0.5 – 4 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -331,22 +329,22 @@ export default function Home() {
       {/* REFERENCIE */}
       <section className="section-alt">
         <div className="container">
-          <SectionHeading title="S čím sa stretávajú zákazníci" center />
+          <SectionHeading title="Čo hovoria naši zákazníci" center />
           <div className={styles.testimonials}>
             <TestimonialCard
-              quote="Čakám týždeň na cenovú ponuku. Potrebujem to rýchlejšie."
-              name="LASER48"
-              company="Cenová ponuka do 24 hodín."
+              quote="Vy ste super. Keď to objednám od vás, príde vždy na čas. Ani nie skôr, ani nie neskôr. Presne v ten deň ako poviete."
+              name="Zákazník"
+              company="Leoni Trenčín"
             />
             <TestimonialCard
-              quote="Prototyp zlyhal, potrebovali sme urgentne nový diel. Mali sme ho do 24 hodín. Zachránilo to celý projekt."
-              name="LASER48"
-              company="Express 48h alebo 24h za príplatok."
+              quote="Keď inde chcem diely do 48 hodín, je to vždy 'no, možno, uvidíme, opýtam sa'. Tu? Nech sa páči, máte to do 48 hodín."
+              name="Zákazník"
+              company="Strojárska výroba"
             />
             <TestimonialCard
-              quote="Diely prišli s otrepmi. Musel som ich ešte opracovávať."
-              name="LASER48"
-              company="Každý kus skontrolovaný. Otrepy odstránené pred odoslaním."
+              quote="Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 100 000."
+              name="Zákazníčka"
+              company="Zákazková výroba"
             />
           </div>
         </div>
@@ -357,8 +355,8 @@ export default function Home() {
         <div className="container">
           <SectionHeading title="LASER48 v číslach" center />
           <div className={styles.stats}>
-            <StatCounter value="5 000+" label="Objednávok dodaných" dark />
-            <StatCounter value="500+" label="Spokojných zákazníkov" dark />
+            <StatCounter value="500 000+" label="Dodaných dielov" dark />
+            <StatCounter value="4 roky" label="Na trhu" dark />
             <StatCounter value="98%" label="Termíny stihnuté" dark />
             <StatCounter value="7 dní" label="Štandardná dodacia lehota" dark />
           </div>
