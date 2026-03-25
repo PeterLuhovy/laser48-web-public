@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PHONE } from "@/config";
 import {
   Bot, Car, Wrench, Lightbulb, Building, Megaphone,
   AlertTriangle, CheckCircle,
@@ -209,7 +210,7 @@ export default function ReferenciePage() {
         title="Chceš byť ďalší spokojný zákazník?"
         text="Viac ako 500 firiem nám dôveruje. Pripoj sa k nim."
         buttonText="Objednaj teraz →"
-        note="Alebo sa nás opýtaj: +421 911 132 485"
+        note={`Alebo sa nás opýtaj: ${PHONE}`}
       />
     </>
   );

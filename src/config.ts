@@ -1,7 +1,7 @@
 /** LASER48 site-wide constants. Values are inlined at build time. */
 
-export const PHONE = "+421 911 132 485";
-export const PHONE_TEL = "tel:+421911132485";
+export const PHONE = "+421 948 552 904";
+export const PHONE_TEL = "tel:+421948552904";
 export const EMAIL = "laser@laser48.sk";
 export const EMAIL_MAILTO = "mailto:laser@laser48.sk";
 export const ADDRESS = "Nosice 256, 020 01 Púchov";

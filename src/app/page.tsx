@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   HelpCircle,
 } from "lucide-react";
+import { PHONE_TEL } from "@/config";
 import HeroSection from "@/components/HeroSection";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
@@ -31,7 +32,7 @@ const localBusinessJsonLd = {
   url: "https://www.laser48.sk",
   logo: "https://www.laser48.sk/images/logo-light.png",
   image: "https://www.laser48.sk/images/hero-laser.png",
-  telephone: "+421911132485",
+  telephone: PHONE_TEL.replace("tel:", ""),
   email: "laser@laser48.sk",
   address: {
     "@type": "PostalAddress",
@@ -127,7 +128,7 @@ export default function Home() {
 
       {/* HERO */}
       <HeroSection
-        title="Laserové rezanie do 7 dní. Garantované."
+        title="Laserové rezanie do 7 dní."
         perex="Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Potrebuješ rýchlejšie? Express 48 hodín. Potrebuješ to zajtra? Aj to vieme. Zavolaj a dohodneme sa."
         bgImage="/images/hero-laser.png"
       >

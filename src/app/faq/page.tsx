@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PHONE } from "@/config";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import FAQ from "@/components/FAQ";
@@ -15,7 +16,7 @@ const categories = [
   {
     title: "Objednávanie",
     items: [
-      { question: "Ako objednám?", answer: "Email (najrýchlejšie): Pošli výkres na laser@laser48.sk, odpovieme do 24 hodín. Alebo zavolaj: +421 911 132 485 (Po–Pia 7:00–19:00, So 7:00–13:00)." },
+      { question: "Ako objednám?", answer: `Email (najrýchlejšie): Pošli výkres na laser@laser48.sk, odpovieme do 24 hodín. Alebo zavolaj: ${PHONE} (Po–Pia 7:00–19:00, So 7:00–13:00).` },
       { question: "Aký formát výkresu potrebujete?", answer: "Preferujeme DXF (najlepšie), DWG alebo PDF s rozmermi. Ak máš len náčrt, fotografiu alebo slovný popis — pošli nám to, pomôžeme vytvoriť CAD výkres (zadarmo pre objednávky nad 200 EUR)." },
       { question: "Musím sa registrovať?", answer: "Nie. Registrácia nie je povinná, môžeš objednať ako hosť." },
       { question: "Môžem zmeniť výkres po objednaní?", answer: "Áno, ak ešte nie je vo výrobe. Zmeny sú bez poplatku. Ak už vyrábame, kontaktuj nás — uvidíme čo sa dá robiť." },
@@ -57,8 +58,8 @@ const categories = [
   {
     title: "Zákaznícky servis",
     items: [
-      { question: "Ako vás kontaktujem?", answer: "Telefón: +421 911 132 485 (Po–Pia 7:00–19:00, So 7:00–13:00). Email: laser@laser48.sk (odpovieme do 24h). Osobne: Nosice 256, Púchov." },
-      { question: "Kedy odpovedáte na emaily?", answer: "Do 24 hodín v pracovné dni. Urgentné? Volaj: +421 911 132 485." },
+      { question: "Ako vás kontaktujem?", answer: `Telefón: ${PHONE} (Po–Pia 7:00–19:00, So 7:00–13:00). Email: laser@laser48.sk (odpovieme do 24h). Osobne: Nosice 256, Púchov.` },
+      { question: "Kedy odpovedáte na emaily?", answer: `Do 24 hodín v pracovné dni. Urgentné? Volaj: ${PHONE}.` },
       { question: "Čo ak mám reklamáciu?", answer: "Kontaktuj nás okamžite. Ak je chyba na našej strane: oprava/výmena zadarmo + kompenzácia. Reklamácií máme < 0.5%." },
       { question: "Máte vernostný program?", answer: "Áno. Po 5. objednávke -5%, po 10. -10%. Plus referenčná zľava: odporuč nás → ty -10%, on -5%." },
       { question: "Môžem dostať faktúru?", answer: "Áno, vždy. PDF emailom + papierová v balíku ak chceš. S QR kódom pre platbu." },
@@ -113,7 +114,7 @@ export default function FAQPage() {
 
       <CTASection
         title="Nenašiel si odpoveď?"
-        text="Napíš nám alebo zavolaj. Radi pomôžeme. laser@laser48.sk | +421 911 132 485"
+        text={`Napíš nám alebo zavolaj. Radi pomôžeme. laser@laser48.sk | ${PHONE}`}
         buttonText="Kontaktuj nás →"
       />
     </>

@@ -10,7 +10,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Kontakt - Telefón, Email, Adresa",
   description:
-    "Kontaktuj nás: +421 911 132 485 | laser@laser48.sk | Nosice 256, Púchov. Odpovieme do 24 hodín.",
+    `Kontaktuj nás: ${PHONE} | laser@laser48.sk | Nosice 256, Púchov. Odpovieme do 24 hodín.`,
 };
 
 export default function KontaktPage() {

@@ -1,6 +1,8 @@
-# LASER48 — Laserové rezanie kovov
+import { PHONE, EMAIL, ADDRESS, WEB, HOURS_WEEKDAY, HOURS_SATURDAY } from "@/config";
 
-> Laserové rezanie kovov do 7 dní. Garantované. Cenová ponuka do 24 hodín.
+const content = `# LASER48 — Laserové rezanie kovov
+
+> Laserové rezanie kovov do 7 dní. Cenová ponuka do 24 hodín.
 
 LASER48 je divízia spoločnosti Luhovy Industries a člen skupiny LRA GROUP.
 B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
@@ -30,10 +32,10 @@ B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
 
 ## Kontakt
 
-- Telefón: +421 911 132 485 (Po–Pia 7:00–19:00, So 7:00–13:00)
-- Email: laser@laser48.sk
-- Adresa: Nosice 256, 020 01 Púchov, Slovensko
-- Web: https://www.laser48.sk
+- Telefón: ${PHONE} (Po–Pia ${HOURS_WEEKDAY}, So ${HOURS_SATURDAY})
+- Email: ${EMAIL}
+- Adresa: ${ADDRESS}, Slovensko
+- Web: ${WEB}
 
 ## Formáty výkresov
 
@@ -42,13 +44,13 @@ Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD 
 
 ## Stránky
 
-- [Domov](https://www.laser48.sk/): Hlavná stránka s prehľadom služieb
-- [Služby](https://www.laser48.sk/sluzby): Detailné informácie o laserovaní
-- [Ako to funguje](https://www.laser48.sk/ako-to-funguje): 3 kroky objednávky
-- [Cenník](https://www.laser48.sk/cennik): Orientačné ceny a materiály na sklade
-- [Referencie](https://www.laser48.sk/referencie): Zákaznícke hodnotenia a case studies
-- [FAQ](https://www.laser48.sk/faq): 32 často kladených otázok
-- [Kontakt](https://www.laser48.sk/kontakt): Kontaktný formulár, adresa, mapa
+- [Domov](${WEB}/): Hlavná stránka s prehľadom služieb
+- [Služby](${WEB}/sluzby): Detailné informácie o laserovaní
+- [Ako to funguje](${WEB}/ako-to-funguje): 3 kroky objednávky
+- [Cenník](${WEB}/cennik): Orientačné ceny a materiály na sklade
+- [Referencie](${WEB}/referencie): Zákaznícke hodnotenia a case studies
+- [FAQ](${WEB}/faq): 32 často kladených otázok
+- [Kontakt](${WEB}/kontakt): Kontaktný formulár, adresa, mapa
 
 ## Doprava
 
@@ -67,3 +69,10 @@ Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD 
 - 100–499 ks: -10%
 - 500+ ks: -15%
 - Vernostný program: po 5. objednávke -5%, po 10. -10%
+`;
+
+export function GET() {
+  return new Response(content, {
+    headers: { "Content-Type": "text/plain; charset=utf-8" },
+  });
+}

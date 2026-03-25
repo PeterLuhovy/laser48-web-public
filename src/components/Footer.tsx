@@ -18,7 +18,7 @@ export default function Footer() {
               className={styles.logoImg}
             />
             <p>
-              Laserové rezanie kovov do 7 dní. Garantované.
+              Laserové rezanie kovov do 7 dní.
               Nerezová oceľ, čierna oceľ, pozinkovaná oceľ, hliník.
             </p>
           </div>

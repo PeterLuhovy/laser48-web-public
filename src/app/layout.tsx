@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "LASER48 | Laserové rezanie do 7 dní - Garantované",
+    default: "LASER48 | Laserové rezanie do 7 dní",
     template: "%s | LASER48",
   },
   description:
