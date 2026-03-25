@@ -36,7 +36,7 @@ const categories = [
   {
     title: "Dodanie",
     items: [
-      { question: "Kedy dostanem diely?", answer: "Štandardne do 7 pracovných dní od potvrdenia objednávky a platby. Express 48h za +50% príplatok." },
+      { question: "Kedy dostanem diely?", answer: "Štandardne do 7 pracovných dní od potvrdenia objednávky a platby. Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok." },
       { question: "Ako počítate 7 dní?", answer: "7 pracovných dní (víkendy a sviatky nepočítame). Počítame od potvrdenia objednávky a prijatia platby." },
       { question: "Čo ak nestihnete 7 dní?", answer: "Dostaneš 20% zľavu automaticky. Žiadne výhovorky. Za 2 roky sme nestihli termín v 2% prípadov." },
       { question: "Ako dodávate diely?", answer: "Kuriér celé Slovensko (5–10 EUR, dodanie nasledujúci deň) alebo osobný odber v Púchove zadarmo (Po–Pia 7:00–19:00, So 7:00–13:00)." },

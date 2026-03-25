@@ -163,8 +163,7 @@ export default function Home() {
           <div className={styles.reasons}>
             <Card icon={Zap} title="7 dní štandard">
               <p>
-                Štandardné dodanie do 7 dní. Express 48h za +50%.
-                Spoľahlivé termíny.
+                Štandardné dodanie do 7 dní. Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok.
               </p>
             </Card>
             <Card icon={Euro} title="Ponuka do 24 hodín">
@@ -369,7 +368,7 @@ export default function Home() {
       {/* FINÁLNA CTA */}
       <CTASection
         title="Potrebuješ laserové diely?"
-        text="Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Express 48h za +50% ak potrebuješ rýchlejšie."
+        text="Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok."
         buttonText="Pošli dopyt →"
         note="Odpovieme do 24 hodín v pracovné dni."
       />

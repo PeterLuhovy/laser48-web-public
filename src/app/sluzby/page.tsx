@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: "Ako dlho čakám na diely?",
     answer:
-      "Štandard 7 dní. Express 48h (+50%), extra rýchle 24h (+100%), ekonomické 28 dní (-10%).",
+      "Štandard 7 dní. Express 48h alebo 24h za príplatok. Ekonomické 28 dní so zľavou.",
   },
 ];
 
@@ -82,9 +82,9 @@ export default function SluzbyPage() {
               </h3>
               <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
                 <li>Štandard: 7 dní</li>
-                <li>Express: 48 hodín (+50%)</li>
-                <li>Extra rýchle: 24 hodín (+100%)</li>
-                <li>Ekonomické: 28 dní (-10%)</li>
+                <li>Express: 48 hodín (za príplatok)</li>
+                <li>Extra rýchle: 24 hodín (za príplatok)</li>
+                <li>Ekonomické: 28 dní (so zľavou)</li>
               </ul>
             </div>
 

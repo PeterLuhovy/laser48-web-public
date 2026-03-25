@@ -24,8 +24,8 @@ B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
 
 **Termíny dodania:**
 - Štandard: 7 pracovných dní
-- Express: 48 hodín (+50% príplatok)
-- Extra rýchle: 24 hodín (+100% príplatok)
+- Express: 48 hodín (za príplatok)
+- Extra rýchle: 24 hodín (za príplatok)
 - Ekonomické: 28 dní (-10% zľava)
 
 **Cenová ponuka:** do 24 hodín po prijatí výkresu

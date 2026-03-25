@@ -93,7 +93,7 @@ export default function AkoToFungujePage() {
               <p style={{ marginBottom: "var(--space-md)" }}>
                 Po potvrdení objednávky a platby začíname vyrábať.
                 Do 7 pracovných dní máš diely u teba.
-                Potrebuješ rýchlejšie? Express 48h za +50%.
+                Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok.
               </p>
               <div style={{ background: "var(--color-bg-light)", padding: "var(--space-lg)", borderRadius: "var(--radius-md)", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)" }}>
                 <p style={{ fontWeight: 600, marginBottom: "var(--space-sm)" }}>Timeline:</p>
@@ -119,10 +119,10 @@ export default function AkoToFungujePage() {
               <p>Bez príplatku. Naša štandardná rýchlosť.</p>
             </Card>
             <Card icon={Zap} title="Express 48h">
-              <p>+50% príplatok. Pre urgentné projekty.</p>
+              <p>Za príplatok. Pre urgentné projekty.</p>
             </Card>
             <Card icon={Zap} title="Extra rýchle 24h">
-              <p>+100% príplatok. Podľa dohody a dostupnosti.</p>
+              <p>Za príplatok. Podľa dohody a dostupnosti.</p>
             </Card>
           </div>
         </div>
