@@ -92,7 +92,7 @@ export default function AkoToFungujePage() {
               <SectionHeading title="3. Do 7 dní máte diely" />
               <p style={{ marginBottom: "var(--space-md)" }}>
                 Po potvrdení objednávky a platby začíname vyrábať.
-                Do 7 pracovných dní máš diely u teba.
+                Do 7 pracovných dní máš diely u seba.
                 Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok.
               </p>
               <div style={{ background: "var(--color-bg-light)", padding: "var(--space-lg)", borderRadius: "var(--radius-md)", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)" }}>

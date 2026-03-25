@@ -149,7 +149,7 @@ export default function Home() {
             </Card>
             <Card icon={Clock} step="Krok 3" title="Do 7 dní máte diely">
               <p>
-                Začíname vyrábať po potvrdení. Do 7 dní máš diely u teba.
+                Začíname vyrábať po potvrdení. Do 7 dní máš diely u seba.
               </p>
             </Card>
           </div>
@@ -221,7 +221,7 @@ export default function Home() {
               </div>
               <div className={styles.comparisonLabel}>
                 <span className={styles.labelBad}>✗ Bežný dodávateľ</span>
-                <p>Otrepy, okuje, špatné hrany. Musíš dodatočne opracovávať.</p>
+                <p>Otrepy a okuje. Musíš dodatočne opracovávať.</p>
               </div>
             </div>
             <div className={styles.comparisonGood}>
@@ -248,7 +248,7 @@ export default function Home() {
         <div className="container">
           <SectionHeading
             title="Čo režeme?"
-            subtitle="Laserové rezanie kovov. Nerezová oceľ, čierna oceľ, pozinkovaná oceľ a hliník."
+            subtitle="Nerezová oceľ, čierna oceľ, pozinkovaná oceľ a hliník. Všetko na sklade."
             center
           />
           <div className={styles.materials}>
@@ -331,22 +331,22 @@ export default function Home() {
       {/* REFERENCIE */}
       <section className="section-alt">
         <div className="container">
-          <SectionHeading title="Čo hovoria naši zákazníci" center />
+          <SectionHeading title="S čím sa stretávajú zákazníci" center />
           <div className={styles.testimonials}>
             <TestimonialCard
-              quote="Keď potrebujem rýchlo, volám LASER48. Vždy stihli termín. Vždy."
-              name="Ján Novák"
-              company="TechAutomation s.r.o."
+              quote="Čakám týždeň na cenovú ponuku. Potrebujem to rýchlejšie."
+              name="LASER48"
+              company="Cenová ponuka do 24 hodín."
             />
             <TestimonialCard
-              quote="Cenová ponuka do 24 hodín. Konečne niekto kto ma nenecháva čakať týždeň."
-              name="Mária Kováčová"
-              company="ProtoMech"
+              quote="Prototyp zlyhal, potrebovali sme urgentne nový diel. Mali sme ho do 24 hodín. Zachránilo to celý projekt."
+              name="LASER48"
+              company="Express 48h alebo 24h za príplatok."
             />
             <TestimonialCard
-              quote="Museli sme zmeniť výkres kým ešte neboli vo výrobe. Žiadny problém. Flexibilita."
-              name="Peter Horváth"
-              company="AutoParts SK"
+              quote="Diely prišli s otrepmi. Musel som ich ešte opracovávať."
+              name="LASER48"
+              company="Každý kus skontrolovaný. Otrepy odstránené pred odoslaním."
             />
           </div>
         </div>
