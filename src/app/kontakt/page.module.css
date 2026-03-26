@@ -1,0 +1,221 @@
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.contactBlock {
+  text-align: center;
+  padding: var(--space-xl);
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+}
+
+.contactBlock svg {
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.contactBlock h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.contactBlock p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.contactBlock a {
+  font-weight: 600;
+  font-size: var(--text-lg);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+/* Form */
+.formSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.field label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-body);
+  transition: border-color var(--transition);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.checkbox input {
+  margin-top: 3px;
+}
+
+.submitBtn {
+  align-self: flex-start;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.submitBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Info sidebar */
+.info h3 {
+  margin-bottom: var(--space-md);
+}
+
+.hoursTable {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-xl);
+}
+
+.hoursTable td {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hoursTable td:last-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+.closed {
+  color: var(--color-text-secondary);
+}
+
+/* Map */
+.mapStatic {
+  width: 100%;
+  margin-bottom: var(--space-xl);
+}
+
+.mapLink {
+  display: block;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: opacity var(--transition);
+}
+
+.mapLink:hover {
+  opacity: 0.9;
+}
+
+.mapButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-body);
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+  text-decoration: none;
+}
+
+.mapButton:hover {
+  background: var(--color-primary-hover);
+  color: var(--color-white);
+}
+
+/* Billing */
+.billing {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.billing p {
+  margin-bottom: var(--space-xs);
+}
+
+/* Success message */
+.successMessage {
+  padding: var(--space-2xl);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,48 @@
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.icon {
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-sm);
+}
+
+.text {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cardLink:hover {
+  border-color: var(--color-primary);
+}
+
+.step {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}

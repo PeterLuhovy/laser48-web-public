@@ -1,0 +1,165 @@
+/* --- How it works (3 steps) --- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* --- Why LASER48 (3 col grid, 5 items) --- */
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* --- Quality Comparison --- */
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.comparisonBad,
+.comparisonGood {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+}
+
+.comparisonBad {
+  border-color: #dc3545;
+}
+
+.comparisonGood {
+  border-color: #28a745;
+}
+
+.comparisonImg {
+  position: relative;
+  height: 280px;
+  background: var(--color-bg-light);
+}
+
+.comparisonLabel {
+  padding: var(--space-lg);
+}
+
+.comparisonLabel p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.labelBad {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: #dc3545;
+}
+
+.labelGood {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: #28a745;
+}
+
+/* --- Materials (4 cards) --- */
+.materials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.materialCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.materialCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.materialImg {
+  position: relative;
+  height: 200px;
+  background: var(--color-bg-light);
+}
+
+.materialBody {
+  padding: var(--space-lg);
+}
+
+.materialBody h3 {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-sm);
+}
+
+.materialBody p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.materialNote {
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.materialNote a {
+  font-weight: 600;
+}
+
+.materialSubtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* --- Testimonials (3 cards) --- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* --- Stats (4 items) --- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+  .materials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reasons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .steps,
+  .materials,
+  .testimonials,
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .reasons {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,16 +1,372 @@
 import Image from "next/image";
+import Link from "next/link";
+import {
+  Upload,
+  Euro,
+  Clock,
+  Zap,
+  Phone,
+  CheckCircle,
+  ShieldCheck,
+  HelpCircle,
+} from "lucide-react";
+import { PHONE_TEL, YEARS_ON_MARKET } from "@/config";
+import HeroSection from "@/components/HeroSection";
+import Button from "@/components/Button";
+import SectionHeading from "@/components/SectionHeading";
+import JsonLd from "@/components/JsonLd";
+import PhoneButton from "@/components/PhoneButton";
+import Card from "@/components/Card";
+import StatCounter from "@/components/StatCounter";
+import TestimonialCard from "@/components/TestimonialCard";
+import CTASection from "@/components/CTASection";
+import styles from "./page.module.css";
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.laser48.sk/#organization",
+  name: "LASER48",
+  description:
+    "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Nerezová oceľ AISI 304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.5–8mm), pozinkovaná oceľ DX51D (0.5–3mm), hliník AlMg3 (0.5–4mm). Cenová ponuka do 24 hodín.",
+  url: "https://www.laser48.sk",
+  logo: "https://www.laser48.sk/images/logo-light.png",
+  image: "https://www.laser48.sk/images/hero-laser.png",
+  telephone: PHONE_TEL.replace("tel:", ""),
+  email: "laser@laser48.sk",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Nosice 256",
+    addressLocality: "Púchov",
+    postalCode: "020 01",
+    addressCountry: "SK",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 49.117,
+    longitude: 18.324,
+  },
+  areaServed: [
+    { "@type": "Country", name: "Slovakia" },
+    { "@type": "Country", name: "Czech Republic" },
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "16:00",
+    },
+  ],
+  priceRange: "$$",
+  currenciesAccepted: "EUR",
+  paymentAccepted: "Bank Transfer, Invoice, Card",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Laserové rezanie kovov",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie nerezovej ocele",
+          description:
+            "CO₂ laser rezanie nerezovej ocele AISI304/316, hrúbka 0.5–6mm, max rozmer 1540×750mm, presnosť ±0.1mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie čiernej ocele",
+          description:
+            "CO₂ laser rezanie čiernej ocele DC01/S235/C45, hrúbka 0.5–8mm, max rozmer 1540×750mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie pozinkovanej ocele",
+          description:
+            "CO₂ laser rezanie pozinkovanej ocele DX51D, hrúbka 0.5–3mm, max rozmer 1540×750mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie hliníka",
+          description:
+            "CO₂ laser rezanie hliníka AlMg3, hrúbka 0.5–4mm, max rozmer 1540×750mm.",
+        },
+      },
+    ],
+  },
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Luhovy Industries",
+    url: "https://www.luhovy-industries.sk",
+    memberOf: {
+      "@type": "Organization",
+      name: "LRA GROUP",
+      url: "https://lra.group",
+    },
+  },
+};
 
 export default function Home() {
   return (
-    <main className="logo-container">
-      <Image
-        src="/logo.png"
-        alt="Laser48"
-        width={500}
-        height={500}
-        className="logo"
-        priority
+    <>
+      <JsonLd data={localBusinessJsonLd} />
+
+      {/* HERO */}
+      <HeroSection
+        title="Laserové rezanie do 7 dní."
+        perex="Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Potrebuješ rýchlejšie? Express 48 hodín. Potrebuješ to zajtra? Aj to vieme. Zavolaj a dohodneme sa."
+        bgImage="/images/hero-laser.png"
+      >
+        <Button href="/kontakt#formular">Pošli dopyt →</Button>
+        <PhoneButton />
+      </HeroSection>
+
+      {/* AKO TO FUNGUJE - 3 kroky */}
+      <section className="section">
+        <div className="container">
+          <SectionHeading title="Ako to funguje?" center />
+          <div className={styles.steps}>
+            <Card icon={Upload} step="Krok 1" title="Pošli výkres" href="/kontakt#formular">
+              <p>Pošli DXF, DWG alebo PDF výkres. Nevieš aký materiál alebo hrúbku? Nevadí — poradíme ti.</p>
+            </Card>
+            <Card icon={Euro} step="Krok 2" title="Ponuka do 24 hodín">
+              <p>Spočítame cenu a pošleme ti ponuku. Odpovieme do 24 hodín.</p>
+            </Card>
+            <Card icon={Clock} step="Krok 3" title="Do 7 dní máte diely">
+              <p>
+                Začíname vyrábať po potvrdení. Do 7 dní máš diely u seba.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* PREČO LASER48 - 4 dôvody */}
+      <section className="section-alt">
+        <div className="container">
+          <SectionHeading title="Prečo LASER48?" center />
+          <div className={styles.reasons}>
+            <Card icon={Zap} title="7 dní štandard">
+              <p>
+                Štandardné dodanie do 7 dní. Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok.
+              </p>
+            </Card>
+            <Card icon={Euro} title="Ponuka do 24 hodín">
+              <p>
+                Pošli výkres, cenovú ponuku dostaneš do 24 hodín. Transparentne.
+              </p>
+            </Card>
+            <Card icon={Phone} title="Priama komunikácia">
+              <p>
+                Telefón, email — reálni ľudia. Nie chatboty. Nie automaty.
+                Pomôžeme vždy.
+              </p>
+            </Card>
+            <Card icon={CheckCircle} title="Flexibilita">
+              <p>
+                Zmena výkresu kým nie je vo výrobe? Žiadny problém. Sme
+                flexibilní.
+              </p>
+            </Card>
+            <Card icon={ShieldCheck} title="Kontrola každého kusu">
+              <p>
+                Každý diel kontrolujeme pred odoslaním. Otrepy a okuje?
+                Odstránené. Dostaneš čisté diely pripravené na použitie.
+              </p>
+            </Card>
+            <Card icon={HelpCircle} title="Poradenstvo">
+              <p>
+                Nevieš aký materiál? Povieme ti čo je na sklade a čo sa hodí.
+                Nevieš akú hrúbku? Navrhneme podľa použitia.
+                Chceš najlacnejšiu variantu? Povieme ktorá to je.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* KVALITA - Porovnanie */}
+      <section className="section">
+        <div className="container">
+          <SectionHeading
+            title="Prišli vám takéto diely?"
+            subtitle="Od iných dodávateľov? U nás sa to nestane."
+            center
+          />
+          <div className={styles.comparison}>
+            <div className={styles.comparisonBad}>
+              <div className={styles.comparisonImg}>
+                <Image
+                  src="/images/otrepy-konkurencia.webp"
+                  alt="Diel s otrepmi od bežného dodávateľa"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className={styles.comparisonLabel}>
+                <span className={styles.labelBad}>✗ Bežný dodávateľ</span>
+                <p>Otrepy a okuje. Musíš dodatočne opracovávať.</p>
+              </div>
+            </div>
+            <div className={styles.comparisonGood}>
+              <div className={styles.comparisonImg}>
+                <Image
+                  src="/images/rezne-hrany.jpg"
+                  alt="Čistý diel od LASER48"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className={styles.comparisonLabel}>
+                <span className={styles.labelGood}>✓ LASER48</span>
+                <p>Každý kus skontrolovaný. Otrepy a okuje odstránené. Diely pripravené na okamžité použitie.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ČO REŽEME - Materiály */}
+      <section className="section-alt">
+        <div className="container">
+          <SectionHeading
+            title="Čo režeme?"
+            subtitle="Nerezová oceľ, čierna oceľ, pozinkovaná oceľ a hliník. Všetko na sklade."
+            center
+          />
+          <div className={styles.materials}>
+            <div className={styles.materialCard}>
+              <div className={styles.materialImg}>
+                <Image
+                  src="/images/mat-nerez.jpg"
+                  alt="Laserové rezanie nerezovej ocele AISI 304 a AISI 316"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className={styles.materialBody}>
+                <h3>Nerezová oceľ</h3>
+                <p className={styles.materialSubtitle}>AISI 304 / AISI 316</p>
+                <p>Hrúbka: 0.5 – 6 mm</p>
+                <p>Max rozmer: 1540 × 750 mm</p>
+              </div>
+            </div>
+
+            <div className={styles.materialCard}>
+              <div className={styles.materialImg}>
+                <Image
+                  src="/images/mat-cierna-ocel.jpg"
+                  alt="Laserové rezanie čiernej ocele DC01, S235 a C45"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className={styles.materialBody}>
+                <h3>Čierna oceľ</h3>
+                <p className={styles.materialSubtitle}>DC01 / S235 / C45</p>
+                <p>Hrúbka: 0.5 – 8 mm</p>
+                <p>Max rozmer: 1540 × 750 mm</p>
+              </div>
+            </div>
+
+            <div className={styles.materialCard}>
+              <div className={styles.materialImg}>
+                <Image
+                  src="/images/mat-pozinkovana.jpg"
+                  alt="Laserové rezanie pozinkovanej ocele DX51D"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </div>
+              <div className={styles.materialBody}>
+                <h3>Pozinkovaná oceľ</h3>
+                <p className={styles.materialSubtitle}>DX51D</p>
+                <p>Hrúbka: 0.5 – 3 mm</p>
+                <p>Max rozmer: 1540 × 750 mm</p>
+              </div>
+            </div>
+
+            <div className={styles.materialCard}>
+              <div className={styles.materialImg}>
+                <Image
+                  src="/images/mat-hlinik.jpg"
+                  alt="Laserové rezanie hliníka AlMg3"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </div>
+              <div className={styles.materialBody}>
+                <h3>Hliník</h3>
+                <p className={styles.materialSubtitle}>AlMg3</p>
+                <p>Hrúbka: 0.5 – 4 mm</p>
+                <p>Max rozmer: 1540 × 750 mm</p>
+              </div>
+            </div>
+          </div>
+          <p className={styles.materialNote}>
+            Potrebuješ iný materiál, väčší rozmer alebo hrubší plech?
+            Zabezpečíme v kooperácii — nemusíš riešiť viacero dodávateľov.{" "}
+            <Link href="/kontakt#formular">Kontaktuj nás →</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* REFERENCIE */}
+      <section className="section-alt">
+        <div className="container">
+          <SectionHeading title="Čo hovoria naši zákazníci" center />
+          <div className={styles.testimonials}>
+            <TestimonialCard
+              quote="Vy ste super. Keď to objednám od vás, príde vždy na čas. Ani nie skôr, ani nie neskôr. Presne v ten deň ako poviete."
+            />
+            <TestimonialCard
+              quote="Keď inde chcem diely do 48 hodín, je to vždy 'no, možno, uvidíme, opýtam sa vo výrobe'. Tu? Nech sa páči, máte to do 48 hodín."
+            />
+            <TestimonialCard
+              quote="Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 1 000."
+            />
+          </div>
+          <p className={styles.materialNote}>
+            <Link href="/referencie">Viac hodnotení od zákazníkov →</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* V ČÍSLACH */}
+      <section className="section-dark">
+        <div className="container">
+          <SectionHeading title="LASER48 v číslach" center />
+          <div className={styles.stats}>
+            <StatCounter value="500 000+" label="Dodaných dielov" dark />
+            <StatCounter value={YEARS_ON_MARKET} label="Na trhu" dark />
+            <StatCounter value="98%" label="Termíny stihnuté" dark />
+            <StatCounter value="7 dní" label="Štandardná dodacia lehota" dark />
+          </div>
+        </div>
+      </section>
+
+      {/* FINÁLNA CTA */}
+      <CTASection
+        title="Potrebuješ laserové diely?"
+        text="Pošli výkres, cenovú ponuku dostaneš do 24 hodín a do 7 dní máš hotovo. Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok."
+        buttonText="Pošli dopyt →"
+        note="Odpovieme do 24 hodín v pracovné dni."
       />
-    </main>
+    </>
   );
 }

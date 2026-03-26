@@ -1,30 +1,49 @@
 # Laser48
 
-Webová stránka pre **laser48.sk** - profesionálne laserové rezanie a CNC spracovanie kovov.
+Webova stranka pre **laser48.sk** — laserove rezanie kovov, B2B.
 
 ## Tech Stack
 
-- Next.js 16 (App Router)
+- Next.js 15 (App Router)
 - React 19
 - TypeScript
+- CSS Modules (no Tailwind)
+- Lucide React (icons)
+- FormSubmit.co (contact form)
 
-## Štruktúra
+## Struktura
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx      # Root layout + metadata
-│   ├── page.tsx        # Homepage
-│   ├── sitemap.ts      # Auto-generated sitemap
-│   ├── robots.ts       # robots.txt
-│   ├── services/       # /services
-│   ├── contact/        # /contact
-│   └── blog/           # /blog
-├── components/
-│   ├── ui/             # Buttons, cards, ...
-│   └── layout/         # Header, footer, nav
+│   ├── layout.tsx              # Root layout + metadata
+│   ├── page.tsx                # Homepage
+│   ├── sitemap.ts              # Auto-generated sitemap
+│   ├── robots.ts               # robots.txt
+│   ├── llms.txt/route.ts       # AI crawler endpoint
+│   ├── sluzby/                 # /sluzby
+│   ├── ako-to-funguje/         # /ako-to-funguje
+│   ├── cennik/                 # /cennik
+│   ├── referencie/             # /referencie
+│   ├── faq/                    # /faq
+│   ├── kontakt/                # /kontakt
+│   └── ochrana-osobnych-udajov/ # /ochrana-osobnych-udajov (GDPR)
+├── components/                 # Shared components (flat)
+│   ├── Header.tsx / .module.css
+│   ├── Footer.tsx / .module.css
+│   ├── HeroSection.tsx / .module.css
+│   ├── Button.tsx / .module.css
+│   ├── Card.tsx / .module.css
+│   ├── CTASection.tsx / .module.css
+│   ├── FAQ.tsx / .module.css
+│   ├── SectionHeading.tsx / .module.css
+│   ├── StatCounter.tsx / .module.css
+│   ├── TestimonialCard.tsx / .module.css
+│   ├── PhoneButton.tsx / .module.css
+│   └── JsonLd.tsx
+├── config.ts                   # Site-wide constants (phone, email, etc.)
 └── styles/
-    └── globals.css     # Global styles
+    └── globals.css             # Design system + global styles
 ```
 
 ## Spustenie
@@ -36,13 +55,13 @@ npm run dev
 
 Otvor [http://localhost:3000](http://localhost:3000)
 
-## Build
+**Poznamka:** Lokalny build moze zlyhavat na sietovych diskoch (W:\) kvoli SWC permissions. Pouzit Vercel deploy.
+
+## Build & Deploy
 
 ```bash
 npm run build
 npm run start
 ```
 
-## Deployment
-
-Vercel / vlastný hosting
+Hosting: Vercel (www.laser48.sk)
