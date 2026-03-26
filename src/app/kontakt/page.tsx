@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { PHONE, PHONE_TEL, EMAIL, EMAIL_MAILTO, ADDRESS, HOURS_SHORT, COMPANY, PARENT_COMPANY } from "@/config";
 import HeroSection from "@/components/HeroSection";
@@ -149,7 +150,8 @@ export default function KontaktPage() {
                 <div className={styles.checkbox}>
                   <input type="checkbox" id="gdpr" name="gdpr" required />
                   <label htmlFor="gdpr">
-                    Súhlasím so spracovaním osobných údajov podľa zásad ochrany osobných údajov. *
+                    Súhlasím so spracovaním osobných údajov podľa{" "}
+                    <Link href="/ochrana-osobnych-udajov">zásad ochrany osobných údajov</Link>. *
                   </label>
                 </div>
 

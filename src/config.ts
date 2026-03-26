@@ -13,3 +13,5 @@ export const PARENT_COMPANY = "Luhovy Industries";
 export const PARENT_URL = "https://www.luhovy-industries.sk";
 export const GROUP = "LRA GROUP";
 export const GROUP_URL = "https://lra.group";
+export const FOUNDED_YEAR = 2022;
+export const YEARS_ON_MARKET = `${new Date().getFullYear() - FOUNDED_YEAR} rokov`;

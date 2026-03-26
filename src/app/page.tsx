@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   HelpCircle,
 } from "lucide-react";
-import { PHONE_TEL } from "@/config";
+import { PHONE_TEL, YEARS_ON_MARKET } from "@/config";
 import HeroSection from "@/components/HeroSection";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
@@ -258,7 +258,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Nerezová oceľ</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AISI 304 / AISI 316</p>
+                <p className={styles.materialSubtitle}>AISI 304 / AISI 316</p>
                 <p>Hrúbka: 0.5 – 6 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Čierna oceľ</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DC01 / S235 / C45</p>
+                <p className={styles.materialSubtitle}>DC01 / S235 / C45</p>
                 <p>Hrúbka: 0.5 – 8 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -294,7 +294,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Pozinkovaná oceľ</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DX51D</p>
+                <p className={styles.materialSubtitle}>DX51D</p>
                 <p>Hrúbka: 0.5 – 3 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -312,7 +312,7 @@ export default function Home() {
               </div>
               <div className={styles.materialBody}>
                 <h3>Hliník</h3>
-                <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AlMg3</p>
+                <p className={styles.materialSubtitle}>AlMg3</p>
                 <p>Hrúbka: 0.5 – 4 mm</p>
                 <p>Max rozmer: 1540 × 750 mm</p>
               </div>
@@ -335,12 +335,15 @@ export default function Home() {
               quote="Vy ste super. Keď to objednám od vás, príde vždy na čas. Ani nie skôr, ani nie neskôr. Presne v ten deň ako poviete."
             />
             <TestimonialCard
-              quote="Keď inde chcem diely do 48 hodín, je to vždy 'no, možno, uvidíme, opýtam sa'. Tu? Nech sa páči, máte to do 48 hodín."
+              quote="Keď inde chcem diely do 48 hodín, je to vždy 'no, možno, uvidíme, opýtam sa vo výrobe'. Tu? Nech sa páči, máte to do 48 hodín."
             />
             <TestimonialCard
               quote="Keď potrebujem rýchlo jeden kus, inde mám stres už len z toho ako so mnou budú jednať. Tu zavolám, chcem jeden kus, a správajú sa ku mne akoby som objednával 1 000."
             />
           </div>
+          <p className={styles.materialNote}>
+            <Link href="/referencie">Viac hodnotení od zákazníkov →</Link>
+          </p>
         </div>
       </section>
 
@@ -350,7 +353,7 @@ export default function Home() {
           <SectionHeading title="LASER48 v číslach" center />
           <div className={styles.stats}>
             <StatCounter value="500 000+" label="Dodaných dielov" dark />
-            <StatCounter value="4 roky" label="Na trhu" dark />
+            <StatCounter value={YEARS_ON_MARKET} label="Na trhu" dark />
             <StatCounter value="98%" label="Termíny stihnuté" dark />
             <StatCounter value="7 dní" label="Štandardná dodacia lehota" dark />
           </div>

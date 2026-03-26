@@ -4,19 +4,13 @@ import Footer from "@/components/Footer";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.laser48.sk"),
   title: {
     default: "LASER48 | Laserové rezanie do 7 dní",
     template: "%s | LASER48",
   },
   description:
     "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Cenová ponuka do 24h. Nerezová oceľ, čierna oceľ, hliník.",
-  keywords: [
-    "laserové rezanie",
-    "laserové rezanie Slovensko",
-    "laserové rezanie nehrdzavejúca oceľ",
-    "expresné laserové rezanie",
-    "laserové rezanie rýchlo",
-  ],
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
@@ -28,6 +22,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "sk_SK",
     siteName: "LASER48",
+    images: [
+      {
+        url: "/images/hero-laser.png",
+        width: 1200,
+        height: 630,
+        alt: "LASER48 — Laserové rezanie kovov",
+      },
+    ],
   },
 };
 

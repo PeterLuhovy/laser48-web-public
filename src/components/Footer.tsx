@@ -66,7 +66,8 @@ export default function Footer() {
             © {new Date().getFullYear()} {COMPANY}. Všetky práva vyhradené.
           </p>
           <p className={styles.group}>
-            Divízia {PARENT_COMPANY} | Člen {GROUP}
+            <Link href="/ochrana-osobnych-udajov">Ochrana osobných údajov</Link>
+            {" | "}Divízia {PARENT_COMPANY} | Člen {GROUP}
           </p>
         </div>
       </div>

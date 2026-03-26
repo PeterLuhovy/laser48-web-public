@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import JsonLd from "@/components/JsonLd";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "FAQ - Často kladené otázky",
@@ -47,7 +48,7 @@ const categories = [
     title: "Materiály a technické",
     items: [
       { question: "Aké materiály režete?", answer: "Nerezová oceľ AISI304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.5–8mm), pozinkovaná oceľ DX51D (0.5–3mm), hliník AlMg3 (0.5–4mm). Max rozmer dielu: 1540 × 750 mm." },
-      { question: "Režete aj iné materiály?", answer: "Štandardne nie, ale zabezpečíme v kooperácii. Ak máš 10 dielov a z nich 8 režeme my a 2 sú mimo náš rozsah — nemusíš riešiť iného dodávateľa. Vyrobíme všetko, akurát pri kooperácii nemôžeme garantovať zrýchlené dodanie." },
+      { question: "Režete aj iné materiály?", answer: "Napíš nám a uvidíme čo sa dá spraviť. Ak máš 10 dielov a z nich 8 režeme my a 2 sú mimo náš rozsah — nemusíš riešiť iného dodávateľa. Vyrobíme všetko, akurát pri kooperácii nemôžeme garantovať zrýchlené dodanie." },
       { question: "Aký je maximálny rozmer dielu?", answer: "1540 × 750 mm. Väčší diel? Zabezpečíme v kooperácii. Nemusíš hľadať iného dodávateľa — pošli nám všetko a my to vyriešime. Pri kooperácii sa dodanie môže natiahnuť na 14–28 dní." },
       { question: "Aká je presnosť?", answer: "Laser samotný: ±0.1 mm. Celkové rozmery dielu: ±0.5 mm bežne. Pre presnejšie tolerancie napíš do poznámky." },
       { question: "Ponúkate aj ohýbanie, zváranie, lakovanie?", answer: "Áno. Ohýbanie, zváranie aj lakovanie zabezpečujeme cez našu materskú firmu. Napíš nám a dohodneme sa." },
@@ -104,7 +105,7 @@ export default function FAQPage() {
 
       {categories.map((cat, i) => (
         <section key={i} className={i % 2 === 0 ? "section" : "section-alt"}>
-          <div className="container" style={{ maxWidth: "800px" }}>
+          <div className={`container ${styles.faqContainer}`}>
             <SectionHeading title={cat.title} />
             <FAQ items={cat.items} />
           </div>
@@ -113,8 +114,9 @@ export default function FAQPage() {
 
       <CTASection
         title="Nenašiel si odpoveď?"
-        text={`Napíš nám alebo zavolaj. Radi pomôžeme. laser@laser48.sk | ${PHONE}`}
+        text="Napíš nám alebo zavolaj. Radi pomôžeme."
         buttonText="Kontaktuj nás →"
+        note={`laser@laser48.sk | ${PHONE}`}
       />
     </>
   );

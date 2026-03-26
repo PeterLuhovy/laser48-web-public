@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Služby - Laserové rezanie kovov",
@@ -53,34 +54,34 @@ export default function SluzbyPage() {
             subtitle="Nerezová oceľ, čierna oceľ, hliník. Do 7 dní štandard. Do 48 hodín keď treba. Do 24 hodín keď to horí."
           />
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-xl)" }}>
+          <div className={styles.specGrid}>
             <div>
-              <h3 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "var(--space-md)" }}>
+              <h3 className={styles.specSection}>
                 <CheckCircle size={20} color="var(--color-primary)" /> Materiály
               </h3>
-              <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
-                <li><strong>Nerezová oceľ (0.5–6 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AISI 304 / 1.4301 · AISI 316 / 1.4401</span></li>
-                <li><strong>Čierna oceľ (0.5–8 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DC01 / 1.0330 · S235 / 1.0038 · C45 / 1.0503</span></li>
-                <li><strong>Pozinkovaná oceľ (0.5–3 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>DX51D / 1.0226</span></li>
-                <li><strong>Hliník (0.5–4 mm)</strong><br /><span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>AlMg3 / 3.3535</span></li>
+              <ul className={styles.specList}>
+                <li><strong>Nerezová oceľ (0.5–6 mm)</strong><br /><span className={styles.specSubtext}>AISI 304 / 1.4301 · AISI 316 / 1.4401</span></li>
+                <li><strong>Čierna oceľ (0.5–8 mm)</strong><br /><span className={styles.specSubtext}>DC01 / 1.0330 · S235 / 1.0038 · C45 / 1.0503</span></li>
+                <li><strong>Pozinkovaná oceľ (0.5–3 mm)</strong><br /><span className={styles.specSubtext}>DX51D / 1.0226</span></li>
+                <li><strong>Hliník (0.5–4 mm)</strong><br /><span className={styles.specSubtext}>AlMg3 / 3.3535</span></li>
               </ul>
             </div>
 
             <div>
-              <h3 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "var(--space-md)" }}>
+              <h3 className={styles.specSection}>
                 <CheckCircle size={20} color="var(--color-primary)" /> Formát
               </h3>
-              <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
+              <ul className={styles.specList}>
                 <li>Maximálny rozmer: 1540 × 750 mm</li>
                 <li>Presnosť: ±0.1 mm</li>
               </ul>
             </div>
 
             <div>
-              <h3 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "var(--space-md)" }}>
+              <h3 className={styles.specSection}>
                 <CheckCircle size={20} color="var(--color-primary)" /> Dodanie
               </h3>
-              <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
+              <ul className={styles.specList}>
                 <li>Štandard: 7 dní</li>
                 <li>Express: 48 hodín (za príplatok)</li>
                 <li>Extra rýchle: 24 hodín (za príplatok)</li>
@@ -89,20 +90,20 @@ export default function SluzbyPage() {
             </div>
 
             <div>
-              <h3 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "var(--space-md)" }}>
+              <h3 className={styles.specSection}>
                 <CheckCircle size={20} color="var(--color-primary)" /> Cena
               </h3>
-              <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
+              <ul className={styles.specList}>
                 <li>Cenová ponuka do 24 hodín</li>
                 <li>Transparentne, bez skrytých poplatkov</li>
               </ul>
             </div>
 
             <div>
-              <h3 style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "var(--space-md)" }}>
+              <h3 className={styles.specSection}>
                 <CheckCircle size={20} color="var(--color-primary)" /> Kvalita
               </h3>
-              <ul style={{ paddingLeft: "1.75rem", display: "flex", flexDirection: "column", gap: "var(--space-xs)" }}>
+              <ul className={styles.specList}>
                 <li>Kontrola každého kusu pred odoslaním</li>
                 <li>Otrepy a okuje? Odstránené pred odoslaním</li>
                 <li>Čisté diely pripravené na použitie</li>
@@ -111,7 +112,7 @@ export default function SluzbyPage() {
             </div>
           </div>
 
-          <div style={{ marginTop: "var(--space-2xl)", textAlign: "center" }}>
+          <div className={styles.specCta}>
             <Button href="/kontakt#formular">Pošli dopyt →</Button>
           </div>
         </div>
@@ -121,18 +122,18 @@ export default function SluzbyPage() {
       <section className="section-alt">
         <div className="container">
           <SectionHeading title="Ako objednať?" center />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-xl)", maxWidth: "700px", margin: "0 auto" }}>
-            <div style={{ textAlign: "center" }}>
-              <h3 style={{ marginBottom: "var(--space-sm)" }}>1. Email</h3>
-              <p style={{ color: "var(--color-text-secondary)", marginBottom: "var(--space-md)" }}>
+          <div className={styles.orderGrid}>
+            <div className={styles.orderOption}>
+              <h3>1. Email</h3>
+              <p className={styles.orderText}>
                 Pošli výkres na <a href={EMAIL_MAILTO}>{EMAIL}</a>.
                 Odpovieme do 24 hodín.
               </p>
               <Button href="/kontakt" size="md">Pošli dopyt →</Button>
             </div>
-            <div style={{ textAlign: "center" }}>
-              <h3 style={{ marginBottom: "var(--space-sm)" }}>2. Telefón</h3>
-              <p style={{ color: "var(--color-text-secondary)", marginBottom: "var(--space-md)" }}>
+            <div className={styles.orderOption}>
+              <h3>2. Telefón</h3>
+              <p className={styles.orderText}>
                 Zavolaj na <a href={PHONE_TEL}>{PHONE}</a>.
                 {HOURS_SHORT}.
               </p>
@@ -144,7 +145,7 @@ export default function SluzbyPage() {
 
       {/* FAQ */}
       <section className="section">
-        <div className="container" style={{ maxWidth: "800px" }}>
+        <div className={`container ${styles.faqContainer}`}>
           <SectionHeading title="Často kladené otázky" center />
           <FAQ items={faqItems} />
         </div>

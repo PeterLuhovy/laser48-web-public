@@ -32,13 +32,16 @@
 }
 
 .answer {
-  display: none;
-  padding: 0 0 var(--space-lg);
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
   color: var(--color-text-secondary);
   line-height: 1.7;
   font-size: var(--text-sm);
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .answerOpen {
-  display: block;
+  max-height: 500px;
+  padding: 0 0 var(--space-lg);
 }

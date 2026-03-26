@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Cenník laserového rezania",
@@ -11,48 +12,11 @@ export const metadata: Metadata = {
     "Transparentný cenník. Cenová ponuka do 24 hodín. Nerezová oceľ, hliník. Štandard 7 dní, express 48h.",
 };
 
-const tableStyle: React.CSSProperties = {
-  width: "100%",
-  borderCollapse: "collapse",
-  fontFamily: "var(--font-sans)",
-  fontSize: "var(--text-sm)",
-  marginBottom: "var(--space-xl)",
-};
-
-const thStyle: React.CSSProperties = {
-  background: "var(--color-dark)",
-  color: "var(--color-white)",
-  padding: "0.75rem 1rem",
-  textAlign: "left",
-  fontWeight: 600,
-};
-
-const tdStyle: React.CSSProperties = {
-  padding: "0.75rem 1rem",
-  borderBottom: "1px solid var(--color-border)",
-};
-
-const tdAltStyle: React.CSSProperties = {
-  ...tdStyle,
-  background: "var(--color-bg-light)",
-};
-
-function TableRow({ cells, alt }: { cells: string[]; alt: boolean }) {
-  const s = alt ? tdAltStyle : tdStyle;
-  return (
-    <tr>
-      {cells.map((c, i) => (
-        <td key={i} style={s}>{c}</td>
-      ))}
-    </tr>
-  );
-}
-
 const faqItems = [
   {
     question: "Prečo nemôžem vidieť cenu bez poslania výkresu?",
     answer:
-      "Každý výkres je jedinečný. Cena závisí od dĺžky rezu, počtu dier, zložitosti. Pošli nám výkres a ponuku dostaneš do 24 hodín.",
+      "Každý výkres je jedinečný. Cena závisí od dĺžky rezu, počtu dier, zložitosti a termínu dodania. Pošli nám výkres a ponuku dostaneš do 24 hodín.",
   },
   {
     question: "Sú v cene zahrnuté materiál a DPH?",
@@ -81,7 +45,7 @@ export default function CennikPage() {
       />
 
       {/* Hlavný CTA */}
-      <section className="section" style={{ textAlign: "center" }}>
+      <section className={`section ${styles.mainCta}`}>
         <div className="container">
           <SectionHeading
             title="Cenová ponuka do 24 hodín"
@@ -89,10 +53,10 @@ export default function CennikPage() {
             center
           />
           <Button href="/kontakt#formular" size="lg">Pošli dopyt →</Button>
-          <div style={{ display: "flex", justifyContent: "center", gap: "var(--space-xl)", marginTop: "var(--space-lg)", flexWrap: "wrap" }}>
-            <span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>✓ Odpovieme do 24 hodín</span>
-            <span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>✓ Vrátane materiálu a DPH</span>
-            <span style={{ fontSize: "var(--text-sm)", color: "var(--color-text-secondary)" }}>✓ Žiadne skryté poplatky</span>
+          <div className={styles.ctaFeatures}>
+            <span className={styles.ctaFeature}>✓ Odpovieme do 24 hodín</span>
+            <span className={styles.ctaFeature}>✓ Vrátane materiálu a DPH</span>
+            <span className={styles.ctaFeature}>✓ Žiadne skryté poplatky</span>
           </div>
         </div>
       </section>
@@ -102,13 +66,13 @@ export default function CennikPage() {
         <div className="container">
           <SectionHeading title="Orientačný cenník" subtitle="Materiály na sklade. Presná cena závisí od zložitosti výkresu." />
 
-          <h3 style={{ marginBottom: "var(--space-md)" }}>Nerezová oceľ AISI 304 / AISI 316</h3>
-          <table style={tableStyle}>
+          <h3 className={styles.tableHeading}>Nerezová oceľ AISI 304 / AISI 316</h3>
+          <table className={styles.table}>
             <thead>
               <tr>
-                <th style={thStyle}>Hrúbka</th>
-                <th style={thStyle}>Max rozmer</th>
-                <th style={thStyle}>Poznámka</th>
+                <th>Hrúbka</th>
+                <th>Max rozmer</th>
+                <th>Poznámka</th>
               </tr>
             </thead>
             <tbody>
@@ -122,18 +86,22 @@ export default function CennikPage() {
                 ["5 mm", "1540×750mm", "Valcované za tepla"],
                 ["6 mm", "1540×750mm", "Valcované za tepla"],
               ].map((row, i) => (
-                <TableRow key={i} cells={row} alt={i % 2 === 1} />
+                <tr key={i}>
+                  {row.map((c, j) => (
+                    <td key={j}>{c}</td>
+                  ))}
+                </tr>
               ))}
             </tbody>
           </table>
 
-          <h3 style={{ marginBottom: "var(--space-md)" }}>Čierna oceľ DC01 / S235 / C45</h3>
-          <table style={tableStyle}>
+          <h3 className={styles.tableHeading}>Čierna oceľ DC01 / S235 / C45</h3>
+          <table className={styles.table}>
             <thead>
               <tr>
-                <th style={thStyle}>Hrúbka</th>
-                <th style={thStyle}>Materiál</th>
-                <th style={thStyle}>Max rozmer</th>
+                <th>Hrúbka</th>
+                <th>Materiál</th>
+                <th>Max rozmer</th>
               </tr>
             </thead>
             <tbody>
@@ -148,17 +116,21 @@ export default function CennikPage() {
                 ["6 mm", "S235 / C45", "1540×750mm"],
                 ["8 mm", "S235", "1540×750mm"],
               ].map((row, i) => (
-                <TableRow key={i} cells={row} alt={i % 2 === 1} />
+                <tr key={i}>
+                  {row.map((c, j) => (
+                    <td key={j}>{c}</td>
+                  ))}
+                </tr>
               ))}
             </tbody>
           </table>
 
-          <h3 style={{ marginBottom: "var(--space-md)" }}>Hliník (AlMg3)</h3>
-          <table style={tableStyle}>
+          <h3 className={styles.tableHeading}>Hliník (AlMg3)</h3>
+          <table className={styles.table}>
             <thead>
               <tr>
-                <th style={thStyle}>Hrúbka</th>
-                <th style={thStyle}>Max rozmer</th>
+                <th>Hrúbka</th>
+                <th>Max rozmer</th>
               </tr>
             </thead>
             <tbody>
@@ -167,7 +139,11 @@ export default function CennikPage() {
                 ["2 mm", "1540×750mm"],
                 ["4 mm", "1540×750mm"],
               ].map((row, i) => (
-                <TableRow key={i} cells={row} alt={i % 2 === 1} />
+                <tr key={i}>
+                  {row.map((c, j) => (
+                    <td key={j}>{c}</td>
+                  ))}
+                </tr>
               ))}
             </tbody>
           </table>
@@ -176,7 +152,7 @@ export default function CennikPage() {
 
       {/* FAQ */}
       <section className="section">
-        <div className="container" style={{ maxWidth: "800px" }}>
+        <div className={`container ${styles.faqContainer}`}>
           <SectionHeading title="Otázky o cene?" center />
           <FAQ items={faqItems} />
         </div>

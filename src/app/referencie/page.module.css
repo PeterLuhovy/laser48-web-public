@@ -1,0 +1,55 @@
+/* --- Pain points grid --- */
+.painGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.painItem {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.painIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.painTitle {
+  font-size: var(--text-body);
+  margin-bottom: var(--space-xs);
+}
+
+.painText {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* --- Solutions grid --- */
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* --- Testimonials grid --- */
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* --- Stats grid --- */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* --- Industries grid --- */
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
