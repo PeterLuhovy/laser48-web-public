@@ -23,12 +23,16 @@ export default function PhoneButton() {
           <span className={styles.number}>{PHONE}</span>
           <button
             className={styles.copyBtn}
-            onClick={() => {
-              navigator.clipboard.writeText(PHONE.replace(/\s/g, ""));
-              setCopied(true);
-              setTimeout(() => setCopied(false), 2000);
+            onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(PHONE.replace(/\s/g, ""));
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              } catch {
+                /* clipboard API unavailable */
+              }
             }}
-            title="Kopírovať číslo"
+            aria-label="Kopírovať číslo"
           >
             {copied ? <Check size={14} /> : <Copy size={14} />}
           </button>

@@ -119,6 +119,12 @@
   background: var(--color-primary-hover);
 }
 
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Info sidebar */
 .info h3 {
   margin-bottom: var(--space-md);
@@ -192,6 +198,12 @@
 
 .billing p {
   margin-bottom: var(--space-xs);
+}
+
+/* Success message */
+.successMessage {
+  padding: var(--space-2xl);
+  text-align: center;
 }
 
 @media (max-width: 768px) {

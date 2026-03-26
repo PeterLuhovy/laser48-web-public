@@ -69,6 +69,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -124,6 +125,11 @@ h1 { font-size: var(--text-h1); }
 h2 { font-size: var(--text-h2); }
 h3 { font-size: var(--text-h3); }
 
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 /* --- Utility --- */
 .container {
   width: 100%;
@@ -149,18 +155,6 @@ h3 { font-size: var(--text-h3); }
 
 .text-center {
   text-align: center;
-}
-
-/* --- Scroll Animations --- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* --- Skip to content (a11y) --- */

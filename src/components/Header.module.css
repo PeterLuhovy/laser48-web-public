@@ -44,8 +44,13 @@
   white-space: nowrap;
 }
 
-.navLink:hover {
+.navLink:hover,
+.navLinkActive {
   color: var(--color-primary);
+}
+
+.navLinkActive {
+  font-weight: 600;
 }
 
 .cta {
@@ -118,8 +123,10 @@
   color: var(--color-black);
 }
 
-.mobileNavLink:hover {
+.mobileNavLink:hover,
+.mobileNavLinkActive {
   color: var(--color-primary);
+  font-weight: 600;
 }
 
 .phoneMobile {

@@ -63,7 +63,7 @@ const serviceJsonLd = {
 export const metadata: Metadata = {
   title: "Služby - Laserové rezanie kovov",
   description:
-    "Laserové rezanie do 7 dní. Nerezová oceľ, čierna oceľ, hliník. Cenová ponuka do 24h.",
+    "CO₂ laser Bystronic ByVention 3015. Nerez 0.5–6mm, čierna oceľ 0.5–8mm, hliník 0.5–4mm. Max 1540×750mm, presnosť ±0.1mm. Dodanie 7 dní, express 48h/24h.",
 };
 
 const faqItems = [
@@ -205,6 +205,15 @@ export default function SluzbyPage() {
       </section>
 
       {/* FAQ */}
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }} />
       <section className="section">
         <div className={`container ${styles.faqContainer}`}>
           <SectionHeading title="Často kladené otázky" center />

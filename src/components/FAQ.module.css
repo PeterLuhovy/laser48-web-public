@@ -42,6 +42,6 @@
 }
 
 .answerOpen {
-  max-height: 500px;
+  max-height: 2000px;
   padding: 0 0 var(--space-lg);
 }

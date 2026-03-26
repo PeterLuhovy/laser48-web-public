@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { PHONE, PHONE_TEL, COMPANY } from "@/config";
@@ -18,10 +19,19 @@ const navItems = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && menuOpen) setMenuOpen(false);
+    };
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
   }, [menuOpen]);
 
   return (
@@ -41,7 +51,11 @@ export default function Header() {
 
           <nav className={styles.nav}>
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className={styles.navLink}>
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`${styles.navLink} ${pathname === item.href ? styles.navLinkActive : ""}`}
+              >
                 {item.label}
               </Link>
             ))}
@@ -73,7 +87,7 @@ export default function Header() {
           <Link
             key={item.href}
             href={item.href}
-            className={styles.mobileNavLink}
+            className={`${styles.mobileNavLink} ${pathname === item.href ? styles.mobileNavLinkActive : ""}`}
             onClick={() => setMenuOpen(false)}
           >
             {item.label}

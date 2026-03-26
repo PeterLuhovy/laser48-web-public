@@ -13,8 +13,9 @@ type FAQProps = {
   items: FAQItem[];
 };
 
-function FAQItemComponent({ question, answer }: FAQItem) {
+function FAQItemComponent({ question, answer, index }: FAQItem & { index: number }) {
   const [open, setOpen] = useState(false);
+  const answerId = `faq-answer-${index}`;
 
   return (
     <div className={styles.item}>
@@ -22,6 +23,7 @@ function FAQItemComponent({ question, answer }: FAQItem) {
         className={styles.question}
         onClick={() => setOpen(!open)}
         aria-expanded={open}
+        aria-controls={answerId}
       >
         {question}
         <ChevronDown
@@ -29,7 +31,12 @@ function FAQItemComponent({ question, answer }: FAQItem) {
           className={`${styles.chevron} ${open ? styles.chevronOpen : ""}`}
         />
       </button>
-      <div className={`${styles.answer} ${open ? styles.answerOpen : ""}`}>
+      <div
+        id={answerId}
+        role="region"
+        aria-hidden={!open}
+        className={`${styles.answer} ${open ? styles.answerOpen : ""}`}
+      >
         {answer}
       </div>
     </div>
@@ -40,7 +47,7 @@ export default function FAQ({ items }: FAQProps) {
   return (
     <div>
       {items.map((item, i) => (
-        <FAQItemComponent key={i} {...item} />
+        <FAQItemComponent key={i} index={i} {...item} />
       ))}
     </div>
   );

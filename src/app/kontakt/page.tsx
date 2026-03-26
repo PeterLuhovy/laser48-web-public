@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { PHONE, PHONE_TEL, EMAIL, EMAIL_MAILTO, ADDRESS, HOURS_SHORT, COMPANY, PARENT_COMPANY } from "@/config";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
+import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
 import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
@@ -60,120 +61,9 @@ export default function KontaktPage() {
 
           {/* Formulár + Info */}
           <div id="formular" className={styles.formSection}>
-            <div>
-              <SectionHeading title="Pošli nám správu" subtitle="Vyplň formulár a odpovieme do 24 hodín." />
-              <form
-                className={styles.form}
-                action={`https://formsubmit.co/${EMAIL}`}
-                method="POST"
-                encType="multipart/form-data"
-              >
-                {/* FormSubmit config */}
-                <input type="hidden" name="_subject" value="Nový dopyt z webu laser48.sk" />
-                <input type="hidden" name="_captcha" value="true" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
-
-                <div className={styles.fieldRow}>
-                  <div className={styles.field}>
-                    <label htmlFor="name">Meno a priezvisko *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Napr. Ján Novák"
-                      required
-                    />
-                  </div>
-                  <div className={styles.field}>
-                    <label htmlFor="email">Email *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Napr. jan.novak@firma.sk"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.fieldRow}>
-                  <div className={styles.field}>
-                    <label htmlFor="phone">Telefón</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="Napr. +421 912 345 678"
-                    />
-                  </div>
-                  <div className={styles.field}>
-                    <label htmlFor="type">Typ dopytu *</label>
-                    <select id="type" name="type" required>
-                      <option value="">Vyber...</option>
-                      <option value="cenova-ponuka">Cenová ponuka</option>
-                      <option value="technicka-otazka">Technická otázka</option>
-                      <option value="reklamacia">Reklamácia</option>
-                      <option value="ine">Iné</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className={styles.field}>
-                  <label htmlFor="message">Správa *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Napíš sem svoju otázku alebo požiadavku..."
-                    required
-                  />
-                </div>
-
-                <div className={styles.field}>
-                  <label htmlFor="attachment1">Nahrať výkresy (DXF, DWG, PDF — max 10MB spolu)</label>
-                  <input
-                    type="file"
-                    id="attachment1"
-                    name="attachment1"
-                    accept=".dxf,.dwg,.pdf,.jpg,.jpeg,.png,.zip"
-                  />
-                  <input
-                    type="file"
-                    id="attachment2"
-                    name="attachment2"
-                    accept=".dxf,.dwg,.pdf,.jpg,.jpeg,.png,.zip"
-                    style={{ marginTop: "var(--space-xs)" }}
-                  />
-                  <input
-                    type="file"
-                    id="attachment3"
-                    name="attachment3"
-                    accept=".dxf,.dwg,.pdf,.jpg,.jpeg,.png,.zip"
-                    style={{ marginTop: "var(--space-xs)" }}
-                  />
-                  <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)", marginTop: "var(--space-xs)" }}>
-                    Viac ako 3 súbory? Zbaľ ich do ZIP alebo pošli na laser@laser48.sk
-                  </p>
-                </div>
-
-                <div className={styles.checkbox}>
-                  <input type="checkbox" id="gdpr" name="gdpr" required />
-                  <label htmlFor="gdpr">
-                    Súhlasím so spracovaním osobných údajov podľa{" "}
-                    <Link href="/ochrana-osobnych-udajov">zásad ochrany osobných údajov</Link>. *
-                  </label>
-                </div>
-
-                <button type="submit" className={styles.submitBtn}>
-                  Odoslať správu →
-                </button>
-
-                <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)" }}>
-                  Odpovieme do 24 hodín v pracovné dni. Urgentné? Radšej zavolaj:{" "}
-                  <a href={PHONE_TEL}>{PHONE}</a>
-                </p>
-              </form>
-            </div>
+            <Suspense>
+              <ContactForm />
+            </Suspense>
 
             <div className={styles.info}>
               <h3>Otváracie hodiny</h3>

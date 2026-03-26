@@ -11,6 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/referencie`, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/faq`, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/kontakt`, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/ochrana-osobnych-udajov`, lastModified: "2026-03-26", changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/ochrana-osobnych-udajov`, lastModified: "2026-03-25", changeFrequency: "yearly", priority: 0.3 },
   ];
 }

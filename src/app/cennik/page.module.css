@@ -46,6 +46,14 @@
   background: var(--color-bg-light);
 }
 
+@media (max-width: 768px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* --- FAQ container --- */
 .faqContainer {
   max-width: 800px;

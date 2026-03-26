@@ -145,6 +145,15 @@ export default function AkoToFungujePage() {
       </section>
 
       {/* FAQ */}
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }} />
       <section className="section-alt">
         <div className={`container ${styles.faqContainer}`}>
           <SectionHeading title="Máš otázky?" center />
