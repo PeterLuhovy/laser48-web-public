@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
+          <nav aria-label="Pätička">
             <h4 className={styles.heading}>Navigácia</h4>
             <div className={styles.links}>
               <Link href="/sluzby">Služby</Link>
@@ -33,7 +33,7 @@ export default function Footer() {
               <Link href="/faq">FAQ</Link>
               <Link href="/kontakt">Kontakt</Link>
             </div>
-          </div>
+          </nav>
 
           <div>
             <h4 className={styles.heading}>Služby</h4>

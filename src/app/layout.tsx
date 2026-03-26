@@ -31,6 +31,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "LASER48 | Laserové rezanie do 7 dní",
+    description:
+      "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Cenová ponuka do 24h.",
+    images: ["/images/hero-laser.png"],
+  },
 };
 
 export default function RootLayout({

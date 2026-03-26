@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PHONE, PHONE_TEL, EMAIL, EMAIL_MAILTO, ADDRESS, COMPANY, PARENT_COMPANY } from "@/config";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
+import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -13,6 +14,14 @@ export const metadata: Metadata = {
 export default function OchranaOsobnychUdajovPage() {
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domov", item: "https://www.laser48.sk" },
+          { "@type": "ListItem", position: 2, name: "Ochrana osobných údajov", item: "https://www.laser48.sk/ochrana-osobnych-udajov" },
+        ],
+      }} />
       <HeroSection title="Ochrana osobných údajov" small />
 
       <section className="section">

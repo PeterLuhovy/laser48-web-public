@@ -19,6 +19,8 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Google-Extended", allow: "/" },
       { userAgent: "Gemini-Deep-Research", allow: "/" },
       { userAgent: "AzureAI-SearchBot", allow: "/" },
+      { userAgent: "Meta-ExternalAgent", allow: "/" },
+      { userAgent: "Meta-ExternalFetcher", allow: "/" },
     ],
     sitemap: "https://www.laser48.sk/sitemap.xml",
   };

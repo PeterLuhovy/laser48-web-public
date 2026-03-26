@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -38,6 +39,14 @@ const faqItems = [
 export default function CennikPage() {
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domov", item: "https://www.laser48.sk" },
+          { "@type": "ListItem", position: 2, name: "Cenník", item: "https://www.laser48.sk/cennik" },
+        ],
+      }} />
       <HeroSection
         title="Cenník laserového rezania"
         perex="Naša cena závisí od materiálu, hrúbky, počtu kusov, dĺžky rezu a termínu dodania. Pošli nám výkres a cenovú ponuku dostaneš do 24 hodín."

@@ -96,6 +96,14 @@ export default function FAQPage() {
   return (
     <>
       <JsonLd data={faqJsonLd} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domov", item: "https://www.laser48.sk" },
+          { "@type": "ListItem", position: 2, name: "FAQ", item: "https://www.laser48.sk/faq" },
+        ],
+      }} />
 
       <HeroSection
         title="Často kladené otázky (FAQ)"

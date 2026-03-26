@@ -6,6 +6,7 @@ import { PHONE, PHONE_TEL, EMAIL, EMAIL_MAILTO, ADDRESS, HOURS_SHORT, COMPANY, P
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -17,6 +18,14 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domov", item: "https://www.laser48.sk" },
+          { "@type": "ListItem", position: 2, name: "Kontakt", item: "https://www.laser48.sk/kontakt" },
+        ],
+      }} />
       <HeroSection
         title="Kontakt"
         perex="Máš otázku alebo potrebuješ radu? Neváhaj nás kontaktovať. Odpovedáme do 24 hodín (v pracovné dni)."

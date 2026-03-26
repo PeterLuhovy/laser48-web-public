@@ -6,7 +6,59 @@ import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Laserové rezanie kovov",
+  description:
+    "CO₂ laserové rezanie plechov. Nerezová oceľ, čierna oceľ, pozinkovaná oceľ, hliník. Štandard 7 dní, express 48h alebo 24h. Max rozmer 1540×750mm, presnosť ±0.1mm.",
+  provider: { "@id": "https://www.laser48.sk/#organization" },
+  areaServed: [
+    { "@type": "Country", name: "Slovakia" },
+    { "@type": "Country", name: "Czech Republic" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Materiály",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie nerezovej ocele",
+          description: "AISI 304/316, hrúbka 0.5–6mm, max 1540×750mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie čiernej ocele",
+          description: "DC01/S235/C45, hrúbka 0.5–8mm, max 1540×750mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie pozinkovanej ocele",
+          description: "DX51D, hrúbka 0.5–3mm, max 1540×750mm.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Laserové rezanie hliníka",
+          description: "AlMg3, hrúbka 0.5–4mm, max 1540×750mm.",
+        },
+      },
+    ],
+  },
+};
 
 export const metadata: Metadata = {
   title: "Služby - Laserové rezanie kovov",
@@ -39,9 +91,18 @@ const faqItems = [
 export default function SluzbyPage() {
   return (
     <>
+      <JsonLd data={serviceJsonLd} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domov", item: "https://www.laser48.sk" },
+          { "@type": "ListItem", position: 2, name: "Služby", item: "https://www.laser48.sk/sluzby" },
+        ],
+      }} />
       <HeroSection
         title="Čo robíme?"
-        perex="Špecializujeme sa na rýchle dodanie laserových dielov pre malé a stredné firmy."
+        perex="Laserové rezanie nerezovej ocele, čiernej ocele a hliníka. Hrúbka 0.5–8 mm, max 1540×750 mm. Dodanie do 7 dní, express 48h alebo 24h. Cenová ponuka do 24 hodín."
         bgImage="/images/stroj-byvention.jpg"
         small
       />

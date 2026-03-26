@@ -10,6 +10,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import StatCounter from "@/components/StatCounter";
 import Card from "@/components/Card";
 import CTASection from "@/components/CTASection";
+import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -59,9 +60,17 @@ const solutions = [
 export default function ReferenciePage() {
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domov", item: "https://www.laser48.sk" },
+          { "@type": "ListItem", position: 2, name: "Referencie", item: "https://www.laser48.sk/referencie" },
+        ],
+      }} />
       <HeroSection
         title="Čo hovoria naši zákazníci"
-        perex={`Dodali sme stovky objednávok za ${YEARS_ON_MARKET}. Tu je pár príbehov našich zákazníkov.`}
+        perex={`Viac ako 500 000 dodaných dielov za ${YEARS_ON_MARKET}. 98% objednávok dodaných na čas. Tu je pár príbehov našich zákazníkov.`}
         bgImage="/images/diel-nerez.jpg"
         small
       />

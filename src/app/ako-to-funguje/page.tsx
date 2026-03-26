@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import Card from "@/components/Card";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -38,6 +39,14 @@ const faqItems = [
 export default function AkoToFungujePage() {
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domov", item: "https://www.laser48.sk" },
+          { "@type": "ListItem", position: 2, name: "Ako to funguje", item: "https://www.laser48.sk/ako-to-funguje" },
+        ],
+      }} />
       <HeroSection
         title="Ako to funguje?"
         perex="Objednať u nás je jednoduché. 3 kroky a máš hotovo."
