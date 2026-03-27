@@ -216,7 +216,7 @@ export default function ExpresPage() {
               <h3><XCircle size={24} /> Pre koho NIE:</h3>
               <ul>
                 <li>keď rozhoduje len cena</li>
-                <li>keď nevadí čakať týždeň</li>
+                <li>keď nevadí čakať mesiac</li>
               </ul>
             </div>
           </div>
