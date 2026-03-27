@@ -99,7 +99,7 @@ export default function ExpresPage() {
       <section className="section">
         <div className="container">
           <SectionHeading
-            title="Nie je to len „rýchlejšie rezanie""
+            title={`Nie je to len \u201Erýchlejšie rezanie\u201C`}
             subtitle="Máme to nastavené systémovo."
           />
           <div className={styles.systemGrid}>
