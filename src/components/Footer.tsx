@@ -27,6 +27,7 @@ export default function Footer() {
             <h4 className={styles.heading}>Navigácia</h4>
             <div className={styles.links}>
               <Link href="/sluzby">Služby</Link>
+              <Link href="/expres">Expres 48h</Link>
               <Link href="/ako-to-funguje">Ako to funguje</Link>
               <Link href="/cennik">Cenník</Link>
               <Link href="/referencie">Referencie</Link>
@@ -39,6 +40,7 @@ export default function Footer() {
             <h4 className={styles.heading}>Služby</h4>
             <div className={styles.links}>
               <Link href="/sluzby">Laserové rezanie</Link>
+              <Link href="/expres">Expres výroba</Link>
               <Link href="/cennik">Cenník</Link>
               <Link href="/ako-to-funguje">Ako objednať</Link>
             </div>

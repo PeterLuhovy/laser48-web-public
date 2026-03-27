@@ -4,8 +4,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.laser48.sk";
 
   return [
-    { url: baseUrl, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 1 },
+    { url: baseUrl, lastModified: "2026-03-27", changeFrequency: "monthly", priority: 1 },
     { url: `${baseUrl}/sluzby`, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/expres`, lastModified: "2026-03-27", changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/ako-to-funguje`, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/cennik`, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/referencie`, lastModified: "2026-03-25", changeFrequency: "monthly", priority: 0.7 },

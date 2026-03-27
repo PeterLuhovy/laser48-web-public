@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 const testimonials = [
-  { quote: "Vy ste super. Keď to objednám od vás, príde vždy na čas. Ani nie skôr, ani nie neskôr. Presne v ten deň ako poviete." },
+  { quote: "Vy ste super. Keď niečo objednám od vás, príde to vždy na čas. Ani nie skôr, ani nie neskôr. Presne v ten deň ako poviete." },
   { quote: "Páči sa mi ako dodávate. Faktúry, balenie — máte to také pekné, profesionálne." },
   { quote: "Poslali sme zlé podklady, zákazka už bola vyrobená a dodaná. Poslali sme nové výkresy a za 24 hodín sme mali novú zákazku. Bez problémov." },
   { quote: "Predchádzajúci dodávateľ dodával stovky kusov a vždy sa desiatky percent vracali kvôli okujám. Od LASER48 sú všetky diely perfektné, pripravené rovno na montáž." },

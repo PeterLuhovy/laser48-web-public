@@ -10,6 +10,7 @@ import styles from "./Header.module.css";
 
 const navItems = [
   { href: "/sluzby", label: "Služby" },
+  { href: "/expres", label: "Expres" },
   { href: "/ako-to-funguje", label: "Ako to funguje" },
   { href: "/cennik", label: "Cenník" },
   { href: "/referencie", label: "Referencie" },
@@ -36,6 +37,13 @@ export default function Header() {
 
   return (
     <>
+      <div className={styles.topBar}>
+        <span>Cena do 24h</span>
+        <span className={styles.topBarDot}>·</span>
+        <span>Expres 48h</span>
+        <span className={styles.topBarDot}>·</span>
+        <span>Bez otrepov</span>
+      </div>
       <header className={styles.header}>
         <div className={styles.inner}>
           <Link href="/" className={styles.logo}>

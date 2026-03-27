@@ -172,7 +172,7 @@ export default function ContactForm() {
         </div>
 
         <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
-          {isSubmitting ? "Odosielam..." : "Odoslať správu →"}
+          {isSubmitting ? "Odosielam..." : "Získať cenu do 24h →"}
         </button>
 
         <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)" }}>
