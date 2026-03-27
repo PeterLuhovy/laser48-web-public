@@ -17,7 +17,7 @@ const faqItems = [
   {
     question: "Prečo nemôžem vidieť cenu bez poslania výkresu?",
     answer:
-      "Každý výkres je jedinečný. Cena závisí od dĺžky rezu, počtu dier, zložitosti a termínu dodania. Pošli nám výkres a ponuku dostaneš do 24 hodín.",
+      "Každý výkres je jedinečný. Cena závisí od dĺžky rezu, počtu dier, zložitosti a termínu dodania. Pošlite nám výkres a ponuku dostanete do 24 hodín.",
   },
   {
     question: "Sú v cene zahrnuté materiál a DPH?",
@@ -27,12 +27,12 @@ const faqItems = [
   {
     question: "Môžem dostať individuálnu cenu pre veľkú sériu?",
     answer:
-      "Áno. Ak potrebuješ viac ako 500 kusov mesačne, napíš nám. Dohodneme individuálnu cenu.",
+      "Áno. Ak potrebujete viac ako 500 kusov mesačne, napíšte nám. Dohodneme individuálnu cenu.",
   },
   {
     question: "Máte zľavy pri väčších objednávkach?",
     answer:
-      "Áno. Pri väčších objemoch alebo pravidelných objednávkach dohodneme individuálnu cenu. Napíš nám.",
+      "Áno. Pri väčších objemoch alebo pravidelných objednávkach dohodneme individuálnu cenu. Napíšte nám.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function CennikPage() {
       }} />
       <HeroSection
         title="Cenník laserového rezania"
-        perex="Naša cena závisí od materiálu, hrúbky, počtu kusov, dĺžky rezu a termínu dodania. Pošli nám výkres a cenovú ponuku dostaneš do 24 hodín."
+        perex="Naša cena závisí od materiálu, hrúbky, počtu kusov, dĺžky rezu a termínu dodania. Pošlite nám výkres a cenovú ponuku dostanete do 24 hodín."
         small
       />
 
@@ -58,10 +58,10 @@ export default function CennikPage() {
         <div className="container">
           <SectionHeading
             title="Cenová ponuka do 24 hodín"
-            subtitle="Pošli nám výkres a my ti pošleme cenovú ponuku vrátane materiálu, práce a DPH. Transparentne a bez záväzkov."
+            subtitle="Pošlite nám výkres a my vám pošleme cenovú ponuku vrátane materiálu, práce a DPH. Transparentne a bez záväzkov."
             center
           />
-          <Button href="/kontakt#formular" size="lg">Pošli dopyt →</Button>
+          <Button href="/kontakt#formular" size="lg">Pošlite dopyt →</Button>
           <div className={styles.ctaFeatures}>
             <span className={styles.ctaFeature}>✓ Odpovieme do 24 hodín</span>
             <span className={styles.ctaFeature}>✓ Vrátane materiálu a DPH</span>
@@ -178,9 +178,9 @@ export default function CennikPage() {
 
       <CTASection
         title="Pripravený zistiť presnú cenu?"
-        text="Pošli výkres. Ponuka do 24 hodín. Žiadne prekvapenia."
-        buttonText="Pošli dopyt →"
-        note="Alebo pošli výkres na laser@laser48.sk"
+        text="Pošlite výkres. Ponuka do 24 hodín. Žiadne prekvapenia."
+        buttonText="Pošlite dopyt →"
+        note="Alebo pošlite výkres na laser@laser48.sk"
       />
     </>
   );

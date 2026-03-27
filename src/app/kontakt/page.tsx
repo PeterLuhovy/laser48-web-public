@@ -13,7 +13,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Kontakt - Telefón, Email, Adresa",
   description:
-    `Kontaktuj nás: ${PHONE} | laser@laser48.sk | Nosice 256, Púchov. Odpovieme do 24 hodín.`,
+    `Kontaktujte nás: ${PHONE} | laser@laser48.sk | Nosice 256, Púchov. Odpovieme do 24 hodín.`,
 };
 
 export default function KontaktPage() {
@@ -29,7 +29,7 @@ export default function KontaktPage() {
       }} />
       <HeroSection
         title="Kontakt"
-        perex="Máš otázku alebo potrebuješ radu? Neváhaj nás kontaktovať. Odpovedáme do 24 hodín (v pracovné dni)."
+        perex="Máte otázku alebo potrebujete radu? Neváhajte nás kontaktovať. Odpovedáme do 24 hodín (v pracovné dni)."
         small
       />
 
@@ -174,8 +174,8 @@ export default function KontaktPage() {
 
       <CTASection
         title="Radšej objednaj online"
-        text="Vieš presne čo potrebuješ? Pošli výkres a cenovú ponuku dostaneš do 24 hodín."
-        buttonText="Pošli dopyt →"
+        text="Viete presne čo potrebujete? Pošlite výkres a cenovú ponuku dostanete do 24 hodín."
+        buttonText="Pošlite dopyt →"
       />
     </>
   );

@@ -50,8 +50,8 @@ const painPoints = [
 ];
 
 const solutions = [
-  { title: "Ponuka do 24 hodín", text: "Pošli výkres — presná cena vrátane materiálu, práce a DPH do 24 hodín. Žiadne čakanie." },
-  { title: "Od 1 kusu", text: "Žiadne minimálne objednávky. Potrebuješ 1 kus? 5 kusov? Žiadny problém." },
+  { title: "Ponuka do 24 hodín", text: "Pošlite výkres — presná cena vrátane materiálu, práce a DPH do 24 hodín. Žiadne čakanie." },
+  { title: "Od 1 kusu", text: "Žiadne minimálne objednávky. Potrebujete 1 kus? 5 kusov? Žiadny problém." },
   { title: "Vždy dodané na čas", text: "Keď povieme termín, dodržíme ho. Ak nastane problém — okamžitá komunikácia a riešenie, nie otáľanie." },
   { title: "Reálni ľudia, nie automaty", text: "Zdvíhame telefón. Odpovedáme na emaily. Informujeme o priebehu objednávky." },
   { title: "Čisté diely, pripravené na použitie", text: "Každý diel kontrolujeme. Otrepy a okuje? Odstránené pred odoslaním." },
@@ -170,10 +170,10 @@ export default function ReferenciePage() {
       </section>
 
       <CTASection
-        title="Chceš byť ďalší spokojný zákazník?"
-        text={`Viac ako 500 000 dodaných dielov za ${YEARS_ON_MARKET}. Pripoj sa k nim.`}
-        buttonText="Objednaj teraz →"
-        note={`Alebo sa nás opýtaj: ${PHONE}`}
+        title="Chcete byť ďalší spokojný zákazník?"
+        text={`Viac ako 500 000 dodaných dielov za ${YEARS_ON_MARKET}. Pripojte sa k nim.`}
+        buttonText="Pošlite výkres →"
+        note={`Alebo sa nás opýtajte: ${PHONE}`}
       />
     </>
   );

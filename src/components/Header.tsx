@@ -68,7 +68,7 @@ export default function Header() {
               </Link>
             ))}
             <Link href="/kontakt#formular" className={styles.cta}>
-              Pošli dopyt
+              Pošlite dopyt
             </Link>
           </nav>
 
@@ -106,7 +106,7 @@ export default function Header() {
           className={styles.cta}
           onClick={() => setMenuOpen(false)}
         >
-          Pošli dopyt
+          Pošlite dopyt
         </Link>
       </nav>
     </>

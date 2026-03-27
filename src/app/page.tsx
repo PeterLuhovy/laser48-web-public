@@ -125,10 +125,10 @@ export default function Home() {
       {/* HERO */}
       <HeroSection
         title="Keď vám chýba diel, stojí výroba."
-        perex="My ho dodáme do 48 hodín — bez problémov. Laserové rezanie kovov pre firmy, ktoré nemajú čas na chyby. Cena do 24h. Expres už od 24–48h."
+        perex="My ho dodáme od 24–48h — bez problémov. Laserové rezanie kovov pre firmy, ktoré nemajú čas na chyby. Cena do 24h."
         bgImage="/images/hero-laser.png"
       >
-        <Button href="/kontakt#formular">Pošli výkres — do 24h máš cenu</Button>
+        <Button href="/kontakt#formular">Pošlite výkres — do 24h máte cenu</Button>
         <PhoneButton />
       </HeroSection>
 
@@ -391,8 +391,8 @@ export default function Home() {
       <CTASection
         title="Máte výkres? Máte riešenie."
         text="Pošlite výkres — do 24h máte cenu. Expres 48h. Bez otrepov. Bez problémov."
-        buttonText="Pošli výkres — do 24h máš cenu"
-        note={`Alebo zavolaj: ${PHONE}`}
+        buttonText="Pošlite výkres — do 24h máte cenu"
+        note={`Alebo zavolajte: ${PHONE}`}
       />
     </>
   );

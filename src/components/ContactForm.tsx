@@ -19,10 +19,10 @@ export default function ContactForm() {
       <div className={styles.successMessage}>
         <SectionHeading
           title="Správa odoslaná ✓"
-          subtitle="Ďakujeme za tvoj dopyt. Odpovieme do 24 hodín v pracovné dni."
+          subtitle="Ďakujeme za váš dopyt. Odpovieme do 24 hodín v pracovné dni."
         />
         <p style={{ color: "var(--color-text-secondary)", marginTop: "var(--space-md)" }}>
-          Urgentné? Zavolaj nám: <a href={PHONE_TEL}>{PHONE}</a>
+          Urgentné? Zavolajte nám: <a href={PHONE_TEL}>{PHONE}</a>
         </p>
       </div>
     );
@@ -58,7 +58,7 @@ export default function ContactForm() {
 
   return (
     <div>
-      <SectionHeading title="Pošli nám správu" subtitle="Vyplň formulár a odpovieme do 24 hodín." />
+      <SectionHeading title="Pošlite nám správu" subtitle="Vyplňte formulár a odpovieme do 24 hodín." />
       <form
         className={styles.form}
         action={`https://formsubmit.co/${EMAIL}`}
@@ -123,7 +123,7 @@ export default function ContactForm() {
           <textarea
             id="message"
             name="message"
-            placeholder="Napíš sem svoju otázku alebo požiadavku..."
+            placeholder="Napíšte sem svoju otázku alebo požiadavku..."
             required
           />
         </div>
@@ -159,7 +159,7 @@ export default function ContactForm() {
             </p>
           )}
           <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)", marginTop: "var(--space-xs)" }}>
-            Viac ako 3 súbory? Zbaľ ich do ZIP alebo pošli na laser@laser48.sk
+            Viac ako 3 súbory? Zbaľte ich do ZIP alebo pošlite na laser@laser48.sk
           </p>
         </div>
 
@@ -176,7 +176,7 @@ export default function ContactForm() {
         </button>
 
         <p style={{ fontSize: "var(--text-xs)", color: "var(--color-text-secondary)" }}>
-          Odpovieme do 24 hodín v pracovné dni. Urgentné? Radšej zavolaj:{" "}
+          Odpovieme do 24 hodín v pracovné dni. Urgentné? Radšej zavolajte:{" "}
           <a href={PHONE_TEL}>{PHONE}</a>
         </p>
       </form>

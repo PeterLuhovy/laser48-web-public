@@ -11,7 +11,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Ako to funguje?",
   description:
-    "3 jednoduché kroky: Pošli výkres → Ponuka do 24h → Do 7 dní máš diely. Žiadne zložité procesy.",
+    "3 jednoduché kroky: Pošlite výkres → Ponuka do 24h → Do 7 dní máte diely. Žiadne zložité procesy.",
 };
 
 const faqItems = [
@@ -27,7 +27,7 @@ const faqItems = [
   {
     question: "Ako viem že diely sú hotové?",
     answer:
-      "Pošleme ti email keď budú diely hotové a odoslané.",
+      "Pošleme vám email keď budú diely hotové a odoslané.",
   },
   {
     question: "Čo ak si to rozmyslím?",
@@ -49,7 +49,7 @@ export default function AkoToFungujePage() {
       }} />
       <HeroSection
         title="Ako to funguje?"
-        perex="Objednať u nás je jednoduché. 3 kroky a máš hotovo."
+        perex="Objednať u nás je jednoduché. 3 kroky a máte hotovo."
         bgImage="/images/hero-laser.png"
         small
       />
@@ -59,10 +59,10 @@ export default function AkoToFungujePage() {
         <div className={`container ${styles.stepsContainer}`}>
           <div className={styles.stepsList}>
             <div>
-              <SectionHeading title="1. Pošli výkres" />
+              <SectionHeading title="1. Pošlite výkres" />
               <p className={styles.stepText}>
-                Pošli svoj výkres na email alebo cez kontaktný formulár.
-                Spočítame cenu a pošleme ti ponuku.
+                Pošlite svoj výkres na email alebo cez kontaktný formulár.
+                Spočítame cenu a pošleme vám ponuku.
               </p>
               <h4 className={styles.stepSubheading}>Čo potrebujeme:</h4>
               <ul className={styles.checkList}>
@@ -70,19 +70,19 @@ export default function AkoToFungujePage() {
                 <li>✓ Materiál: nerezová oceľ / čierna oceľ / hliník</li>
                 <li>✓ Hrúbka: napr. 3 mm</li>
                 <li>✓ Počet kusov: napr. 10 ks</li>
-                <li>✓ Termín: kedy diely potrebuješ</li>
+                <li>✓ Termín: kedy diely potrebujete</li>
               </ul>
               <p className={styles.tipNote}>
-                Nemáš hotový výkres? Pošli nám náčrt, fotografiu alebo popis.
-                Pomôžeme ti vytvoriť CAD výkres.
+                Nemáte hotový výkres? Pošlite nám náčrt, fotografiu alebo popis.
+                Pomôžeme vám vytvoriť CAD výkres.
               </p>
             </div>
 
             <div>
               <SectionHeading title="2. Ponuka do 24 hodín" />
               <p className={styles.stepText}>
-                Spočítame cenu a pošleme ti cenovú ponuku.
-                Uvidíš presnú cenu vrátane DPH.
+                Spočítame cenu a pošleme vám cenovú ponuku.
+                Uvidíte presnú cenu vrátane DPH.
                 Odpovieme do 24 hodín v pracovné dni.
               </p>
             </div>
@@ -91,8 +91,8 @@ export default function AkoToFungujePage() {
               <SectionHeading title="3. Do 7 dní máte diely" />
               <p className={styles.stepText}>
                 Po potvrdení objednávky a platby začíname vyrábať.
-                Do 7 pracovných dní máš diely u seba.
-                Potrebuješ rýchlejšie? Express 48h alebo 24h za príplatok.
+                Do 7 pracovných dní máte diely u seba.
+                Potrebujete rýchlejšie? Express 48h alebo 24h za príplatok.
               </p>
               <div className={styles.timeline}>
                 <p className={styles.timelineBold}>Timeline:</p>
@@ -109,7 +109,7 @@ export default function AkoToFungujePage() {
       {/* Express */}
       <section className="section-alt">
         <div className="container">
-          <SectionHeading title="Kedy to potrebuješ?" center />
+          <SectionHeading title="Kedy to potrebujete?" center />
           <div className={styles.deliveryGrid}>
             <Card icon={Zap} title="24 hodín">
               <p>Keď to horí. Za príplatok, podľa dostupnosti.</p>
@@ -119,9 +119,6 @@ export default function AkoToFungujePage() {
             </Card>
             <Card icon={Clock} title="7 dní">
               <p>Štandard. Bez príplatku.</p>
-            </Card>
-            <Card icon={Clock} title="28 dní">
-              <p>Ekonomické. So zľavou.</p>
             </Card>
           </div>
         </div>
@@ -156,15 +153,15 @@ export default function AkoToFungujePage() {
       }} />
       <section className="section-alt">
         <div className={`container ${styles.faqContainer}`}>
-          <SectionHeading title="Máš otázky?" center />
+          <SectionHeading title="Máte otázky?" center />
           <FAQ items={faqItems} />
         </div>
       </section>
 
       <CTASection
-        title="Pripravený začať?"
-        text="3 kroky. Ponuka do 24h. Diely do 7 dní. Jednoducho a rýchlo."
-        buttonText="Objednaj teraz →"
+        title="Pripravení začať?"
+        text="Pošlite výkres. My sa postaráme o zvyšok."
+        buttonText="Pošlite výkres →"
       />
     </>
   );

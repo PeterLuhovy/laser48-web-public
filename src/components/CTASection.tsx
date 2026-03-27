@@ -12,7 +12,7 @@ type CTASectionProps = {
 export default function CTASection({
   title,
   text,
-  buttonText = "Pošli dopyt →",
+  buttonText = "Pošlite dopyt →",
   buttonHref = "/kontakt#formular",
   note,
 }: CTASectionProps) {

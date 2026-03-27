@@ -79,7 +79,7 @@ const faqItems = [
   {
     question: "Koľko to stojí?",
     answer:
-      "Závisí od materiálu, hrúbky a dĺžky rezu. Pošli výkres — cenovú ponuku dostaneš do 24h.",
+      "Závisí od materiálu, hrúbky a dĺžky rezu. Pošlite výkres — cenovú ponuku dostanete do 24h.",
   },
   {
     question: "Ako dlho čakám na diely?",
@@ -174,7 +174,7 @@ export default function SluzbyPage() {
           </div>
 
           <div className={styles.specCta}>
-            <Button href="/kontakt#formular">Pošli dopyt →</Button>
+            <Button href="/kontakt#formular">Pošlite dopyt →</Button>
           </div>
         </div>
       </section>
@@ -187,18 +187,18 @@ export default function SluzbyPage() {
             <div className={styles.orderOption}>
               <h3>1. Email</h3>
               <p className={styles.orderText}>
-                Pošli výkres na <a href={EMAIL_MAILTO}>{EMAIL}</a>.
+                Pošlite výkres na <a href={EMAIL_MAILTO}>{EMAIL}</a>.
                 Odpovieme do 24 hodín.
               </p>
-              <Button href="/kontakt" size="md">Pošli dopyt →</Button>
+              <Button href="/kontakt" size="md">Pošlite dopyt →</Button>
             </div>
             <div className={styles.orderOption}>
               <h3>2. Telefón</h3>
               <p className={styles.orderText}>
-                Zavolaj na <a href={PHONE_TEL}>{PHONE}</a>.
+                Zavolajte na <a href={PHONE_TEL}>{PHONE}</a>.
                 {HOURS_SHORT}.
               </p>
-              <Button href={PHONE_TEL} variant="secondary" size="md">Zavolaj →</Button>
+              <Button href={PHONE_TEL} variant="secondary" size="md">Zavolajte →</Button>
             </div>
           </div>
         </div>
@@ -223,8 +223,8 @@ export default function SluzbyPage() {
 
       <CTASection
         title="Pripravený objednať?"
-        text="Pošli výkres a cenovú ponuku dostaneš do 24 hodín. Štandard 7 dní, express 48h alebo 24h za príplatok."
-        buttonText="Objednaj teraz →"
+        text="Pošlite výkres a cenovú ponuku dostanete do 24 hodín. Štandard 7 dní, express 48h alebo 24h za príplatok."
+        buttonText="Pošlite výkres →"
       />
     </>
   );

@@ -38,10 +38,10 @@ export default function ExpresPage() {
       {/* HERO */}
       <HeroSection
         title="Keď vám stojí projekt, neriešite cenu. Riešite čas."
-        perex="Diel dodáme do 48 hodín. V kritických prípadoch do 24h. Laserové rezanie pre situácie, keď sa už nedá čakať."
+        perex="Diel dodáme do 48 hodín. V kritických prípadoch do 24h. Laserové rezanie pre situácie, keď sa nedá čakať."
         bgImage="/images/hero-laser.png"
       >
-        <Button href="/kontakt#formular">Pošli výkres — do 24h máš cenu</Button>
+        <Button href="/kontakt#formular">Pošlite výkres — do 24h máte cenu</Button>
         <PhoneButton />
       </HeroSection>
 
@@ -265,8 +265,8 @@ export default function ExpresPage() {
       <CTASection
         title="Máte problém dnes? Riešime ho dnes."
         text="Pošlite výkres — do 24h máte cenu. Expres do 48h. Kritické prípady do 24h."
-        buttonText="Pošli výkres — do 24h máš cenu"
-        note={`Alebo zavolaj: ${PHONE}`}
+        buttonText="Pošlite výkres — do 24h máte cenu"
+        note={`Alebo zavolajte: ${PHONE}`}
       />
     </>
   );
