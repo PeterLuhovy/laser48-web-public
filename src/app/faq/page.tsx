@@ -36,6 +36,8 @@ const categories = [
   {
     title: "Dodanie",
     items: [
+      { question: "Ponúkate expresné laserové rezanie?", answer: "Áno. Expresné laserové rezanie s dodaním do 48 hodín alebo urgentné do 24 hodín. Riešime urgentné zákazky, chýbajúce diely a prototypy. Za príplatok, podľa dostupnosti kapacity." },
+      { question: "Ako rýchlo viete vyrobiť urgentnú zákazku?", answer: "Urgentné zákazky vieme dodať do 24 hodín od potvrdenia objednávky. Express zákazky do 48 hodín. Prioritné spracovanie — zákazka ide na začiatok výroby." },
       { question: "Kedy dostanem diely?", answer: "Štandardne do 7 pracovných dní od potvrdenia objednávky a platby. Potrebujete rýchlejšie? Express 48h alebo 24h za príplatok." },
       { question: "Ako počítate 7 dní?", answer: "7 pracovných dní (víkendy a sviatky nepočítame). Počítame od potvrdenia objednávky a prijatia platby." },
       { question: "Čo ak nestihnete termín?", answer: "Vždy dodávame na čas. Ak nastane problém, okamžite komunikujeme a hľadáme riešenie — nie otáľame." },

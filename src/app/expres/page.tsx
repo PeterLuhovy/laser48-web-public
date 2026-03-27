@@ -18,9 +18,16 @@ import PhoneButton from "@/components/PhoneButton";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Expres výroba 24h / 48h",
+  title: "Expresné laserové rezanie kovov — dodanie do 24h / 48h",
   description:
-    "Urgentné laserové rezanie kovov. Diel dodáme do 48 hodín, v kritických prípadoch do 24h. Pre situácie, keď sa už nedá čakať.",
+    "Urgentné laserové rezanie kovov — express dodanie do 24 alebo 48 hodín. Rýchle laserové rezanie pre urgentné zákazky, chýbajúce diely a prototypy. LASER48 Púchov.",
+  openGraph: {
+    title: "Expresné laserové rezanie kovov — dodanie do 24h / 48h",
+    description:
+      "Urgentné laserové rezanie — diel do 24 alebo 48 hodín. Pre firmy, ktoré nemajú čas čakať.",
+    url: "https://www.laser48.sk/expres",
+    images: [{ url: "/images/hero-laser.png", width: 1200, height: 630, alt: "LASER48 Express laserové rezanie" }],
+  },
 };
 
 export default function ExpresPage() {
@@ -34,11 +41,42 @@ export default function ExpresPage() {
           { "@type": "ListItem", position: 2, name: "Expres výroba", item: "https://www.laser48.sk/expres" },
         ],
       }} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Expresné laserové rezanie kovov",
+        alternateName: ["Rýchle laserové rezanie", "Urgentné laserové rezanie", "Express laser cutting"],
+        description: "Urgentné laserové rezanie kovov s dodaním do 24 alebo 48 hodín. CO₂ laser Bystronic ByVention 3015, presnosť ±0.1mm. Nerezová oceľ, čierna oceľ, hliník.",
+        provider: { "@id": "https://www.laser48.sk/#organization" },
+        serviceType: "Expresné laserové rezanie",
+        areaServed: [
+          { "@type": "Country", name: "Slovakia" },
+          { "@type": "Country", name: "Czech Republic" },
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Express termíny",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              name: "Express 48h laserové rezanie",
+              description: "Laserové rezanie kovov s dodaním do 48 hodín od potvrdenia objednávky.",
+              eligibleDuration: { "@type": "QuantitativeValue", value: 48, unitCode: "HUR" },
+            },
+            {
+              "@type": "Offer",
+              name: "Urgentné 24h laserové rezanie",
+              description: "Kritické zákazky s dodaním do 24 hodín. Prioritné spracovanie.",
+              eligibleDuration: { "@type": "QuantitativeValue", value: 24, unitCode: "HUR" },
+            },
+          ],
+        },
+      }} />
 
       {/* HERO */}
       <HeroSection
-        title="Keď vám stojí projekt, neriešite cenu. Riešite čas."
-        perex="Diel dodáme do 48 hodín. V kritických prípadoch do 24h. Laserové rezanie pre situácie, keď sa nedá čakať."
+        title="Expresné laserové rezanie — diel do 24 alebo 48 hodín"
+        perex="Keď vám stojí projekt, neriešite cenu. Riešite čas. Urgentné laserové rezanie kovov pre situácie, keď sa nedá čakať."
         bgImage="/images/hero-laser.png"
       >
         <Button href="/kontakt#formular">Pošlite výkres — do 24h máte cenu</Button>
@@ -237,27 +275,30 @@ export default function ExpresPage() {
         </div>
       </section>
 
-      {/* TECHNICKÉ DETAILY */}
+      {/* TECHNICKÉ PARAMETRE */}
       <section className="section">
         <div className="container">
-          <div className={styles.techGrid}>
-            <div>
-              <h4>Materiály</h4>
-              <p>oceľ, nerez, hliník, pozinkovaná oceľ</p>
-            </div>
-            <div>
-              <h4>Hrúbky</h4>
-              <p>0.5 – 8 mm (podľa materiálu)</p>
-            </div>
-            <div>
-              <h4>Formáty</h4>
-              <p>DXF, DWG, STEP, PDF</p>
-            </div>
-            <div>
-              <h4>Max rozmer</h4>
-              <p>1540 × 750 mm</p>
-            </div>
-          </div>
+          <SectionHeading title="Technické parametre expresnej výroby" center />
+          <table className={styles.techTable}>
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Hodnota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Express dodanie</td><td>48 hodín od potvrdenia</td></tr>
+              <tr><td>Urgentné dodanie</td><td>24 hodín (kritické prípady)</td></tr>
+              <tr><td>Materiály</td><td>Nerezová oceľ, čierna oceľ, hliník, pozinkovaná oceľ</td></tr>
+              <tr><td>Hrúbky</td><td>0.5 – 8 mm (podľa materiálu)</td></tr>
+              <tr><td>Max rozmer dielu</td><td>1540 × 750 mm</td></tr>
+              <tr><td>Presnosť</td><td>±0.1 mm</td></tr>
+              <tr><td>Laser</td><td>CO₂ laser Bystronic ByVention 3015, 2.2 kW</td></tr>
+              <tr><td>Formáty výkresu</td><td>DXF, DWG, STEP, PDF</td></tr>
+              <tr><td>Cenová ponuka</td><td>Do 24 hodín</td></tr>
+              <tr><td>Minimálna objednávka</td><td>1 kus</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

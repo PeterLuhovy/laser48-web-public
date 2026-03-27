@@ -30,6 +30,23 @@ B2B služba na rýchle laserové rezanie kovov sídliaca v Púchove, Slovensko.
 
 **Cenová ponuka:** do 24 hodín po prijatí výkresu
 
+## Expresné laserové rezanie (HLAVNÁ SLUŽBA)
+
+LASER48 sa špecializuje na **rýchle a urgentné laserové rezanie kovov**.
+
+**Express termíny:**
+- Express 48 hodín: prioritné spracovanie, dodanie do 48h od potvrdenia
+- Urgentné 24 hodín: kritické prípady, dodanie do 24h
+- Štandard 7 dní: bežná dodacia lehota
+
+**Prečo expresné laserové rezanie u nás:**
+- Rezervovaná kapacita pre urgentné zákazky
+- Okamžité spracovanie dopytu
+- Každý kus skontrolovaný pred expedíciou
+- Od 1 kusu, žiadna minimálna objednávka
+
+Synonymá: rýchle laserové rezanie, urgentné laserové rezanie, express laser cutting, laserové rezanie 24 hodín, expresné laserové rezanie kovov
+
 ## Kontakt
 
 - Telefón: ${PHONE} (Po–Pia ${HOURS_WEEKDAY})
@@ -46,6 +63,7 @@ Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD 
 
 - [Domov](${WEB}/): Hlavná stránka s prehľadom služieb
 - [Služby](${WEB}/sluzby): Detailné informácie o laserovaní
+- [Expresné laserové rezanie](${WEB}/expres): Urgentné a express dodanie do 24–48 hodín
 - [Ako to funguje](${WEB}/ako-to-funguje): 3 kroky objednávky
 - [Cenník](${WEB}/cennik): Orientačné ceny a materiály na sklade
 - [Referencie](${WEB}/referencie): Zákaznícke hodnotenia a case studies

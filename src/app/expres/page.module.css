@@ -241,25 +241,41 @@
   border-radius: var(--radius-md);
 }
 
-/* --- Tech details --- */
-.techGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-xl);
-  text-align: center;
+/* --- Tech table --- */
+.techTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
 }
 
-.techGrid h4 {
-  font-family: var(--font-sans);
+.techTable th {
+  text-align: left;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-weight: 600;
   font-size: var(--text-sm);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-sm);
+  letter-spacing: 0.03em;
 }
 
-.techGrid p {
+.techTable td {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.techTable tr:nth-child(even) {
+  background: var(--color-bg-alt);
+}
+
+.techTable td:first-child {
   font-weight: 600;
+  color: var(--color-black);
+}
+
+.techTable td:last-child {
+  color: var(--color-text-secondary);
 }
 
 /* --- Responsive --- */

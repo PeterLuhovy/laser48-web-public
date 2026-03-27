@@ -30,7 +30,7 @@ const localBusinessJsonLd = {
   "@id": "https://www.laser48.sk/#organization",
   name: "LASER48",
   description:
-    "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Nerezová oceľ AISI 304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.5–8mm), pozinkovaná oceľ DX51D (0.5–3mm), hliník AlMg3 (0.5–4mm). Cenová ponuka do 24 hodín.",
+    "Rýchle laserové rezanie kovov — express dodanie do 24–48 hodín. Nerezová oceľ AISI 304/316 (0.5–6mm), čierna oceľ DC01/S235/C45 (0.5–8mm), pozinkovaná oceľ DX51D (0.5–3mm), hliník AlMg3 (0.5–4mm). Cenová ponuka do 24 hodín.",
   url: "https://www.laser48.sk",
   logo: "https://www.laser48.sk/images/logo-light.png",
   image: "https://www.laser48.sk/images/hero-laser.png",
@@ -103,6 +103,17 @@ const localBusinessJsonLd = {
             "CO₂ laser rezanie hliníka AlMg3, hrúbka 0.5–4mm, max rozmer 1540×750mm.",
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Expresné laserové rezanie kovov",
+          alternateName: ["Rýchle laserové rezanie", "Urgentné laserové rezanie"],
+          description:
+            "Express dodanie do 48 hodín, urgentné do 24 hodín. Prioritné spracovanie, každý kus skontrolovaný.",
+          url: "https://www.laser48.sk/expres",
+        },
+      },
     ],
   },
   parentOrganization: {
@@ -124,8 +135,8 @@ export default function Home() {
 
       {/* HERO */}
       <HeroSection
-        title="Keď vám chýba diel, stojí výroba."
-        perex="My ho dodáme od 24–48h — bez problémov. Laserové rezanie kovov pre firmy, ktoré nemajú čas na chyby. Cena do 24h."
+        title="Rýchle laserové rezanie kovov — express od 24 hodín"
+        perex="Keď vám chýba diel, stojí výroba. My ho dodáme od 24–48h — bez problémov. Laserové rezanie pre firmy, ktoré nemajú čas na chyby. Cena do 24h."
         bgImage="/images/hero-laser.png"
       >
         <Button href="/kontakt#formular">Pošlite výkres — do 24h máte cenu</Button>
@@ -203,7 +214,7 @@ export default function Home() {
             <div className={styles.step}>
               <div className={styles.stepNumber}>3</div>
               <h3>Diel máte hotový</h3>
-              <p>Štandard do 7 dní. Expres 48h / 24h. Pripravený na montáž.</p>
+              <p>Štandard do 7 dní. <Link href="/expres">Expresné laserové rezanie 48h / 24h</Link>. Pripravený na montáž.</p>
             </div>
           </div>
         </div>
@@ -390,7 +401,7 @@ export default function Home() {
       {/* FINÁLNA CTA */}
       <CTASection
         title="Máte výkres? Máte riešenie."
-        text="Pošlite výkres — do 24h máte cenu. Expres 48h. Bez otrepov. Bez problémov."
+        text="Pošlite výkres — do 24h máte cenu. Expresné laserové rezanie do 48h. Bez otrepov. Bez problémov."
         buttonText="Pošlite výkres — do 24h máte cenu"
         note={`Alebo zavolajte: ${PHONE}`}
       />
