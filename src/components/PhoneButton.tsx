@@ -13,7 +13,7 @@ export default function PhoneButton() {
     <>
       {/* Mobile: tel link (shown via CSS) */}
       <a href={PHONE_TEL} className={`${styles.btn} ${styles.mobileOnly}`}>
-        <Phone size={16} /> Zavolaj nám
+        <Phone size={16} /> Zavolajte nám
       </a>
 
       {/* Desktop: show number on click (shown via CSS) */}
@@ -42,7 +42,7 @@ export default function PhoneButton() {
           className={`${styles.btn} ${styles.desktopOnly}`}
           onClick={() => setShowNumber(true)}
         >
-          <Phone size={16} /> Zavolaj nám
+          <Phone size={16} /> Zavolajte nám
         </button>
       )}
     </>

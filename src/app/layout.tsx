@@ -7,11 +7,11 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.laser48.sk"),
   title: {
-    default: "LASER48 | Laserové rezanie do 7 dní",
+    default: "LASER48 | Rýchle laserové rezanie kovov | Express 24–48h",
     template: "%s | LASER48",
   },
   description:
-    "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Cenová ponuka do 24h. Nerezová oceľ, čierna oceľ, hliník.",
+    "Rýchle laserové rezanie kovov — express dodanie do 24–48 hodín. Nerezová oceľ, čierna oceľ, hliník. Cenová ponuka do 24h. Púchov, Slovensko.",
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LASER48 | Laserové rezanie do 7 dní",
+    title: "LASER48 | Rýchle laserové rezanie kovov | Express 24–48h",
     description:
-      "Laserové rezanie kovov. Štandard 7 dní, express 48h alebo 24h. Cenová ponuka do 24h.",
+      "Rýchle laserové rezanie kovov — express dodanie do 24–48 hodín. Cenová ponuka do 24h. Púchov, Slovensko.",
     images: ["/images/hero-laser.png"],
   },
 };

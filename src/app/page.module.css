@@ -1,18 +1,213 @@
-/* --- How it works (3 steps) --- */
+/* --- Why us (2 columns: bad vs good) --- */
+.whyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.whyBad,
+.whyGood {
+  padding: var(--space-2xl);
+  border-radius: var(--radius-md);
+}
+
+.whyBad {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+}
+
+.whyGood {
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+}
+
+.whyTitle {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-lg);
+}
+
+.whyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.whyList li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-lg);
+}
+
+.whyBad .whyList li {
+  color: #dc2626;
+}
+
+.whyGood .whyList li {
+  color: #16a34a;
+}
+
+.whyResult {
+  margin-top: var(--space-xl);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+/* --- Benefits (3 cards) --- */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.benefitCard {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.benefitIcon {
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.benefitCard h3 {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-sm);
+}
+
+.benefitCard p {
+  color: var(--color-text-secondary);
+}
+
+/* --- Steps (3 items) --- */
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
 }
 
-/* --- Why LASER48 (3 col grid, 5 items) --- */
-.reasons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
+.step {
+  text-align: center;
+  padding: var(--space-xl);
 }
 
-/* --- Quality Comparison --- */
+.stepNumber {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-h3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+}
+
+.step h3 {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-sm);
+}
+
+.step p {
+  color: var(--color-text-secondary);
+}
+
+/* --- Expres section --- */
+.expresSection {
+  padding: var(--space-section) 0;
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.expresGrid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+}
+
+.expresItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+.expresNote {
+  text-align: center;
+  margin-top: var(--space-xl);
+  font-size: var(--text-lg);
+  color: var(--color-silver);
+}
+
+.expresCta {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+
+/* --- Reality (2 columns) --- */
+.realityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.realityProblem,
+.realitySolution {
+  padding: var(--space-2xl);
+  border-radius: var(--radius-md);
+}
+
+.realityProblem {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.realitySolution {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.realitySolution h3 {
+  margin-bottom: var(--space-lg);
+}
+
+.realityList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.realityList li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-lg);
+}
+
+.realityProblem .realityList li {
+  color: #dc2626;
+}
+
+.realitySolution .realityList li {
+  color: #16a34a;
+}
+
+.realityEmphasis {
+  margin-top: var(--space-xl);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+/* --- Comparison (bad vs good) --- */
 .comparison {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,30 +216,88 @@
 
 .comparisonBad,
 .comparisonGood {
+  padding: var(--space-2xl);
   border-radius: var(--radius-md);
-  overflow: hidden;
   border: 2px solid var(--color-border);
 }
 
 .comparisonBad {
   border-color: #dc3545;
+  background: #fef2f2;
 }
 
 .comparisonGood {
   border-color: #28a745;
+  background: #f0fdf4;
 }
 
-.comparisonImg {
+.comparisonTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-lg);
+}
+
+.comparisonBad .comparisonTitle {
+  color: #dc3545;
+}
+
+.comparisonGood .comparisonTitle {
+  color: #28a745;
+}
+
+.comparisonList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.comparisonList li {
+  font-size: var(--text-lg);
+  padding-left: var(--space-md);
+}
+
+.comparisonResult {
+  text-align: center;
+  margin-top: var(--space-xl);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+/* --- Photo comparison --- */
+.photoComparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.photoBad,
+.photoGood {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+}
+
+.photoBad {
+  border-color: #dc3545;
+}
+
+.photoGood {
+  border-color: #28a745;
+}
+
+.photoImg {
   position: relative;
   height: 280px;
   background: var(--color-bg-light);
 }
 
-.comparisonLabel {
+.photoLabel {
   padding: var(--space-lg);
 }
 
-.comparisonLabel p {
+.photoLabel p {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
   margin-top: var(--space-sm);
@@ -64,102 +317,104 @@
   color: #28a745;
 }
 
-/* --- Materials (4 cards) --- */
-.materials {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-xl);
+/* --- Target audience --- */
+.targetText {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-md);
   margin-bottom: var(--space-xl);
 }
 
-.materialCard {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  transition: box-shadow var(--transition);
+.targetGrid {
+  display: flex;
+  gap: var(--space-2xl);
 }
 
-.materialCard:hover {
-  box-shadow: var(--shadow-md);
-}
-
-.materialImg {
-  position: relative;
-  height: 200px;
-  background: var(--color-bg-light);
-}
-
-.materialBody {
-  padding: var(--space-lg);
-}
-
-.materialBody h3 {
-  font-size: var(--text-h3);
-  margin-bottom: var(--space-sm);
-}
-
-.materialBody p {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-}
-
-.materialNote {
-  text-align: center;
-  color: var(--color-text-secondary);
-}
-
-.materialNote a {
+.targetItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
   font-weight: 600;
+  color: var(--color-primary);
 }
 
-.materialSubtitle {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-}
-
-/* --- Testimonials (3 cards) --- */
+/* --- Testimonials --- */
 .testimonials {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
 }
 
-/* --- Stats (4 items) --- */
+.quote {
+  font-size: var(--text-h3);
+  font-style: italic;
+  text-align: center;
+  padding: var(--space-2xl);
+  border-left: 4px solid var(--color-primary);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+}
+
+.refLink {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+
+.refLink a {
+  font-weight: 600;
+}
+
+/* --- Stats --- */
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-xl);
 }
 
+/* --- Responsive --- */
 @media (max-width: 1024px) {
-  .materials {
-    grid-template-columns: repeat(2, 1fr);
+  .benefits {
+    grid-template-columns: 1fr;
   }
 
-  .reasons {
-    grid-template-columns: repeat(2, 1fr);
+  .expresGrid {
+    flex-wrap: wrap;
+    gap: var(--space-lg);
   }
 
   .stats {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
   }
+
+  .targetGrid {
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
 }
 
 @media (max-width: 768px) {
+  .whyGrid,
+  .realityGrid,
+  .comparison,
+  .photoComparison,
   .steps,
-  .materials,
-  .testimonials,
-  .comparison {
-    grid-template-columns: 1fr;
-  }
-
-  .reasons {
+  .testimonials {
     grid-template-columns: 1fr;
   }
 
   .stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expresGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .targetGrid {
+    flex-direction: column;
   }
 }
