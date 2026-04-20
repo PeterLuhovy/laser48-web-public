@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Kontakt - Telefón, Email, Adresa",
   description:
     `Kontaktujte nás: ${PHONE} | laser@laser48.sk | Nosice 256, Púchov. Odpovieme do 24 hodín.`,
+  alternates: { canonical: "/kontakt" },
 };
 
 export default function KontaktPage() {

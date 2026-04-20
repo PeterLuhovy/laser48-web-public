@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Referencie - Spokojní zákazníci",
   description:
     "Čo hovoria naši zákazníci. Rýchlosť, kvalita, spoľahlivosť. Viac ako 500 000 dodaných dielov.",
+  alternates: { canonical: "/referencie" },
 };
 
 const testimonials = [

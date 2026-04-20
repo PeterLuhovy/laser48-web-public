@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   },
   description:
     "Rýchle laserové rezanie kovov — express dodanie do 24–48 hodín. Nerezová oceľ, čierna oceľ, hliník. Cenová ponuka do 24h. Púchov, Slovensko.",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "sk-SK": "/",
+      "cs-CZ": "/",
+      "x-default": "/",
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },

@@ -8,9 +8,16 @@ import JsonLd from "@/components/JsonLd";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Cenník laserového rezania",
+  title: "Cenník laserového rezania 2026 — Ponuka do 24 h",
   description:
-    "Transparentný cenník. Cenová ponuka do 24 hodín. Nerezová oceľ, hliník. Štandard 7 dní, express 48h.",
+    "Transparentný cenník laserového rezania kovov 2026. Cenová ponuka vrátane materiálu a DPH do 24 hodín. Nerez, hliník, čierna oceľ. Púchov, Slovensko.",
+  alternates: { canonical: "/cennik" },
+  openGraph: {
+    title: "Cenník laserového rezania 2026 — Ponuka do 24 h | LASER48",
+    description:
+      "Transparentný cenník. Cenová ponuka do 24 hodín vrátane materiálu a DPH. Nerez, hliník, čierna oceľ.",
+    url: "https://www.laser48.sk/cennik",
+  },
 };
 
 const faqItems = [

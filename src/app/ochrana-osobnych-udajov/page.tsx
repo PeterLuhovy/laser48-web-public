@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Ochrana osobných údajov",
   description:
     "Zásady ochrany osobných údajov spoločnosti Luhovy Industries, s. r. o. — divízia LASER48.",
+  alternates: { canonical: "/ochrana-osobnych-udajov" },
 };
 
 export default function OchranaOsobnychUdajovPage() {

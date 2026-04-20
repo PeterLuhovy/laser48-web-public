@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "FAQ - Často kladené otázky",
   description:
     "Odpovede na najčastejšie otázky o laserovaní, cenách, dodaní, platbe. Všetko čo potrebujete vedieť.",
+  alternates: { canonical: "/faq" },
 };
 
 const categories = [

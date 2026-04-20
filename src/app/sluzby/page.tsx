@@ -64,6 +64,7 @@ export const metadata: Metadata = {
   title: "Laserové rezanie kovov — express 24h, štandard 7 dní",
   description:
     "Rýchle laserové rezanie nerezovej ocele, čiernej ocele a hliníka. Express dodanie do 24–48h. CO₂ laser Bystronic ByVention 3015, presnosť ±0.1mm. Max 1540×750mm.",
+  alternates: { canonical: "/sluzby" },
 };
 
 const faqItems = [

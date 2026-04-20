@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Expresné laserové rezanie kovov — dodanie do 24h / 48h",
   description:
     "Urgentné laserové rezanie kovov — express dodanie do 24 alebo 48 hodín. Rýchle laserové rezanie pre urgentné zákazky, chýbajúce diely a prototypy. LASER48 Púchov.",
+  alternates: { canonical: "/expres" },
   openGraph: {
     title: "Expresné laserové rezanie kovov — dodanie do 24h / 48h",
     description:

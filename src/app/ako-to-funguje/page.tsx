@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Ako to funguje?",
   description:
     "3 jednoduché kroky: Pošlite výkres → Ponuka do 24h → Do 7 dní máte diely. Žiadne zložité procesy.",
+  alternates: { canonical: "/ako-to-funguje" },
 };
 
 const faqItems = [
