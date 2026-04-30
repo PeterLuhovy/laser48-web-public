@@ -26,7 +26,7 @@ export const articles = [
     slug: "ako-stihame-laserove-rezanie-do-48-hodin",
     title: "Ako stíhame laserové rezanie do 48 hodín",
     excerpt:
-      "Rýchle laserové rezanie kovov nie je o rýchlejšom stroji. Je to o systéme. Pozrite sa, ako vyrobíme diel za 48 hodín, kým konkurencia povie „o týždeň".",
+      "Rýchle laserové rezanie kovov nie je o rýchlejšom stroji. Je to o systéme. Pozrite sa, ako vyrobíme diel za 48 hodín, kým konkurencia povie \u201Eo týždeň\u201C.",
     date: "2026-04-30",
     readTime: "6 min",
     category: "Express výroba",
