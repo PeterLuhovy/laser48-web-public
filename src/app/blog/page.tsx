@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const articles = [
+const articles = [
   {
     slug: "ako-stihame-laserove-rezanie-do-48-hodin",
     title: "Ako stíhame laserové rezanie do 48 hodín",
