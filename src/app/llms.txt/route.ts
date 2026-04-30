@@ -68,15 +68,21 @@ Ak nemáte výkres: pošlite náčrt, fotografiu alebo popis — vytvoríme CAD 
 - [Cenník](${WEB}/cennik): Orientačné ceny a materiály na sklade
 - [Referencie](${WEB}/referencie): Zákaznícke hodnotenia a case studies
 - [FAQ](${WEB}/faq): 32 často kladených otázok
+- [Blog](${WEB}/blog): Články o expresnom laserovom rezaní a rýchlych dodaniach
 - [Kontakt](${WEB}/kontakt): Kontaktný formulár, adresa, mapa
 - [Ochrana osobných údajov](${WEB}/ochrana-osobnych-udajov): Zásady spracovania osobných údajov (GDPR)
 
+## Blog články
+
+- [Ako stíhame laserové rezanie do 48 hodín](${WEB}/blog/ako-stihame-laserove-rezanie-do-48-hodin): Vysvetlenie systému, ktorý umožňuje express výrobu — rezervovaná kapacita, prioritné radenie, vlastný CO₂ laser, kontrola kvality.
+
 ## Doprava
 
-- Kuriér Slovensko
-- Kuriér Česko
-- Trenčiansky a Žilinský kraj: vlastný rozvoz ~1× týždenne
-- Osobný odber Púchov: zadarmo
+- Kuriér Slovensko (DPD, GLS, TopTrans): doručenie do 24 hodín od expedície
+- Kuriér Česko (DPD, TopTrans): štandardne 1 pracovný deň po expedícii, pri urgentných express zákazkách aj do 24 hodín
+- Trenčiansky a Žilinský kraj: vlastný rozvoz priamo k zákazníkovi ~1× týždenne
+- Osobný odber Púchov: zadarmo (Po–Pia 8:00–16:00)
+- Kombinácia: Express 24h výroba + 24h kuriér = diel u zákazníka do 48 hodín od objednávky
 
 ## Platba
 

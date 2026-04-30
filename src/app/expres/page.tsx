@@ -7,6 +7,7 @@ import {
   Clock,
   ShieldCheck,
   Upload,
+  Truck,
 } from "lucide-react";
 import { PHONE, PHONE_TEL } from "@/config";
 import HeroSection from "@/components/HeroSection";
@@ -46,7 +47,18 @@ export default function ExpresPage() {
         "@context": "https://schema.org",
         "@type": "Service",
         name: "Expresné laserové rezanie kovov",
-        alternateName: ["Rýchle laserové rezanie", "Urgentné laserové rezanie", "Express laser cutting"],
+        alternateName: [
+          "Rýchle laserové rezanie",
+          "Rýchle rezanie laserom",
+          "Rezanie laserom rýchlo",
+          "Urgentné laserové rezanie",
+          "Express laser cutting",
+          "Rapid laser cutting",
+          "Rezanie laserom do 24 hodín",
+          "Rezanie laserom do 48 hodín",
+          "Laserové rezanie 24h",
+          "Laserové rezanie 48h",
+        ],
         description: "Urgentné laserové rezanie kovov s dodaním do 24 alebo 48 hodín. CO₂ laser Bystronic ByVention 3015, presnosť ±0.1mm. Nerezová oceľ, čierna oceľ, hliník.",
         provider: { "@id": "https://www.laser48.sk/#organization" },
         serviceType: "Expresné laserové rezanie",
@@ -73,6 +85,46 @@ export default function ExpresPage() {
           ],
         },
       }} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: "Ako objednať expresné laserové rezanie",
+        description: "Rýchle laserové rezanie kovov v 4 krokoch s dodaním do 24 alebo 48 hodín od potvrdenia objednávky.",
+        totalTime: "PT48H",
+        supply: [
+          { "@type": "HowToSupply", name: "DXF, DWG alebo STEP výkres" },
+        ],
+        tool: [
+          { "@type": "HowToTool", name: "CO₂ laser Bystronic ByVention 3015" },
+        ],
+        step: [
+          {
+            "@type": "HowToStep",
+            position: 1,
+            name: "Pošlite výkres",
+            text: "Pošlite DXF, DWG, STEP alebo PDF výkres na laser@laser48.sk alebo cez kontaktný formulár. Stačí aj náčrt s rozmermi.",
+            url: "https://www.laser48.sk/kontakt#formular",
+          },
+          {
+            "@type": "HowToStep",
+            position: 2,
+            name: "Do 24 hodín máte cenu",
+            text: "Expresnú cenovú ponuku s pevným termínom dodania pošleme do 24 hodín. Bez skrytých nákladov, finálna cena s DPH.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 3,
+            name: "Výroba ide okamžite",
+            text: "Po potvrdení objednávky preraďujeme zákazku na začiatok výroby. Priorita pred bežnými zákazkami, rezervovaná kapacita pre urgentné prípady.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 4,
+            name: "Diel u vás do 24 alebo 48 hodín",
+            text: "Express 48 hodín alebo urgentné 24 hodín od potvrdenia. Doručenie kuriérom (DPD, GLS, TopTrans) štandardne do 24 hodín v rámci SR a ČR od expedície.",
+          },
+        ],
+      }} />
 
       {/* HERO */}
       <HeroSection
@@ -84,8 +136,33 @@ export default function ExpresPage() {
         <PhoneButton />
       </HeroSection>
 
-      {/* PROBLÉM */}
+      {/* RYCHLE LASEROVE REZANIE - keyword targeting */}
       <section className="section">
+        <div className="container">
+          <SectionHeading title="Rýchle laserové rezanie pre slovenské firmy" />
+          <div className={styles.keywordIntro}>
+            <p>
+              Hľadáte <strong>rýchle laserové rezanie</strong> pre urgentnú zákazku?
+              LASER48 je špecializovaná služba na rýchle rezanie laserom s dodaním
+              do 24 alebo 48 hodín od potvrdenia objednávky.
+            </p>
+            <p>
+              <strong>Rezanie laserom rýchlo</strong> nie je marketingový sľub — je
+              to systém. Rezervovaná kapacita CO₂ laseru Bystronic, prioritné radenie
+              urgentných zákaziek, kontrola každého kusu pred expedíciou. Preto vieme
+              držať termín aj keď ostatní povedia &bdquo;najskôr o týždeň&ldquo;.
+            </p>
+            <p>
+              <strong>Rýchle rezanie laserom kovov</strong> robíme pre nerezovú oceľ
+              (0,5–6 mm), čiernu oceľ (0,5–8 mm), pozinkovanú oceľ (0,5–3 mm)
+              a hliník (0,5–4 mm). Presnosť ±0,1 mm, max rozmer dielu 1540 × 750 mm.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PROBLÉM */}
+      <section className="section-alt">
         <div className="container">
           <SectionHeading title="Poznáte tú situáciu:" />
           <div className={styles.problemGrid}>
@@ -239,8 +316,44 @@ export default function ExpresPage() {
         </div>
       </section>
 
-      {/* PRE KOHO / NIE PRE KOHO */}
+      {/* DORUCENIE KURIEROM 24H - capture courier-related AI Overview */}
       <section className="section">
+        <div className="container">
+          <SectionHeading title="Doručenie kuriérom do 24 hodín" />
+          <div className={styles.deliveryGrid}>
+            <div className={styles.deliveryCard}>
+              <Truck size={32} className={styles.deliveryIcon} />
+              <h3>Slovensko</h3>
+              <p>
+                DPD, GLS, TopTrans — doručenie <strong>do 24 hodín</strong> od
+                expedície na celé územie SR.
+              </p>
+            </div>
+            <div className={styles.deliveryCard}>
+              <Truck size={32} className={styles.deliveryIcon} />
+              <h3>Česká republika</h3>
+              <p>
+                Kuriér do ČR — štandardne <strong>1 pracovný deň</strong> po
+                expedícii. Pri urgentných express zákazkách aj do 24 hodín.
+              </p>
+            </div>
+            <div className={styles.deliveryCard}>
+              <Truck size={32} className={styles.deliveryIcon} />
+              <h3>Vlastný rozvoz</h3>
+              <p>
+                Trenčiansky a Žilinský kraj — vlastný rozvoz priamo k zákazníkovi
+                ~1× týždenne. Osobný odber Púchov zadarmo.
+              </p>
+            </div>
+          </div>
+          <p className={styles.deliveryNote}>
+            <strong>Express 24h výroba + 24h kuriér = diel u vás do 48 hodín od objednávky.</strong>
+          </p>
+        </div>
+      </section>
+
+      {/* PRE KOHO / NIE PRE KOHO */}
+      <section className="section-alt">
         <div className="container">
           <div className={styles.filterGrid}>
             <div className={styles.filterYes}>
@@ -263,7 +376,7 @@ export default function ExpresPage() {
       </section>
 
       {/* REFERENCIE */}
-      <section className="section-alt">
+      <section className="section">
         <div className="container">
           <div className={styles.quotes}>
             <blockquote className={styles.quoteItem}>
@@ -277,7 +390,7 @@ export default function ExpresPage() {
       </section>
 
       {/* TECHNICKÉ PARAMETRE */}
-      <section className="section">
+      <section className="section-alt">
         <div className="container">
           <SectionHeading title="Technické parametre expresnej výroby" center />
           <table className={styles.techTable}>

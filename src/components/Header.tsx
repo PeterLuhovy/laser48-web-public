@@ -14,6 +14,7 @@ const navItems = [
   { href: "/ako-to-funguje", label: "Ako to funguje" },
   { href: "/cennik", label: "Cenník" },
   { href: "/referencie", label: "Referencie" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
 ];

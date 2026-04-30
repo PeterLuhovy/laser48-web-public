@@ -1,3 +1,67 @@
+/* --- Keyword intro section (R\u00fdchle laserov\u00e9 rezanie) --- */
+.keywordIntro {
+  margin-top: var(--space-xl);
+  max-width: 800px;
+}
+
+.keywordIntro p {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.keywordIntro p:last-child {
+  margin-bottom: 0;
+}
+
+.keywordIntro strong {
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+/* --- Delivery section --- */
+.deliveryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.deliveryCard {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.deliveryIcon {
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.deliveryCard h3 {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-sm);
+}
+
+.deliveryCard p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+.deliveryNote {
+  text-align: center;
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-size: var(--text-lg);
+}
+
 /* --- Problem section --- */
 .problemGrid {
   display: flex;
@@ -294,6 +358,13 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .deliveryGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
 @media (max-width: 768px) {
   .problemGrid,
   .costGrid {
@@ -315,5 +386,9 @@
 
   .techGrid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .keywordIntro p {
+    font-size: var(--text-body);
   }
 }

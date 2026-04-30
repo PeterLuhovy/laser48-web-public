@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/referencie`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/blog/ako-stihame-laserove-rezanie-do-48-hodin`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/ochrana-osobnych-udajov`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 }
